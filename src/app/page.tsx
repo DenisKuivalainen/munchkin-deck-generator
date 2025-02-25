@@ -18,6 +18,9 @@ import {
 import { DisplayCard, Options } from "@/types";
 import getDeck from "@/getDeck";
 import html2canvas from "html2canvas";
+import { Download, LinkRounded, Replay } from "@mui/icons-material";
+import { useSearchParams } from "next/navigation";
+import { cesarDecode, cesarEncode } from "@/xor";
 
 const initialOptions: Options = {
   mounts: false,
@@ -48,7 +51,7 @@ const categorizeData = (data: DisplayCard[]) => {
 
   data.forEach((card) => {
     const { cardType, cardSubtype, id, name, level } = card;
-    const displayName = level > 0 ? `Level ${level} - ${name}` : name;
+    const displayName = level > 0 ? `Уровень ${level} - ${name}` : name;
 
     if (!grouped[cardType][cardSubtype]) {
       grouped[cardType][cardSubtype] = [];
@@ -60,6 +63,58 @@ const categorizeData = (data: DisplayCard[]) => {
   return grouped;
 };
 
+const T: Record<string, string> = {
+  DOOR: "Карты дверей",
+  TREASURE: "Карты сокровищ",
+  "DOOR-WALKING": "Бродячие",
+  "DOOR-CHEAT": "Читы",
+  "DOOR-RACE": "Расы",
+  "DOOR-CLASS": "Классы",
+  "DOOR-MODIFIER": "Модификаторы расы и класса",
+  "DOOR-MONSTER": "Монстры",
+  "DOOR-COMMON": "Прочее",
+  "DOOR-MONSTER_BOOST": "Усилители монстров",
+  "DOOR-CURSE": "Проклятия",
+  "DOOR-PORTAL": "Порталы",
+  "DOOR-PET": "Скакуны и наемнички",
+  "TREASURE-ONE_HAND": "1 рука",
+  "TREASURE-TWO_HANDS": "2 руки",
+  "TREASURE-BOOTS": "Обувки",
+  "TREASURE-BODY": "Броники",
+  "TREASURE-HAT": "Головняки",
+  "TREASURE-OTHER": "Прочие шмотки",
+  "TREASURE-RING": "Кольца",
+  "TREASURE-DICE": "Кубики",
+  "TREASURE-FREE": "Прочее",
+  "TREASURE-ONE_TIME": "Одноразовые",
+  "TREASURE-GAIN_LVL": "Получи уровень",
+  "TREASURE-HIRELING_BOOST": "Усилители наемничков",
+  "TREASURE-HIRELING": "Hаемнички",
+  "TREASURE-MOUNT_BOOST": "Усилители скакунов",
+  "TREASURE-GEAR_BOOST": "Усилители шмоток",
+  mounts: "Скакуны",
+  hirelings: "Hаемнички",
+  ultramanchkins: "Ультраманчкины",
+  dungeons: "Подземелья",
+  undeads: "Андеды",
+  stronger_monsters: "Опасные монстры",
+  sharper_weapons: "Усиленные шмотки",
+  extended_deck: "Большая колода",
+  cler: "Клирики",
+  mage: "Волшебники",
+  warrior: "Воины",
+  thief: "Воры",
+  ranger: "Следопыты",
+  bard: "Барды",
+  dward: "Дварфы",
+  hafling: "Хафлинги",
+  gnome: "Гномы",
+  elf: "Эльфы",
+  ork: "Орки",
+  lizard: "Ящерки",
+  kent: "Кентавры",
+};
+
 const CardsTable = ({
   title,
   data,
@@ -69,13 +124,13 @@ const CardsTable = ({
 }) => (
   <TableContainer component={Paper} sx={{ marginBottom: 4 }}>
     <Typography variant="h6" sx={{ padding: 2 }}>
-      {title}
+      {T[title]}
     </Typography>
     <Table size="small">
       <TableHead>
         <TableRow>
-          <TableCell>ID</TableCell>
-          <TableCell>Name</TableCell>
+          <TableCell style={{ width: 40 }}>ID</TableCell>
+          <TableCell>Название</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
@@ -86,7 +141,7 @@ const CardsTable = ({
                 colSpan={2}
                 sx={{ backgroundColor: "#f0f0f0", fontWeight: "bold" }}
               >
-                {subtype} {`(${cards.length})`}
+                {T[`${title}-${subtype}`]} {`(${cards.length})`}
               </TableCell>
             </TableRow>
             {cards.map(({ id, name }) => (
@@ -105,11 +160,14 @@ const CardsTable = ({
 const Deck = ({
   deckOptions,
   imgRef: ref,
+  queryDeck,
 }: {
   deckOptions: Options;
   imgRef: RefObject<any>;
+  queryDeck?: string;
 }) => {
-  const [cards, setCards] = useState<any>([]);
+  const [cards, setCards] = useState<any[]>([]);
+  const [deck, setDeck] = useState<DisplayCard[]>([]);
 
   useEffect(() => {
     Promise.all([
@@ -121,11 +179,28 @@ const Deck = ({
       .catch((error) => console.error("Error loading cards:", error));
   }, []);
 
+  useEffect(() => {
+    if (
+      !queryDeck
+      // || queryDeck.length % 4 != 0
+    )
+      setDeck(getDeck(cards, deckOptions));
+    else {
+      const _deck: Record<string, any> = Object.fromEntries(
+        cards.map((c) => [c.id, c])
+      );
+
+      setDeck(
+        (cesarDecode(queryDeck).match(/.{1,4}/g) || [])
+          .map((id) => _deck[id] && new DisplayCard(_deck[id]))
+          .filter((a) => a)
+      );
+    }
+  }, [cards]);
+
   if (cards.length == 0) return <></>;
 
-  const cardsData = getDeck(cards, deckOptions);
-
-  const groupedData = categorizeData(cardsData);
+  const groupedData = categorizeData(deck);
 
   const saveAs = () => {
     const input = ref.current;
@@ -142,27 +217,63 @@ const Deck = ({
   };
 
   return (
-    <div style={{ padding: 40 }}>
-      <Button variant="contained" onClick={saveAs} style={{ marginBottom: 20 }}>
-        Download
-      </Button>
+    <Paper elevation={0}>
+      {queryDeck ? (
+        <></>
+      ) : (
+        <div style={{ marginBottom: 20 }}>
+          <Button
+            variant="contained"
+            onClick={() => setDeck(getDeck(cards, deckOptions))}
+            style={{ marginRight: 20 }}
+            endIcon={<Replay />}
+          >
+            Переделать
+          </Button>
+          <Button
+            variant="contained"
+            onClick={saveAs}
+            style={{ marginRight: 20 }}
+            endIcon={<Download />}
+          >
+            Скачать .png
+          </Button>
+          <Button
+            variant="contained"
+            onClick={() => {
+              navigator?.clipboard?.writeText(
+                `${window.location.protocol}//${
+                  window.location.host
+                }?deck=${cesarEncode(deck.map((c) => c.id).join(""))}`
+              );
+            }}
+            style={{ marginRight: 20 }}
+            endIcon={<LinkRounded />}
+          >
+            Копировать URL
+          </Button>
+        </div>
+      )}
       <div ref={ref}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
-            <CardsTable title="Doors" data={groupedData.DOOR} />
+            <CardsTable title="DOOR" data={groupedData.DOOR} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <CardsTable title="Treasures" data={groupedData.TREASURE} />
+            <CardsTable title="TREASURE" data={groupedData.TREASURE} />
           </Grid>
         </Grid>
       </div>
-    </div>
+    </Paper>
   );
 };
 
 export default function DeckSetup() {
   const [step, setStep] = useState(1);
   const [options, setOptions] = useState<Options>(initialOptions);
+
+  const router = useSearchParams();
+  const queryDeck = router.get("deck");
 
   const handleToggle = (key: keyof Options) => {
     setOptions((prev) => ({
@@ -195,7 +306,8 @@ export default function DeckSetup() {
 
   const ref = useRef(null);
 
-  if (step === 4) return <Deck deckOptions={options} imgRef={ref} />;
+  if (step === 4 || queryDeck)
+    return <Deck deckOptions={options} imgRef={ref} queryDeck={queryDeck} />;
 
   return (
     <Box sx={{ maxWidth: 500, mx: "auto", mt: 4, textAlign: "center" }}>
@@ -205,7 +317,7 @@ export default function DeckSetup() {
           <>
             {" "}
             <Typography variant="h6">
-              Select Game Options (recomended maximum 2)
+              Выберите опции игры (рекомендуется максимум 2)
             </Typography>
             <Grid container spacing={2} sx={{ mt: 2 }} textAlign={"left"}>
               {[
@@ -226,9 +338,7 @@ export default function DeckSetup() {
                         onChange={() => handleToggle(option as keyof Options)}
                       />
                     }
-                    label={(
-                      option.charAt(0).toUpperCase() + option.slice(1)
-                    ).replace("_", " ")}
+                    label={T[option]}
                   />
                 </Grid>
               ))}
@@ -243,7 +353,7 @@ export default function DeckSetup() {
               variant="h6"
               color={selectedClasses().length !== 4 ? "error" : "textPrimary"}
             >
-              Select exactly 4 classes ({selectedClasses().length}/4)
+              Выберите классы ({selectedClasses().length}/4)
             </Typography>
             <Grid container spacing={2} sx={{ mt: 2 }}>
               {["cler", "mage", "warrior", "thief", "ranger", "bard"].map(
@@ -261,7 +371,7 @@ export default function DeckSetup() {
                           } // Cleric always selected if undeads
                         />
                       }
-                      label={cls.charAt(0).toUpperCase() + cls.slice(1)}
+                      label={T[cls]}
                     />
                   </Grid>
                 )
@@ -276,7 +386,7 @@ export default function DeckSetup() {
               variant="h6"
               color={selectedRaces().length !== 4 ? "error" : "textPrimary"}
             >
-              Select exactly 4 races ({selectedRaces().length}/4)
+              Выберите расы ({selectedRaces().length}/4)
             </Typography>
             <Grid container spacing={2} sx={{ mt: 2 }}>
               {[
@@ -285,8 +395,8 @@ export default function DeckSetup() {
                 "gnome",
                 "elf",
                 "ork",
-                "kent",
                 "lizard",
+                "kent",
               ].map(
                 (race) =>
                   !(race === "kent" && !options.mounts) && (
@@ -298,7 +408,7 @@ export default function DeckSetup() {
                             onChange={() => handleToggle(race as keyof Options)}
                           />
                         }
-                        label={race.charAt(0).toUpperCase() + race.slice(1)}
+                        label={T[race]}
                         disabled={
                           !options[race as keyof Options] &&
                           selectedRaces().length == 4
