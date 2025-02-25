@@ -221,11 +221,11 @@ const Deck = ({
       {queryDeck ? (
         <></>
       ) : (
-        <div style={{ marginBottom: 20 }}>
+        <div style={{ textAlign: "right" }}>
           <Button
             variant="contained"
             onClick={() => setDeck(getDeck(cards, deckOptions))}
-            style={{ marginRight: 20 }}
+            style={{ marginRight: 20, marginBottom: 20, width: 200 }}
             endIcon={<Replay />}
           >
             Переделать
@@ -233,7 +233,7 @@ const Deck = ({
           <Button
             variant="contained"
             onClick={saveAs}
-            style={{ marginRight: 20 }}
+            style={{ marginRight: 20, marginBottom: 20, width: 200 }}
             endIcon={<Download />}
           >
             Скачать .png
@@ -247,7 +247,7 @@ const Deck = ({
                 }?deck=${cesarEncode(deck.map((c) => c.id).join(""))}`
               );
             }}
-            style={{ marginRight: 20 }}
+            style={{ marginRight: 20, marginBottom: 20, width: 200 }}
             endIcon={<LinkRounded />}
           >
             Копировать URL
@@ -355,7 +355,7 @@ export default function DeckSetup() {
             >
               Выберите классы ({selectedClasses().length}/4)
             </Typography>
-            <Grid container spacing={2} sx={{ mt: 2 }}>
+            <Grid container spacing={2} sx={{ mt: 2 }} textAlign={"left"}>
               {["cler", "mage", "warrior", "thief", "ranger", "bard"].map(
                 (cls) => (
                   <Grid item xs={6} key={cls}>
@@ -388,7 +388,7 @@ export default function DeckSetup() {
             >
               Выберите расы ({selectedRaces().length}/4)
             </Typography>
-            <Grid container spacing={2} sx={{ mt: 2 }}>
+            <Grid container spacing={2} sx={{ mt: 2 }} textAlign={"left"}>
               {[
                 "dward",
                 "hafling",
