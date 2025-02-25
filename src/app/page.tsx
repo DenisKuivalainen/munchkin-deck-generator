@@ -164,7 +164,7 @@ const Deck = ({
 }: {
   deckOptions: Options;
   imgRef: RefObject<any>;
-  queryDeck?: string;
+  queryDeck: string | null;
 }) => {
   const [cards, setCards] = useState<any[]>([]);
   const [deck, setDeck] = useState<DisplayCard[]>([]);
