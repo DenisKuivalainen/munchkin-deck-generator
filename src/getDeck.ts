@@ -369,6 +369,17 @@ export default (input: any[], options: Options) => {
       .flat();
   };
 
+  const getPortal = () => {
+    const n = deckSize["DOOR-PORTAL"];
+    let c = cards.filter(
+      (a) => a.cardType == "DOOR" && a.cardSubtype == "PORTAL"
+    );
+
+    const unique = [...new Map(c.map((item) => [item.name, item])).values()];
+
+    return getRandomElements(unique.length >= n ? unique : c, n);
+  };
+
   return [
     getCategory("DOOR-WALKING"),
     getCategory("DOOR-CHEAT"),
@@ -379,7 +390,7 @@ export default (input: any[], options: Options) => {
     getCategory("DOOR-COMMON"),
     getMonsterBoost(),
     getCategory("DOOR-CURSE"),
-    getCategory("DOOR-PORTAL"),
+    getPortal(),
     getPet(),
     getCategory("TREASURE-ONE_HAND"),
     getCategory("TREASURE-TWO_HANDS"),
