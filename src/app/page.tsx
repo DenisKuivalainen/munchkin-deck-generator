@@ -44,7 +44,7 @@ const initialOptions: Options = {
 };
 
 const categorizeData = (data: DisplayCard[]) => {
-  const grouped = { DOOR: {}, TREASURE: {} };
+  const grouped: Record<string, any> = { DOOR: {} as any, TREASURE: {} as any };
 
   data.forEach((card) => {
     const { cardType, cardSubtype, id, name, level } = card;
