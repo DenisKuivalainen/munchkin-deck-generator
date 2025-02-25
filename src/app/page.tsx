@@ -330,7 +330,7 @@ export default function DeckSetup() {
                 "sharper_weapons",
                 "extended_deck",
               ].map((option) => (
-                <Grid item xs={4} key={option}>
+                <Grid item xs={6} key={option}>
                   <FormControlLabel
                     control={
                       <Checkbox
