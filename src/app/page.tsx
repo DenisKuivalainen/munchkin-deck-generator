@@ -17,7 +17,6 @@ import {
 } from "@mui/material";
 import { DisplayCard, Options } from "@/types";
 import getDeck from "@/getDeck";
-import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 
 const initialOptions: Options = {
