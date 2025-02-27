@@ -217,7 +217,7 @@ const Deck = ({
   };
 
   return (
-    <Paper elevation={0}>
+    <Paper elevation={0} style={{ padding: 20 }}>
       {queryDeck ? (
         <></>
       ) : (
@@ -310,7 +310,15 @@ export default function DeckSetup() {
     return <Deck deckOptions={options} imgRef={ref} queryDeck={queryDeck} />;
 
   return (
-    <Box sx={{ maxWidth: 500, mx: "auto", mt: 4, textAlign: "center" }}>
+    <Box
+      sx={{
+        maxWidth: 500,
+        mx: "auto",
+        mt: 4,
+        textAlign: "center",
+      }}
+      style={{ padding: 20 }}
+    >
       <Box style={{ height: 500 }}>
         {/* Step 1: Select Game Options */}
         {step === 1 && (
