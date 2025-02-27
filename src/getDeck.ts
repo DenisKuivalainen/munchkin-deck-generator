@@ -110,6 +110,7 @@ export default (input: any[], options: Options) => {
 
   const cards = input
     .map((i) => new Card(i))
+    .filter((c) => !c.unused)
     .filter((c) =>
       Object.entries(filters)
         .map((a) =>
@@ -316,7 +317,7 @@ export default (input: any[], options: Options) => {
       S: [20],
     };
 
-    return Object.entries(
+    const res = Object.entries(
       options.stronger_monsters
         ? {
             F: 0,
@@ -367,6 +368,12 @@ export default (input: any[], options: Options) => {
         ]);
       })
       .flat();
+
+    return (
+      sortById(res)
+        // TODO: remove when all card will be numerated
+        .sort((a, b) => a.level - b.level)
+    );
   };
 
   const getPortal = () => {

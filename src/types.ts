@@ -332,6 +332,7 @@ export class Card {
 
   isHireling: boolean;
   isMount: boolean;
+  unused: boolean;
 
   constructor(d: any) {
     this.id = d.id;
@@ -340,7 +341,7 @@ export class Card {
     this.name = d.name;
     this.isBase = d.isBase;
 
-    this.level = d.level ?? 0;
+    this.level = parseInt(d.level ?? 0);
 
     this.undeadRelated = d.undeadRelated ?? false;
     this.mountRelated = (d.mountRelated || d.isMount) ?? false;
@@ -366,6 +367,9 @@ export class Card {
 
     this.isHireling = d.isHireling ?? false;
     this.isMount = d.isMount ?? false;
+
+    // if card is temporary removed from deck generation
+    this.unused = d.unused ?? false;
   }
 }
 
