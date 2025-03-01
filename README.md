@@ -1,3 +1,5 @@
+Disclaimer: this is my very own project, that I need for my personal use. The code is crap, but it works. Mb I will refactor it one day, but I do not think so :) Please do not judge my programming skills based on this XD There are some other open repos that you can check. Thank you!
+
 My personal munchkin deck generator.
 [https://my-munchkin-deck.vercel.app/](url)
 
