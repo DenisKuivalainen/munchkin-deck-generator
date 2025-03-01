@@ -1,5 +1,5 @@
-const key = "MUNCHKIN"; // Secret key
-const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; // 36 allowed characters
+const key = "MUNCHKIN";
+const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
 export function cesarEncode(input: string): string {
   let output: string[] = [];

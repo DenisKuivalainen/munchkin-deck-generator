@@ -27,6 +27,6 @@ export async function POST(req: any) {
 
     return Response.json({ message: "Data received", receivedData: body });
   } catch (error) {
-    return Response.json({ error: "Invalid JSON" }, { status: 400 });
+    return Response.json({ error }, { status: 500 });
   }
 }

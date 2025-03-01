@@ -7874,6 +7874,7 @@
     "classModifier": false,
     "raceModifier": false,
     "isHireling": false,
+    "withEffect": true,
     "isMount": false
   },
   {
@@ -8210,6 +8211,7 @@
     "classModifier": false,
     "raceModifier": false,
     "isHireling": false,
+    "withEffect": true,
     "isMount": false
   },
   {
@@ -8238,6 +8240,7 @@
     "classModifier": false,
     "raceModifier": false,
     "isHireling": false,
+    "withEffect": true,
     "isMount": false
   },
   {
@@ -8294,6 +8297,7 @@
     "classModifier": false,
     "raceModifier": false,
     "isHireling": false,
+    "withEffect": true,
     "isMount": false
   },
   {
@@ -8434,6 +8438,7 @@
     "classModifier": false,
     "raceModifier": false,
     "isHireling": false,
+    "withEffect": true,
     "isMount": false
   },
   {
@@ -8462,6 +8467,7 @@
     "classModifier": false,
     "raceModifier": false,
     "isHireling": false,
+    "withEffect": true,
     "isMount": false
   },
   {
@@ -8490,6 +8496,7 @@
     "classModifier": false,
     "raceModifier": false,
     "isHireling": false,
+    "withEffect": true,
     "isMount": false
   },
   {
@@ -8518,6 +8525,7 @@
     "classModifier": false,
     "raceModifier": false,
     "isHireling": false,
+    "withEffect": true,
     "isMount": false
   },
   {
@@ -8574,6 +8582,7 @@
     "classModifier": false,
     "raceModifier": false,
     "isHireling": false,
+    "withEffect": true,
     "isMount": false
   },
   {
@@ -8630,6 +8639,7 @@
     "classModifier": false,
     "raceModifier": false,
     "isHireling": false,
+    "withEffect": true,
     "isMount": false
   },
   {
@@ -8742,6 +8752,7 @@
     "classModifier": false,
     "raceModifier": false,
     "isHireling": false,
+    "withEffect": true,
     "isMount": false
   },
   {
@@ -8770,6 +8781,7 @@
     "classModifier": false,
     "raceModifier": false,
     "isHireling": false,
+    "withEffect": true,
     "isMount": false
   },
   {
@@ -8910,6 +8922,7 @@
     "classModifier": false,
     "raceModifier": false,
     "isHireling": false,
+    "withEffect": true,
     "isMount": false
   },
   {
@@ -8966,6 +8979,7 @@
     "classModifier": false,
     "raceModifier": false,
     "isHireling": false,
+    "withEffect": true,
     "isMount": false
   },
   {
@@ -8994,6 +9008,7 @@
     "classModifier": false,
     "raceModifier": false,
     "isHireling": false,
+    "withEffect": true,
     "isMount": false
   },
   {

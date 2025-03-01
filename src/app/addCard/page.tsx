@@ -15,6 +15,17 @@ import {
   TextField,
 } from "@mui/material";
 
+const getCardSubtypes = (type: string) => {
+  switch (type) {
+    case "DOOR":
+      return;
+    case "TREASURE":
+      return;
+    default:
+      return [];
+  }
+};
+
 export default () => {
   const [formData, setFormData] = useState<
     Record<string, string | number | boolean>
@@ -43,6 +54,7 @@ export default () => {
     raceModifier: false,
     isHireling: false,
     isMount: false,
+    withEffect: false,
     unused: false,
   });
 
@@ -252,10 +264,17 @@ export default () => {
           <Divider />
           <Grid container style={{ marginBottom: 20 }} key="sdfsdf">
             {[
-              "classModifier",
-              "raceModifier",
-              "isHireling",
-              "isMount",
+              ...(formData.cardType === "DOOR" &&
+              formData.cardSubtype === "MODIFIER"
+                ? ["classModifier", "raceModifier"]
+                : []),
+              ...(formData.cardType === "DOOR" && formData.cardSubtype === "PET"
+                ? ["isHireling", "isMount"]
+                : []),
+              ...(formData.cardType === "TREASURE" &&
+              formData.cardSubtype === "GAIN_LVL"
+                ? ["withEffect"]
+                : []),
               "unused",
             ].map((key) => (
               <Grid item xs={4} key={key}>

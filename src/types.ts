@@ -1,304 +1,3 @@
-export type DOOR_WALKING = {
-  cardType: "DOOR";
-  cardSubtype: "WALKING";
-  name: string;
-  isBase: boolean;
-};
-
-export type DOOR_CHEAT = {
-  cardType: "DOOR";
-  cardSubtype: "CHEAT";
-  name: "Чит";
-  isBase: boolean;
-};
-
-export type DOOR_PORTAL = {
-  cardType: "DOOR";
-  cardSubtype: "PORTAL";
-  name: string;
-  isBase: false;
-  undeadRelated: boolean;
-  dwarfRelated: boolean;
-  haflingRelated: boolean;
-  gnomeRelated: boolean;
-};
-
-export type DOOR_RACE = {
-  cardType: "DOOR";
-  cardSubtype: "RACE";
-  name: string;
-  isBase: boolean;
-  mountRelated: boolean;
-};
-
-export type DOOR_CLASS = {
-  cardType: "DOOR";
-  cardSubtype: "CLASS";
-  name: string;
-  isBase: boolean;
-  undeadRelated: boolean;
-  mountRelated: boolean;
-};
-
-export type DOOR_MODIFIER = {
-  cardType: "DOOR";
-  cardSubtype: "MODIFIER";
-  name: string;
-  isBase: boolean;
-  classModifier: boolean;
-  raceModifier: boolean;
-};
-
-export type DOOR_PET = {
-  cardType: "DOOR";
-  cardSubtype: "PET";
-  name: string;
-  isBase: boolean;
-  isHireling: boolean;
-  isMount: boolean;
-};
-
-export type DOOR_MONSTER = {
-  cardType: "DOOR";
-  cardSubtype: "MONSTER";
-  name: string;
-  isBase: boolean;
-
-  level: number;
-
-  undeadRelated: boolean;
-  hirelingRelated: boolean;
-  mountRelated: boolean;
-
-  clerRelated: boolean;
-  thiefRelated: boolean;
-  warriorRelated: boolean;
-  mageRelated: boolean;
-  rangerRelated: boolean;
-  bardRelated: boolean;
-
-  dwarfRelated: boolean;
-  haflingRelated: boolean;
-  gnomeRelated: boolean;
-  orkRelated: boolean;
-  elfRelated: boolean;
-  kentRelated: boolean;
-  lizardRelated: boolean;
-};
-
-export type DOOR_COMMON = {
-  cardType: "DOOR";
-  cardSubtype: "COMMON";
-  name: string;
-  isBase: boolean;
-
-  undeadRelated: boolean;
-  hirelingRelated: boolean;
-  mountRelated: boolean;
-
-  clerRelated: boolean;
-  thiefRelated: boolean;
-  warriorRelated: boolean;
-  mageRelated: boolean;
-  rangerRelated: boolean;
-  bardRelated: boolean;
-
-  dwarfRelated: boolean;
-  haflingRelated: boolean;
-  gnomeRelated: boolean;
-  orkRelated: boolean;
-  elfRelated: boolean;
-  kentRelated: boolean;
-  lizardRelated: boolean;
-};
-
-export type DOOR_MONSTER_BOOST = {
-  cardType: "DOOR";
-  cardSubtype: "MONSTER_BOOST";
-  name: string;
-  isBase: boolean;
-
-  undeadRelated: boolean;
-  hirelingRelated: boolean;
-  mountRelated: boolean;
-
-  clerRelated: boolean;
-  thiefRelated: boolean;
-  warriorRelated: boolean;
-  mageRelated: boolean;
-  rangerRelated: boolean;
-  bardRelated: boolean;
-
-  dwarfRelated: boolean;
-  haflingRelated: boolean;
-  gnomeRelated: boolean;
-  orkRelated: boolean;
-  elfRelated: boolean;
-  kentRelated: boolean;
-  lizardRelated: boolean;
-};
-
-export type DOOR_CURSE = {
-  cardType: "DOOR";
-  cardSubtype: "CURSE";
-  name: string;
-  isBase: boolean;
-
-  undeadRelated: boolean;
-  hirelingRelated: boolean;
-  mountRelated: boolean;
-
-  clerRelated: boolean;
-  thiefRelated: boolean;
-  warriorRelated: boolean;
-  mageRelated: boolean;
-  rangerRelated: boolean;
-  bardRelated: boolean;
-
-  dwarfRelated: boolean;
-  haflingRelated: boolean;
-  gnomeRelated: boolean;
-  orkRelated: boolean;
-  elfRelated: boolean;
-  kentRelated: boolean;
-  lizardRelated: boolean;
-};
-
-export type DOOR = {
-  cardType: "DOOR";
-  cardSubtype:
-    | "WALKING"
-    | "CHEAT"
-    | "PORTAL"
-    | "RACE"
-    | "CLASS"
-    | "MODIFIER"
-    | "PET"
-    | "MONSTER"
-    | "COMMON"
-    | "MONSTER_BOOST"
-    | "CURSE";
-  name: string;
-  isBase: boolean;
-
-  level?: number;
-
-  undeadRelated?: boolean;
-  hirelingRelated?: boolean;
-  mountRelated?: boolean;
-
-  clerRelated?: boolean;
-  thiefRelated?: boolean;
-  warriorRelated?: boolean;
-  mageRelated?: boolean;
-  rangerRelated?: boolean;
-  bardRelated?: boolean;
-
-  dwarfRelated?: boolean;
-  haflingRelated?: boolean;
-  gnomeRelated?: boolean;
-  orkRelated?: boolean;
-  elfRelated?: boolean;
-  kentRelated?: boolean;
-  lizardRelated?: boolean;
-
-  classModifier?: boolean;
-  raceModifier?: boolean;
-
-  isHireling?: boolean;
-  isMount?: boolean;
-};
-
-export class Door {
-  cardType = "DOOR";
-  cardSubtype: DOOR["cardSubtype"];
-  name: string;
-  isBase: boolean;
-
-  undeadRelated: boolean = false;
-  mountRelated: boolean = false;
-
-  dwarfRelated: boolean = false;
-  haflingRelated: boolean = false;
-  gnomeRelated: boolean = false;
-  orkRelated: boolean = false;
-  elfRelated: boolean = false;
-  kentRelated: boolean = false;
-  lizardRelated: boolean = false;
-
-  classModifier: boolean = false;
-  raceModifier: boolean = false;
-
-  isHireling: boolean = false;
-  isMount: boolean = false;
-
-  constructor(d: DOOR) {
-    this.cardSubtype = d.cardSubtype;
-    this.name = d.name;
-    this.isBase = d.isBase;
-
-    this.undeadRelated = d.undeadRelated ?? false;
-    this.mountRelated = d.mountRelated ?? false;
-
-    this.dwarfRelated = d.dwarfRelated ?? false;
-    this.haflingRelated = d.haflingRelated ?? false;
-    this.gnomeRelated = d.gnomeRelated ?? false;
-    this.orkRelated = d.orkRelated ?? false;
-    this.elfRelated = d.elfRelated ?? false;
-    this.kentRelated = d.kentRelated ?? false;
-    this.lizardRelated = d.lizardRelated ?? false;
-
-    this.classModifier = d.classModifier ?? false;
-    this.raceModifier = d.raceModifier ?? false;
-
-    this.isHireling = d.isHireling ?? false;
-    this.isMount = d.isMount ?? false;
-  }
-}
-
-export type CARD = DOOR | TREASURE;
-
-export type TREASURE = {
-  cardType: "TREASURE";
-  cardSubtype:
-    | "ONE_HAND"
-    | "TWO_HANDS"
-    | "HAT"
-    | "BODY"
-    | "BOOTS"
-    | "OTHER"
-    | "ONE_TIME"
-    | "DICE"
-    | "RING"
-    | "GAIN_LVL"
-    | "FREE"
-    | "MOUNT_BOOST"
-    | "HIRELING_BOOST"
-    | "GEAR_BOOST"
-    | "HIRELING";
-  name: string;
-  isBase: boolean;
-
-  undeadRelated: boolean;
-  hirelingRelated: boolean;
-  mountRelated: boolean;
-
-  clerRelated: boolean;
-  thiefRelated: boolean;
-  warriorRelated: boolean;
-  mageRelated: boolean;
-  rangerRelated: boolean;
-  bardRelated: boolean;
-
-  dwarfRelated: boolean;
-  haflingRelated: boolean;
-  gnomeRelated: boolean;
-  orkRelated: boolean;
-  elfRelated: boolean;
-  kentRelated: boolean;
-  lizardRelated: boolean;
-};
-
 export class Card {
   id: string;
   cardType: string;
@@ -332,6 +31,9 @@ export class Card {
 
   isHireling: boolean;
   isMount: boolean;
+
+  withEffect: boolean;
+
   unused: boolean;
 
   constructor(d: any) {
@@ -362,11 +64,16 @@ export class Card {
     this.kentRelated = d.kentRelated ?? false;
     this.lizardRelated = d.lizardRelated ?? false;
 
+    // Only for DOOR MODIFIER
     this.classModifier = d.classModifier ?? false;
     this.raceModifier = d.raceModifier ?? false;
 
+    // Only for DOOR PET
     this.isHireling = d.isHireling ?? false;
     this.isMount = d.isMount ?? false;
+
+    // Only for TREASURE GAIN_LVL
+    this.withEffect = d.withEffect ?? false;
 
     // if card is temporary removed from deck generation
     this.unused = d.unused ?? false;
@@ -412,3 +119,36 @@ export class DisplayCard {
     this.name = c.name;
   }
 }
+
+export const DECK_CARD_TYPES = [
+  "DOOR-WALKING",
+  "DOOR-CHEAT",
+  "DOOR-RACE",
+  "DOOR-CLASS",
+  "DOOR-MODIFIER",
+  "DOOR-MONSTER",
+  "DOOR-COMMON",
+  "DOOR-MONSTER_BOOST",
+  "DOOR-CURSE",
+  "DOOR-PORTAL",
+  "DOOR-PET",
+  "TREASURE-ONE_HAND",
+  "TREASURE-TWO_HANDS",
+  "TREASURE-BOOTS",
+  "TREASURE-BODY",
+  "TREASURE-HAT",
+  "TREASURE-OTHER",
+  "TREASURE-RING",
+  "TREASURE-DICE",
+  "TREASURE-FREE",
+  "TREASURE-ONE_TIME",
+  "TREASURE-GAIN_LVL",
+  "TREASURE-HIRELING_BOOST",
+  "TREASURE-HIRELING",
+  "TREASURE-MOUNT_BOOST",
+  "TREASURE-GEAR_BOOST",
+] as const;
+
+export type DeckCardType = (typeof DECK_CARD_TYPES)[number];
+
+export type DeckSize = Record<DeckCardType, number>;
