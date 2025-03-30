@@ -103,11 +103,8 @@ export default ({
   const cardListRef = useRef(null);
 
   useEffect(() => {
-    Promise.all([
-      fetch("/DOORS.json").then((response) => response.json()),
-      fetch("/TREASURES.json").then((response) => response.json()),
-    ])
-      .then((res) => res.flat() as any[])
+    fetch("/CARDS.json")
+      .then((response) => response.json())
       .then((data) => setCards(data));
   }, []);
 

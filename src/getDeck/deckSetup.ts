@@ -64,7 +64,7 @@ const getDeckSize = (cards: Card[], options: Options): DeckSize => {
   const doorsIncrease = countIncrease("DOOR");
   const treasuresIncrease = countIncrease("TREASURE");
 
-  return Object.fromEntries(
+  const deckSize = Object.fromEntries(
     (Object.entries(deck) as [DeckCardType, number][]).map(([k, v]) => {
       if (modificationCategories.some((c) => c == k))
         return [k, Math.ceil(options.extended_deck ? 1.5 * v : v)];
@@ -87,6 +87,38 @@ const getDeckSize = (cards: Card[], options: Options): DeckSize => {
       return [k, getMaxCardsNumber(k, _v)];
     })
   ) as DeckSize;
+
+  const balanceDeckSize = () => {
+    let deckSizeCopy = Object.assign({}, deckSize);
+
+    const doorsCount = Object.entries(deckSizeCopy)
+      .filter(([key]) => key.startsWith("DOOR"))
+      .reduce((sum, [k, value]) => sum + value, 0);
+
+    const curses = deckSizeCopy["DOOR-CURSE"],
+      monsters = deckSizeCopy["DOOR-MONSTER"];
+
+    let c = 0,
+      m = 0;
+
+    while (true) {
+      const cLess =
+        Math.floor(((curses + c) / (doorsCount + c + m)) * 100) / 100 < 0.19;
+      const mLess =
+        Math.floor(((monsters + m) / (doorsCount + c + m)) * 100) / 100 < 0.38;
+
+      if (!cLess && !mLess) break;
+      if (cLess) c++;
+      if (mLess) m++;
+    }
+
+    deckSizeCopy["DOOR-MONSTER"] = monsters + m;
+    deckSizeCopy["DOOR-CURSE"] = curses + c;
+
+    return deckSizeCopy;
+  };
+
+  return balanceDeckSize();
 };
 
 const filterInput = (input: any[], options: Options) =>

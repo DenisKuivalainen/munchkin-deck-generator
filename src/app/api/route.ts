@@ -1,23 +1,45 @@
 import { Card } from "@/types";
 import fs from "fs";
 
+const getIdPrefix = (c: any) => {
+  let subtype = "";
+
+  if (c.cardSubtype.includes("_")) {
+    let parts = c.cardSubtype.split("_");
+    subtype = parts[0].slice(0, 2) + parts[1].slice(0, 1);
+  } else {
+    subtype = c.cardSubtype.slice(0, 3);
+  }
+
+  return `${c.cardType.slice(0, 1)}${subtype}`;
+};
+
+const getId = (card: any, cards: any[]) => {
+  const idPrefix = getIdPrefix(card);
+  const idNumber =
+    card.cardType == "DOOR" && card.cardSubtype == "MONSTER"
+      ? cards.filter((c) => c.id.startsWith(idPrefix) && c.level == card.level)
+          .length +
+        1 +
+        (card.level - 1) * 50
+      : cards.filter((c) => c.id.startsWith(idPrefix)).length + 1;
+
+  return `${idPrefix}_${idNumber.toString().padStart(3, "0")}`;
+};
+
 export async function POST(req: any) {
   try {
-    const body = await req.json();
-    const json = JSON.parse(
-      fs.readFileSync(`public/${body.cardType}S.json`).toString()
-    );
+    const card = await req.json();
+    const cards = JSON.parse(fs.readFileSync(`public/CARDS.json`).toString());
 
     fs.writeFileSync(
-      `public/${body.cardType}S.json`,
+      `public/CARDS.json`,
       JSON.stringify(
         [
-          ...json,
+          ...cards,
           new Card({
-            ...body,
-            id: `${body.cardType.slice(0, 1)}${(json.length + 1)
-              .toString()
-              .padStart(3, "0")}`,
+            ...card,
+            id: getId(card, cards),
           }),
         ],
         null,
@@ -25,7 +47,7 @@ export async function POST(req: any) {
       )
     );
 
-    return Response.json({ message: "Data received", receivedData: body });
+    return Response.json({ message: "Data received", receivedData: card });
   } catch (error) {
     return Response.json({ error }, { status: 500 });
   }

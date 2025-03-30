@@ -7,10 +7,10 @@ const gameOptions = [
   "hirelings",
   "ultramanchkins",
   "dungeons",
-  "undeads",
-  "stronger_monsters",
+  // "undeads",
+  // "stronger_monsters",
   "sharper_weapons",
-  "extended_deck",
+  // "extended_deck",
 ];
 
 export default ({

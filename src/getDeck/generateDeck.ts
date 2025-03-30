@@ -19,7 +19,7 @@ export class GenerateDeck {
   }
 
   private sortById = (arr: Card[]) =>
-    arr.sort((a, b) => (a.id > b.id ? 1 : -1));
+    arr.sort((a, b) => Number(a.id.split("_")[1]) - Number(b.id.split("_")[1]));
 
   private getRandomCards = (arr: Card[], n: number) => {
     if (!arr.length) return arr;
@@ -93,9 +93,10 @@ export class GenerateDeck {
 
   private getClassRaceModifiers = () => {
     if (!this.options.ultramanchkins)
-      return this.cards.filter((a) =>
-        ["D155", "D156", "D173", "D174"].some((x) => x == a.id)
-      );
+      return [
+        ...this.cards.filter((a) => a.name === "Полукровка").slice(0, 2),
+        ...this.cards.filter((a) => a.name === "Суперманчкин").slice(0, 2),
+      ];
 
     const n = this.deckSize["DOOR-MODIFIER"];
     const c = this.cards.filter(
@@ -121,7 +122,10 @@ export class GenerateDeck {
   private getMonsterBoost = () => {
     if (!this.options.undeads) return this.getCategory("DOOR-MONSTER_BOOST");
 
-    const undeads = ["D427", "D428"];
+    const undeads = this.cards
+      .filter((a) => a.name === "Андед")
+      .slice(0, 2)
+      .map((c) => c.id);
     const n = this.deckSize["DOOR-MONSTER_BOOST"];
     const c = this.cards.filter(
       (a) => a.cardType == "DOOR" && a.cardSubtype == "MONSTER_BOOST"
@@ -212,35 +216,56 @@ export class GenerateDeck {
       S: [20],
     };
 
-    const res = Object.entries(
-      this.options.stronger_monsters
-        ? {
-            F: 0,
-            E: 0,
-            D: 14,
-            C: 12,
-            B: 6,
-            A: 4,
-            S: 2,
-          }
-        : {
-            F: 10,
-            E: 8,
-            D: 7,
-            C: 6,
-            B: 3,
-            A: 2,
-            S: 1,
-          }
-    )
-      .map(
-        ([k, v]) =>
-          // Something strange happens on this line, but it work absolutely correct for some reason
-          [k, (v * n) / (this.options.stronger_monsters ? 38 : 37)] as [
-            keyof typeof monster_grades,
-            number
-          ]
-      )
+    const monsterGradesIncrease = {
+      F: 1,
+      E: 2,
+      D: 2,
+      C: 2,
+      B: 2,
+      A: 1,
+      S: 1,
+    };
+
+    let monstersByGradeCount = this.options.stronger_monsters
+      ? {
+          F: 0,
+          E: 0,
+          D: 14,
+          C: 12,
+          B: 6,
+          A: 4,
+          S: 2,
+        }
+      : {
+          F: 10,
+          E: 8,
+          D: 7,
+          C: 6,
+          B: 3,
+          A: 2,
+          S: 1,
+        };
+
+    while (true) {
+      const m = Object.entries(monstersByGradeCount)
+        .map(([k, v]) => [k, v] as [keyof typeof monster_grades, number])
+        .filter(([k, v]) => v > 0);
+      let mDif = n - m.reduce((sum, [k, v]) => sum + v, 0);
+
+      for (const [k, v] of m) {
+        const increase =
+          monsterGradesIncrease[k] <= mDif ? monsterGradesIncrease[k] : mDif;
+
+        monstersByGradeCount[k] = v + increase;
+        mDif -= increase;
+        if (mDif == 0) break;
+      }
+
+      if (mDif == 0) break;
+    }
+
+    const res = Object.entries(monstersByGradeCount)
+      .map(([k, v]) => [k, v] as [keyof typeof monster_grades, number])
       .map(([k, v]) => {
         const _c = c.filter((o) => monster_grades[k].some((a) => a == o.level));
 
