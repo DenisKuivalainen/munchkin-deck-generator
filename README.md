@@ -14,3 +14,8 @@ Included sets:
 - Munchkin 8: Half Horse, Will Travel
 - Munchkin Party Pack
 - Munchkin Puppies
+
+TODO:
+- Add a parameter to each card indicating a set the card belongs to
+- Add english names for cards
+  
