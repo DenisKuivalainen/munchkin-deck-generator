@@ -7,24 +7,11 @@ import {
   CardContent,
   Checkbox,
   Divider,
-  FormControl,
   FormControlLabel,
   Grid,
   MenuItem,
-  Select,
   TextField,
 } from "@mui/material";
-
-const getCardSubtypes = (type: string) => {
-  switch (type) {
-    case "DOOR":
-      return;
-    case "TREASURE":
-      return;
-    default:
-      return [];
-  }
-};
 
 export default () => {
   const [formData, setFormData] = useState<
@@ -68,7 +55,7 @@ export default () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    fetch("/api", {
+    fetch("/api/addCard", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),

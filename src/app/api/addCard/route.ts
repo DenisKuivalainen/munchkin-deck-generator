@@ -1,3 +1,5 @@
+"use server";
+
 import { Card } from "@/types";
 import fs from "fs";
 

@@ -8,3 +8,8 @@
 
 - Added card search
 - Remmove development only page from build
+
+##### 1.2.2
+
+- Server refactoring
+- Added telegrab bot webhook
