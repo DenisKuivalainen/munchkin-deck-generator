@@ -44,6 +44,16 @@ export default () => {
           </TableHead>
           <TableBody>
             {cards
+              .sort((a, b) => {
+                const [prefixA, numA] = a.id.split("_");
+                const [prefixB, numB] = b.id.split("_");
+
+                if (prefixA === prefixB) {
+                  return Number(numA) - Number(numB);
+                }
+
+                return prefixA.localeCompare(prefixB);
+              })
               .filter(
                 (c) =>
                   c.name.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
