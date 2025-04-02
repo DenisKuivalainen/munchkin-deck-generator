@@ -158,7 +158,7 @@ export default ({
 }) => {
   const [cards, setCards] = useState<any[]>([]);
   const [deck, setDeck] = useState<DisplayCard[]>([]);
-  const cardListRef = useRef(null);
+  const cardListRef = useRef(null) as any;
 
   useEffect(() => {
     fetch("/CARDS.json")
