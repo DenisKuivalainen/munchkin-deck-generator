@@ -84,40 +84,44 @@ const CardsTable = ({
         </TableRow>
       </TableHead>
       <TableBody>
-        {Object.entries(data).map(([subtype, cards]) => (
-          <Fragment key={subtype}>
-            <TableRow>
-              <TableCell
-                colSpan={2}
-                sx={{
-                  backgroundColor: "#f0f0f0",
-                  fontWeight: "bold",
-                  justifyContent: "space-between",
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  <a>
-                    {T(`${title}-${subtype}`)} {`(${cards.length})`}
-                  </a>
-                  <IconButton
-                    size="small"
-                    style={{ marginLeft: "auto" }}
-                    id="TableCategoryReload"
-                    onClick={() => reloadCategory(title, subtype)}
-                  >
-                    <Replay />
-                  </IconButton>
-                </div>
-              </TableCell>
-            </TableRow>
-            {cards.map(({ id, name }) => (
-              <TableRow key={id}>
-                <TableCell>{id}</TableCell>
-                <TableCell>{name}</TableCell>
+        {Object.entries(data).map(([subtype, cards]) =>
+          cards.length ? (
+            <Fragment key={subtype}>
+              <TableRow>
+                <TableCell
+                  colSpan={2}
+                  sx={{
+                    backgroundColor: "#f0f0f0",
+                    fontWeight: "bold",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <a>
+                      {T(`${title}-${subtype}`)} {`(${cards.length})`}
+                    </a>
+                    <IconButton
+                      size="small"
+                      style={{ marginLeft: "auto" }}
+                      id="TableCategoryReload"
+                      onClick={() => reloadCategory(title, subtype)}
+                    >
+                      <Replay />
+                    </IconButton>
+                  </div>
+                </TableCell>
               </TableRow>
-            ))}
-          </Fragment>
-        ))}
+              {cards.map(({ id, name }) => (
+                <TableRow key={id}>
+                  <TableCell>{id}</TableCell>
+                  <TableCell>{name}</TableCell>
+                </TableRow>
+              ))}
+            </Fragment>
+          ) : (
+            <></>
+          )
+        )}
       </TableBody>
     </Table>
   </TableContainer>
