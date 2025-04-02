@@ -32,7 +32,7 @@ const getDeckSize = (cards: Card[], options: Options): DeckSize => {
     "DOOR-PET": (options.mounts ? 5 : 0) + (options.hirelings ? 5 : 0),
     "TREASURE-ONE_HAND": 12,
     "TREASURE-TWO_HANDS": 5,
-    "TREASURE-BOOTS": 4,
+    "TREASURE-BOOTS": options.kent ? 5 : 4,
     "TREASURE-BODY": 5,
     "TREASURE-HAT": 4,
     "TREASURE-OTHER": 7,

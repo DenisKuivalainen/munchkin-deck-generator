@@ -1,11 +1,12 @@
 import { cesarDecode, cesarEncode } from "@/coder";
 import getDeck from "@/getDeck";
 import { T } from "@/translations";
-import { DisplayCard, Options } from "@/types";
+import { DECK_CARD_TYPES, DisplayCard, Options } from "@/types";
 import { Download, LinkRounded, Replay } from "@mui/icons-material";
 import {
   Button,
   Grid,
+  IconButton,
   Paper,
   Table,
   TableBody,
@@ -19,15 +20,42 @@ import html2canvas from "html2canvas";
 import { Fragment, RefObject, useEffect, useRef, useState } from "react";
 
 const categorizeData = (data: DisplayCard[]) => {
-  const grouped: Record<string, any> = { DOOR: {} as any, TREASURE: {} as any };
+  const grouped: Record<string, any> = {
+    DOOR: {
+      RACE: [],
+      CLASS: [],
+      MODIFIER: [],
+      MONSTER: [],
+      MONSTER_BOOST: [],
+      WALKING: [],
+      CURSE: [],
+      COMMON: [],
+      CHEAT: [],
+      PORTAL: [],
+      PET: [],
+    } as any,
+    TREASURE: {
+      ONE_HAND: [],
+      TWO_HANDS: [],
+      BOOTS: [],
+      BODY: [],
+      HAT: [],
+      OTHER: [],
+      FREE: [],
+      RING: [],
+      DICE: [],
+      ONE_TIME: [],
+      GAIN_LVL: [],
+      HIRELING: [],
+      HIRELING_BOOST: [],
+      MOUNT_BOOST: [],
+      GEAR_BOOST: [],
+    },
+  };
 
   data.forEach((card) => {
     const { cardType, cardSubtype, id, name, level } = card;
     const displayName = level > 0 ? `Уровень ${level} - ${name}` : name;
-
-    if (!grouped[cardType][cardSubtype]) {
-      grouped[cardType][cardSubtype] = [];
-    }
 
     grouped[cardType][cardSubtype].push({ id, name: displayName });
   });
@@ -38,9 +66,11 @@ const categorizeData = (data: DisplayCard[]) => {
 const CardsTable = ({
   title,
   data,
+  reloadCategory,
 }: {
   title: string;
   data: Record<string, DisplayCard[]>;
+  reloadCategory: (type: string, subType: string) => void;
 }) => (
   <TableContainer component={Paper} sx={{ marginBottom: 4 }}>
     <Typography variant="h6" sx={{ padding: 2 }}>
@@ -59,9 +89,25 @@ const CardsTable = ({
             <TableRow>
               <TableCell
                 colSpan={2}
-                sx={{ backgroundColor: "#f0f0f0", fontWeight: "bold" }}
+                sx={{
+                  backgroundColor: "#f0f0f0",
+                  fontWeight: "bold",
+                  justifyContent: "space-between",
+                }}
               >
-                {T(`${title}-${subtype}`)} {`(${cards.length})`}
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <a>
+                    {T(`${title}-${subtype}`)} {`(${cards.length})`}
+                  </a>
+                  <IconButton
+                    size="small"
+                    style={{ marginLeft: "auto" }}
+                    id="TableCategoryReload"
+                    onClick={() => reloadCategory(title, subtype)}
+                  >
+                    <Replay />
+                  </IconButton>
+                </div>
               </TableCell>
             </TableRow>
             {cards.map(({ id, name }) => (
@@ -77,9 +123,17 @@ const CardsTable = ({
   </TableContainer>
 );
 
-const saveAs = (ref: RefObject<any>) => {
+const saveAs = async (ref: RefObject<HTMLElement>) => {
   const input = ref.current;
-  html2canvas(input as any, { scale: 2 }).then((canvas) => {
+  if (!input) return;
+
+  var buttons = document.querySelectorAll("#TableCategoryReload");
+
+  buttons.forEach((button) => {
+    (button as any).style.display = "none";
+  });
+
+  await html2canvas(input, { scale: 2 }).then((canvas) => {
     const imgData = canvas.toDataURL("image/png");
 
     const link = document.createElement("a");
@@ -88,6 +142,10 @@ const saveAs = (ref: RefObject<any>) => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  });
+
+  buttons.forEach((button) => {
+    (button as any).style.removeProperty("display");
   });
 };
 
@@ -109,19 +167,33 @@ export default ({
   }, []);
 
   useEffect(() => {
-    if (!queryDeck) setDeck(getDeck(cards, deckOptions));
-    else {
-      const _deck: Record<string, any> = Object.fromEntries(
-        cards.map((c) => [c.id, c])
-      );
+    // if (!queryDeck)
+    setDeck(getDeck(cards, deckOptions));
+    // else {
+    //   const _deck: Record<string, any> = Object.fromEntries(
+    //     cards.map((c) => [c.id, c])
+    //   );
 
-      setDeck(
-        (cesarDecode(queryDeck).match(/.{1,4}/g) || [])
-          .map((id) => _deck[id] && new DisplayCard(_deck[id]))
-          .filter((a) => a)
-      );
-    }
+    //   setDeck(
+    //     (cesarDecode(queryDeck).match(/.{1,4}/g) || [])
+    //       .map((id) => _deck[id] && new DisplayCard(_deck[id]))
+    //       .filter((a) => a)
+    //   );
+    // }
   }, [cards]);
+
+  const reloadCategory = (type: string, subType: string) => {
+    const newDeck = getDeck(cards, deckOptions);
+
+    setDeck((prev) => [
+      ...prev.filter(
+        (c) => !(c.cardType === type && c.cardSubtype === subType)
+      ),
+      ...newDeck.filter(
+        (c) => c.cardType === type && c.cardSubtype === subType
+      ),
+    ]);
+  };
 
   if (cards.length == 0) return <></>;
 
@@ -149,7 +221,8 @@ export default ({
           >
             {T("download")}
           </Button>
-          <Button
+          {/* TODO: Update url generation logic */}
+          {/* <Button
             variant="contained"
             onClick={() => {
               navigator?.clipboard?.writeText(
@@ -162,16 +235,24 @@ export default ({
             endIcon={<LinkRounded />}
           >
             {T("copyUrl")}
-          </Button>
+          </Button> */}
         </div>
       )}
       <div ref={cardListRef}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
-            <CardsTable title="DOOR" data={groupedData.DOOR} />
+            <CardsTable
+              title="DOOR"
+              data={groupedData.DOOR}
+              reloadCategory={reloadCategory}
+            />
           </Grid>
           <Grid item xs={12} md={6}>
-            <CardsTable title="TREASURE" data={groupedData.TREASURE} />
+            <CardsTable
+              title="TREASURE"
+              data={groupedData.TREASURE}
+              reloadCategory={reloadCategory}
+            />
           </Grid>
         </Grid>
       </div>

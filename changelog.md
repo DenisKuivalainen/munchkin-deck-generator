@@ -13,3 +13,7 @@
 
 - Server refactoring
 - Added telegrab bot webhook
+
+##### 1.2.3
+
+- Update deck generation
