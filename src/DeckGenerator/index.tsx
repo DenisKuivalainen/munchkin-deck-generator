@@ -68,7 +68,10 @@ export default () => {
     }));
   };
 
-  if (step === 4 || queryDeck)
+  if (
+    step === 4
+    // || queryDeck
+  )
     return <Deck deckOptions={options} queryDeck={queryDeck} />;
 
   return (
