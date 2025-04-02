@@ -12,10 +12,11 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import { T } from "@/translations";
+import { Card } from "@/types";
 
 export default () => {
   const [search, setSearch] = useState<string>("");
-  const [cards, setCards] = useState<any[]>([]);
+  const [cards, setCards] = useState<Card[]>([]);
 
   useEffect(() => {
     fetch("/CARDS.json")

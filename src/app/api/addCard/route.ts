@@ -3,17 +3,17 @@
 import { Card } from "@/types";
 import fs from "fs";
 
-const getIdPrefix = (c: any) => {
+const getIdPrefix = (card: Card) => {
   let subtype = "";
 
-  if (c.cardSubtype.includes("_")) {
-    let parts = c.cardSubtype.split("_");
+  if (card.cardSubtype.includes("_")) {
+    let parts = card.cardSubtype.split("_");
     subtype = parts[0].slice(0, 2) + parts[1].slice(0, 1);
   } else {
-    subtype = c.cardSubtype.slice(0, 3);
+    subtype = card.cardSubtype.slice(0, 3);
   }
 
-  return `${c.cardType.slice(0, 1)}${subtype}`;
+  return `${card.cardType.slice(0, 1)}${subtype}`;
 };
 
 const getId = (card: any, cards: any[]) => {
@@ -31,8 +31,10 @@ const getId = (card: any, cards: any[]) => {
 
 export async function POST(req: any) {
   try {
-    const card = await req.json();
-    const cards = JSON.parse(fs.readFileSync(`public/CARDS.json`).toString());
+    const card: Card = await req.json();
+    const cards: Card[] = JSON.parse(
+      fs.readFileSync(`public/CARDS.json`).toString()
+    );
 
     fs.writeFileSync(
       `public/CARDS.json`,

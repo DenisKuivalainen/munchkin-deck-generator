@@ -45,46 +45,51 @@ export class GenerateDeck {
     return this.sortById(pickedCards);
   };
 
-  private getCategory = (k: DeckCardType) => {
-    const n = this.deckSize[k];
-    const [type, subtype] = k.split("-");
-    const c = this.cards.filter(
-      (a) => a.cardType == type && a.cardSubtype == subtype
+  private getCategory = (cardType: DeckCardType) => {
+    const categorySize = this.deckSize[cardType];
+    const [type, subtype] = cardType.split("-");
+    const categoryCards = this.cards.filter(
+      (card) => card.cardType == type && card.cardSubtype == subtype
     );
 
-    if (!this.options.undeads) return this.getRandomCards(c, n);
+    if (!this.options.undeads)
+      return this.getRandomCards(categoryCards, categorySize);
 
     const undeads = this.getRandomCards(
-      c.filter((a) => a.undeadRelated),
-      n
+      categoryCards.filter((card) => card.undeadRelated),
+      categorySize
     );
-    if (undeads.length == n) return undeads;
+    if (undeads.length == categorySize) return undeads;
 
-    const undeadsIds = undeads.map((a) => a.id);
+    const undeadsIds = undeads.map((card) => card.id);
 
     return this.sortById([
       ...undeads,
       ...this.getRandomCards(
-        c.filter((a) => undeadsIds.every((o) => o !== a.id)),
-        n - undeads.length
+        categoryCards.filter((card) =>
+          undeadsIds.every((id) => id !== card.id)
+        ),
+        categorySize - undeads.length
       ),
     ]);
   };
 
-  private getClassOrRace = (t: "CLASS" | "RACE") => {
-    const n = this.deckSize[`DOOR-${t}`];
+  private getClassOrRace = (classOrRace: "CLASS" | "RACE") => {
+    const categorySize = this.deckSize[`DOOR-${classOrRace}`];
 
-    const groups: Record<string, Card[]> = {};
+    const classRaceGroups: Record<string, Card[]> = {};
     this.cards
-      .filter((a) => a.cardType == "DOOR" && a.cardSubtype == t)
-      .forEach((item) => {
-        if (!groups[item.name]) groups[item.name] = [];
-        groups[item.name].push(item);
+      .filter(
+        (card) => card.cardType == "DOOR" && card.cardSubtype == classOrRace
+      )
+      .forEach((card) => {
+        if (!classRaceGroups[card.name]) classRaceGroups[card.name] = [];
+        classRaceGroups[card.name].push(card);
       });
 
     let result: Card[] = [];
-    for (const group of Object.values(groups)) {
-      const selected = this.getRandomCards(group, n / 4);
+    for (const group of Object.values(classRaceGroups)) {
+      const selected = this.getRandomCards(group, categorySize / 4);
       result = result.concat(selected);
     }
 
@@ -94,58 +99,61 @@ export class GenerateDeck {
   private getClassRaceModifiers = () => {
     if (!this.options.ultramanchkins)
       return [
-        ...this.cards.filter((a) => a.name === "Полукровка").slice(0, 2),
-        ...this.cards.filter((a) => a.name === "Суперманчкин").slice(0, 2),
+        ...this.cards.filter((card) => card.name === "Полукровка").slice(0, 2),
+        ...this.cards
+          .filter((card) => card.name === "Суперманчкин")
+          .slice(0, 2),
       ];
 
-    const n = this.deckSize["DOOR-MODIFIER"];
-    const c = this.cards.filter(
-      (a) => a.cardType == "DOOR" && a.cardSubtype == "MODIFIER"
+    const categorySize = this.deckSize["DOOR-MODIFIER"];
+    const categoryCards = this.cards.filter(
+      (card) => card.cardType == "DOOR" && card.cardSubtype == "MODIFIER"
     );
 
-    const classMod = this.getRandomCards(
-      c.filter((x) => x.classModifier),
-      n / 2
+    const classModifiers = this.getRandomCards(
+      categoryCards.filter((c) => c.classModifier),
+      categorySize / 2
     );
 
-    const raceMod = this.getRandomCards(
-      c.filter(
-        (x) =>
-          x.raceModifier && classMod.map((o) => o.id).every((o) => o !== x.id)
+    const raceModifiers = this.getRandomCards(
+      categoryCards.filter(
+        (card) =>
+          card.raceModifier &&
+          classModifiers.every((modifierCard) => modifierCard.id !== card.id)
       ),
-      n / 2
+      categorySize / 2
     );
 
-    return this.sortById([...classMod, ...raceMod]);
+    return this.sortById([...classModifiers, ...raceModifiers]);
   };
 
   private getMonsterBoost = () => {
     if (!this.options.undeads) return this.getCategory("DOOR-MONSTER_BOOST");
 
     const undeads = this.cards
-      .filter((a) => a.name === "Андед")
+      .filter((card) => card.name === "Андед")
       .slice(0, 2)
-      .map((c) => c.id);
-    const n = this.deckSize["DOOR-MONSTER_BOOST"];
-    const c = this.cards.filter(
-      (a) => a.cardType == "DOOR" && a.cardSubtype == "MONSTER_BOOST"
+      .map((card) => card.id);
+    const categorySize = this.deckSize["DOOR-MONSTER_BOOST"];
+    const categoryCards = this.cards.filter(
+      (card) => card.cardType == "DOOR" && card.cardSubtype == "MONSTER_BOOST"
     );
 
     return [
-      ...c.filter((o) => undeads.some((u) => u === o.id)),
+      ...categoryCards.filter((card) => undeads.some((id) => id === card.id)),
       ...this.getRandomCards(
-        c.filter((o) => undeads.every((u) => u !== o.id)),
-        n - 2
+        categoryCards.filter((card) => undeads.every((id) => id !== card.id)),
+        categorySize - 2
       ),
     ];
   };
 
   private getPet = () => {
-    const n =
+    const categorySize =
       this.deckSize["DOOR-PET"] *
       (this.options.hirelings && this.options.mounts ? 0.5 : 1);
-    let c = this.cards.filter(
-      (a) => a.cardType == "DOOR" && a.cardSubtype == "PET"
+    let categoryCards = this.cards.filter(
+      (card) => card.cardType == "DOOR" && card.cardSubtype == "PET"
     );
 
     let hirelings: Card[] = [],
@@ -153,45 +161,49 @@ export class GenerateDeck {
 
     if (this.options.hirelings) {
       hirelings = this.getRandomCards(
-        c
-          .filter((a) => a.isHireling)
-          .filter((a) => (this.options.undeads ? a.undeadRelated : true)),
-        n
+        categoryCards
+          .filter((card) => card.isHireling)
+          .filter((card) => (this.options.undeads ? card.undeadRelated : true)),
+        categorySize
       );
 
       if (this.options.undeads) {
         hirelings = [
           ...hirelings,
           ...this.getRandomCards(
-            c
-              .filter((a) => a.isHireling)
-              .filter((a) =>
-                hirelings.map((o) => o.id).every((o) => o !== a.id)
+            categoryCards
+              .filter((card) => card.isHireling)
+              .filter((card) =>
+                hirelings.every((hirelingCard) => hirelingCard.id !== card.id)
               ),
-            n - hirelings.length
+            categorySize - hirelings.length
           ),
         ];
       }
     }
 
     if (this.options.mounts) {
-      c = c.filter((a) => hirelings.map((o) => o.id).every((o) => o !== a.id));
+      categoryCards = categoryCards.filter((card) =>
+        hirelings.every((hirelingCard) => hirelingCard.id !== card.id)
+      );
 
       mounts = this.getRandomCards(
-        c
-          .filter((a) => a.isMount)
-          .filter((a) => (this.options.undeads ? a.undeadRelated : true)),
-        n
+        categoryCards
+          .filter((card) => card.isMount)
+          .filter((card) => (this.options.undeads ? card.undeadRelated : true)),
+        categorySize
       );
 
       if (this.options.undeads) {
         mounts = [
           ...mounts,
           ...this.getRandomCards(
-            c
-              .filter((a) => a.isMount)
-              .filter((a) => mounts.map((o) => o.id).every((o) => o !== a.id)),
-            n - mounts.length
+            categoryCards
+              .filter((card) => card.isMount)
+              .filter((card) =>
+                mounts.every((mountCard) => mountCard.id !== card.id)
+              ),
+            categorySize - mounts.length
           ),
         ];
       }
@@ -201,9 +213,9 @@ export class GenerateDeck {
   };
 
   private getMonsters = () => {
-    const n = this.deckSize["DOOR-MONSTER"];
-    let c = this.cards.filter(
-      (a) => a.cardType == "DOOR" && a.cardSubtype == "MONSTER"
+    const categorySize = this.deckSize["DOOR-MONSTER"];
+    let categoryCards = this.cards.filter(
+      (card) => card.cardType == "DOOR" && card.cardSubtype == "MONSTER"
     );
 
     const monster_grades = {
@@ -247,42 +259,50 @@ export class GenerateDeck {
         };
 
     while (true) {
-      const m = Object.entries(monstersByGradeCount)
+      const monstersByGradeCountArray = Object.entries(monstersByGradeCount)
         .map(([k, v]) => [k, v] as [keyof typeof monster_grades, number])
         .filter(([k, v]) => v > 0);
-      let mDif = n - m.reduce((sum, [k, v]) => sum + v, 0);
+      let monsterAmountDifference =
+        categorySize -
+        monstersByGradeCountArray.reduce((sum, [k, v]) => sum + v, 0);
 
-      for (const [k, v] of m) {
+      for (const [k, v] of monstersByGradeCountArray) {
         const increase =
-          monsterGradesIncrease[k] <= mDif ? monsterGradesIncrease[k] : mDif;
+          monsterGradesIncrease[k] <= monsterAmountDifference
+            ? monsterGradesIncrease[k]
+            : monsterAmountDifference;
 
         monstersByGradeCount[k] = v + increase;
-        mDif -= increase;
-        if (mDif == 0) break;
+        monsterAmountDifference -= increase;
+        if (monsterAmountDifference == 0) break;
       }
 
-      if (mDif == 0) break;
+      if (monsterAmountDifference == 0) break;
     }
 
     const res = Object.entries(monstersByGradeCount)
       .map(([k, v]) => [k, v] as [keyof typeof monster_grades, number])
       .map(([k, v]) => {
-        const _c = c.filter((o) => monster_grades[k].some((a) => a == o.level));
+        const gradeCards = categoryCards.filter((card) =>
+          monster_grades[k].some((a) => a == card.level)
+        );
 
-        if (!this.options.undeads) return this.getRandomCards(_c, v);
+        if (!this.options.undeads) return this.getRandomCards(gradeCards, v);
 
         const undeads = this.getRandomCards(
-          _c.filter((a) => a.undeadRelated),
+          gradeCards.filter((card) => card.undeadRelated),
           v
         );
         if (undeads.length == v) return undeads;
 
-        const undeadsIds = undeads.map((a) => a.id);
+        const undeadsIds = undeads.map((undeadCard) => undeadCard.id);
 
         return this.sortById([
           ...undeads,
           ...this.getRandomCards(
-            _c.filter((a) => undeadsIds.every((o) => o !== a.id)),
+            gradeCards.filter((gradeCard) =>
+              undeadsIds.every((undeadId) => undeadId !== gradeCard.id)
+            ),
             v - undeads.length
           ),
         ]);
@@ -293,32 +313,37 @@ export class GenerateDeck {
   };
 
   private getPortal = () => {
-    const n = this.deckSize["DOOR-PORTAL"];
-    let c = this.cards.filter(
-      (a) => a.cardType == "DOOR" && a.cardSubtype == "PORTAL"
+    const categorySize = this.deckSize["DOOR-PORTAL"];
+    let categoryCards = this.cards.filter(
+      (card) => card.cardType == "DOOR" && card.cardSubtype == "PORTAL"
     );
 
-    const unique = [...new Map(c.map((item) => [item.name, item])).values()];
+    const unique = [
+      ...new Map(categoryCards.map((card) => [card.name, card])).values(),
+    ];
 
-    return this.getRandomCards(unique.length >= n ? unique : c, n);
+    return this.getRandomCards(
+      unique.length >= categorySize ? unique : categoryCards,
+      categorySize
+    );
   };
 
   private getGainLevel = () => {
-    const n = this.deckSize["TREASURE-GAIN_LVL"];
-    let c = this.cards.filter(
-      (a) => a.cardType == "TREASURE" && a.cardSubtype == "GAIN_LVL"
+    const categorySize = this.deckSize["TREASURE-GAIN_LVL"];
+    let categoryCards = this.cards.filter(
+      (card) => card.cardType == "TREASURE" && card.cardSubtype == "GAIN_LVL"
     );
 
-    const withEffect = Math.ceil(n / 3);
-    const noEffect = n - withEffect;
+    const withEffect = Math.ceil(categorySize / 3);
+    const noEffect = categorySize - withEffect;
 
     return this.sortById([
       ...this.getRandomCards(
-        c.filter((a) => a.withEffect),
+        categoryCards.filter((card) => card.withEffect),
         withEffect
       ),
       ...this.getRandomCards(
-        c.filter((a) => !a.withEffect),
+        categoryCards.filter((card) => !card.withEffect),
         noEffect
       ),
     ]);

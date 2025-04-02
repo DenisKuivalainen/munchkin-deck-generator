@@ -1,7 +1,7 @@
 const key = "MUNCHKIN";
 const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-export function cesarEncode(input: string): string {
+export const cesarEncode = (input: string): string => {
   let output: string[] = [];
 
   for (let i = 0; i < input.length; i++) {
@@ -14,9 +14,9 @@ export function cesarEncode(input: string): string {
   }
 
   return output.join("");
-}
+};
 
-export function cesarDecode(input: string): string {
+export const cesarDecode = (input: string): string => {
   let output: string[] = [];
 
   for (let i = 0; i < input.length; i++) {
@@ -31,4 +31,4 @@ export function cesarDecode(input: string): string {
   }
 
   return output.join("");
-}
+};
