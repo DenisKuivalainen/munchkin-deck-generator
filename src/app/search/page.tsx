@@ -13,6 +13,7 @@ import {
 import { useEffect, useState } from "react";
 import { T } from "@/translations";
 import { Card } from "@/types";
+import { grey } from "@mui/material/colors";
 
 export default () => {
   const [search, setSearch] = useState<string>("");
@@ -62,13 +63,15 @@ export default () => {
               )
               .map((row) => (
                 <TableRow key={row.id}>
-                  <TableCell>{row.id}</TableCell>
-                  <TableCell>
+                  <TableCell style={row.unused ? { color: grey[500] } : {}}>
+                    {row.id}
+                  </TableCell>
+                  <TableCell style={row.unused ? { color: grey[500] } : {}}>
                     {row.level > 0
                       ? `Уровень ${row.level} - ${row.name}`
                       : row.name}
                   </TableCell>
-                  <TableCell>
+                  <TableCell style={row.unused ? { color: grey[500] } : {}}>
                     {T(row.cardType)} -{" "}
                     {T(`${row.cardType}-${row.cardSubtype}`)}
                   </TableCell>

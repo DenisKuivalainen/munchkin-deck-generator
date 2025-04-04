@@ -17,3 +17,7 @@
 ##### 1.2.3
 
 - Update deck generation
+
+##### 1.2.4
+
+- Fixes to some cards and their use in deck generation
