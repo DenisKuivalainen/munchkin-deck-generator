@@ -1,17 +1,17 @@
 type TypeFromConst<T extends readonly unknown[]> = T[number];
 
 export enum Expansion {
-  Original = "original",
-  Two = "2",
-  Three = "3",
-  Four = "4",
-  Five = "5",
-  Six = "6",
-  SixPointFive = "6.5",
-  Seven = "7",
-  Eight = "8",
-  Puppies = "puppies",
-  PartyPack = "party_pack",
+  original = "original",
+  m2 = "m2",
+  m3 = "m3",
+  m4 = "m4",
+  m5 = "m5",
+  m6 = "m6",
+  m65 = "m65",
+  m7 = "m7",
+  m8 = "m8",
+  puppy = "puppy",
+  partypack = "partypack",
 }
 
 export enum Lang {
@@ -34,9 +34,15 @@ enum Type {
   Race = "race",
   Class = "class",
   Monster = "monster",
+  Portal = "portal",
+  RoleModifier = "role_modifier",
+  Cheat = "cheat",
+  Pet = "pet",
+  Wandering = "wandering",
 }
 
 enum Subtype {
+  None = "none",
   Level = "level",
   Steed = "steed",
   Hireling = "hireling",
@@ -49,6 +55,10 @@ enum Subtype {
   Footgear = "footgear",
   Gear = "gear",
   Other = "other",
+  ClassModifier = "class_modifier",
+  RaceModifier = "race_modifier",
+  ClassEnhancer = "class_enhancer",
+  RaceEnhancer = "race_enhancer",
   // ...other keys-values
   Aaa = "aaa",
 }
@@ -69,6 +79,15 @@ const curseSubtypes = [
 ] as const;
 type CurseSubtype = (typeof curseSubtypes)[number];
 
+const roleModifierSubtypes = [
+  Subtype.ClassModifier,
+  Subtype.RaceModifier,
+  Subtype.ClassEnhancer,
+  Subtype.RaceEnhancer,
+  Subtype.Other,
+] as const;
+type RoleModifierSubtype = (typeof roleModifierSubtypes)[number];
+
 enum CharRelation {
   Bard = "bard",
   Ranger = "ranger",
@@ -84,6 +103,8 @@ enum CharRelation {
   Dwarf = "dwarf",
   Halfling = "halfling",
   RoleModifier = "role_modifier",
+  Stead = "stead",
+  Hireling = "hireling",
 }
 
 const classes = [
@@ -146,15 +167,15 @@ class CurseCard extends Card {
   override level = 0;
 
   constructor(
-    curseSubtype: CurseSubtype,
-    props: Omit<Card, "type" | "card" | "level" | "subtype">
+    props: Omit<Card, "subtype"> & {
+      subtype: CurseSubtype;
+    }
   ) {
     super({
       ...props,
       deck: Deck.Door,
       type: Type.Curse,
       level: 0,
-      subtype: curseSubtype,
     });
   }
 }
@@ -162,20 +183,18 @@ class CurseCard extends Card {
 class RaceCard extends Card {
   override deck: Deck.Door = Deck.Door;
   override type: Type.Race = Type.Race;
-  override subtype: Subtype.Other = Subtype.Other;
+  override subtype: Subtype.None = Subtype.None;
   override level = 0;
 
   constructor(
-    race: Race,
-    props: Omit<Card, "type" | "card" | "level" | "subtype" | "char_relations">
+    props: Omit<Card, "char_relations"> & { char_relations: [Race] }
   ) {
     super({
       ...props,
       deck: Deck.Door,
       type: Type.Race,
       level: 0,
-      subtype: Subtype.Other,
-      char_relations: [race],
+      subtype: Subtype.None,
     });
   }
 }
@@ -183,20 +202,18 @@ class RaceCard extends Card {
 class ClassCard extends Card {
   override deck: Deck.Door = Deck.Door;
   override type: Type.Class = Type.Class;
-  override subtype: Subtype.Other = Subtype.Other;
+  override subtype: Subtype.None = Subtype.None;
   override level = 0;
 
   constructor(
-    _class: Class,
-    props: Omit<Card, "type" | "card" | "level" | "subtype" | "char_relations">
+    props: Omit<Card, "char_relations"> & { char_relations: [Class] }
   ) {
     super({
       ...props,
       deck: Deck.Door,
       type: Type.Class,
       level: 0,
-      subtype: Subtype.Other,
-      char_relations: [_class],
+      subtype: Subtype.None,
     });
   }
 }
@@ -204,14 +221,106 @@ class ClassCard extends Card {
 class MonsterCard extends Card {
   override deck: Deck.Door = Deck.Door;
   override type: Type.Monster = Type.Monster;
-  override subtype: Subtype.Other = Subtype.Other;
+  override subtype: Subtype.None = Subtype.None;
 
-  constructor(_class: Class, props: Omit<Card, "type" | "card" | "subtype">) {
+  constructor(props: Card) {
     super({
       ...props,
       deck: Deck.Door,
       type: Type.Monster,
-      subtype: Subtype.Other,
+      subtype: Subtype.None,
+    });
+  }
+}
+
+class PortalCard extends Card {
+  override deck: Deck.Door = Deck.Door;
+  override type: Type.Portal = Type.Portal;
+  override subtype: Subtype.None = Subtype.None;
+  override level = 0;
+  override char_relations = [];
+  override other_relations = [];
+
+  constructor(props: Card) {
+    super({
+      ...props,
+      deck: Deck.Door,
+      type: Type.Portal,
+      level: 0,
+      subtype: Subtype.None,
+      char_relations: [],
+      other_relations: [],
+    });
+  }
+}
+
+class RoleModifierCard extends Card {
+  override deck: Deck.Door = Deck.Door;
+  override type: Type.RoleModifier = Type.RoleModifier;
+  override level = 0;
+
+  constructor(props: Omit<Card, "subtype"> & { subtype: RoleModifierSubtype }) {
+    super({
+      ...props,
+      deck: Deck.Door,
+      type: Type.RoleModifier,
+      level: 0,
+    });
+  }
+}
+
+class CheatCard extends Card {
+  override deck: Deck.Door = Deck.Door;
+  override type: Type.Cheat = Type.Cheat;
+  override subtype: Subtype.None = Subtype.None;
+  override level = 0;
+  override char_relations = [];
+  override other_relations = [];
+
+  constructor(props: Card) {
+    super({
+      ...props,
+      deck: Deck.Door,
+      type: Type.Cheat,
+      level: 0,
+      subtype: Subtype.None,
+      required: [],
+      char_relations: [],
+      other_relations: [],
+    });
+  }
+}
+
+class PetCard extends Card {
+  override deck: Deck.Door = Deck.Door;
+  override type: Type.Pet = Type.Pet;
+  override subtype: Subtype.None = Subtype.None;
+  override level = 0;
+
+  constructor(props: Card) {
+    super({
+      ...props,
+      deck: Deck.Door,
+      type: Type.Pet,
+      subtype: Subtype.None,
+      level: 0,
+    });
+  }
+}
+
+class WanderingCard extends Card {
+  override deck: Deck.Door = Deck.Door;
+  override type: Type.Wandering = Type.Wandering;
+  override subtype: Subtype.None = Subtype.None;
+  override level = 0;
+
+  constructor(props: Card) {
+    super({
+      ...props,
+      deck: Deck.Door,
+      type: Type.Wandering,
+      subtype: Subtype.None,
+      level: 0,
     });
   }
 }
