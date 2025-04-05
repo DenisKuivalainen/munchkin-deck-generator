@@ -1,154 +1,217 @@
-export class Card {
-  id: string;
-  cardType: string;
-  cardSubtype: string;
-  name: string;
-  isBase: boolean;
+type TypeFromConst<T extends readonly unknown[]> = T[number];
 
-  level: number;
-
-  undeadRelated: boolean;
-  mountRelated: boolean;
-  hirelingRelated: boolean;
-
-  clerRelated: boolean;
-  thiefRelated: boolean;
-  warriorRelated: boolean;
-  mageRelated: boolean;
-  rangerRelated: boolean;
-  bardRelated: boolean;
-
-  dwarfRelated: boolean;
-  haflingRelated: boolean;
-  gnomeRelated: boolean;
-  orkRelated: boolean;
-  elfRelated: boolean;
-  kentRelated: boolean;
-  lizardRelated: boolean;
-
-  classModifier: boolean;
-  raceModifier: boolean;
-
-  isHireling: boolean;
-  isMount: boolean;
-
-  withEffect: boolean;
-
-  unused: boolean;
-
-  constructor(d: any) {
-    this.id = d.id;
-    this.cardType = d.cardType;
-    this.cardSubtype = d.cardSubtype;
-    this.name = d.name;
-    this.isBase = d.isBase;
-
-    this.level = parseInt(d.level ?? 0);
-
-    this.undeadRelated = d.undeadRelated ?? false;
-    this.mountRelated = (d.mountRelated || d.isMount) ?? false;
-    this.hirelingRelated = (d.hirelingRelated || d.isHireling) ?? false;
-
-    this.clerRelated = d.clerRelated ?? false;
-    this.thiefRelated = d.thiefRelated ?? false;
-    this.warriorRelated = d.warriorRelated ?? false;
-    this.mageRelated = d.mageRelated ?? false;
-    this.rangerRelated = d.rangerRelated ?? false;
-    this.bardRelated = d.bardRelated ?? false;
-
-    this.dwarfRelated = d.dwarfRelated ?? false;
-    this.haflingRelated = d.haflingRelated ?? false;
-    this.gnomeRelated = d.gnomeRelated ?? false;
-    this.orkRelated = d.orkRelated ?? false;
-    this.elfRelated = d.elfRelated ?? false;
-    this.kentRelated = d.kentRelated ?? false;
-    this.lizardRelated = d.lizardRelated ?? false;
-
-    // Only for DOOR MODIFIER
-    this.classModifier = d.classModifier ?? false;
-    this.raceModifier = d.raceModifier ?? false;
-
-    // Only for DOOR PET
-    this.isHireling = d.isHireling ?? false;
-    this.isMount = d.isMount ?? false;
-
-    // Only for TREASURE GAIN_LVL
-    this.withEffect = d.withEffect ?? false;
-
-    // if card is temporary removed from deck generation
-    this.unused = d.unused ?? false;
-  }
+export enum Expansion {
+  Original = "original",
+  Two = "2",
+  Three = "3",
+  Four = "4",
+  Five = "5",
+  Six = "6",
+  SixPointFive = "6.5",
+  Seven = "7",
+  Eight = "8",
+  Puppies = "puppies",
+  PartyPack = "party_pack",
 }
 
-export type Options = {
-  mounts: boolean;
-  hirelings: boolean;
-  ultramanchkins: boolean;
-  dungeons: boolean;
-  undeads: boolean;
-  stronger_monsters: boolean;
-  sharper_weapons: boolean;
-  extended_deck: boolean;
-  cler: boolean;
-  mage: boolean;
-  warrior: boolean;
-  thief: boolean;
-  ranger: boolean;
-  bard: boolean;
-  dward: boolean;
-  hafling: boolean;
-  gnome: boolean;
-  elf: boolean;
-  ork: boolean;
-  kent: boolean;
-  lizard: boolean;
-};
+export enum Lang {
+  En = "en",
+  Ru = "ru",
+}
 
-export class DisplayCard {
-  id: string;
-  cardType: string;
-  cardSubtype: string;
+type Name = Record<Lang, string>;
+
+type Reprints = { id: string; expansion: Expansion };
+
+type CardId = string;
+
+enum Deck {
+  Door = "door",
+  Treasure = "treasure",
+}
+enum Type {
+  Curse = "curse",
+  Race = "race",
+  Class = "class",
+  Monster = "monster",
+}
+
+enum Subtype {
+  Level = "level",
+  Steed = "steed",
+  Hireling = "hireling",
+  Role = "role", // Class or race
+  Gender = "gender",
+  Headgear = "headgear",
+  Armor = "armor",
+  BigItem = "big_item",
+  SmallItem = "small_item",
+  Footgear = "footgear",
+  Gear = "gear",
+  Other = "other",
+  // ...other keys-values
+  Aaa = "aaa",
+}
+
+const curseSubtypes = [
+  Subtype.Level,
+  Subtype.Steed,
+  Subtype.Hireling,
+  Subtype.Role,
+  Subtype.Gender,
+  Subtype.Headgear,
+  Subtype.Armor,
+  Subtype.BigItem,
+  Subtype.SmallItem,
+  Subtype.Footgear,
+  Subtype.Gear,
+  Subtype.Other,
+] as const;
+type CurseSubtype = (typeof curseSubtypes)[number];
+
+enum CharRelation {
+  Bard = "bard",
+  Ranger = "ranger",
+  Warrior = "warrior",
+  Wizard = "wizard",
+  Thief = "thief",
+  Cleric = "cleric",
+  Lizard = "lizard",
+  Centaur = "centaur",
+  Elf = "elf",
+  Orc = "orc",
+  Gnome = "gnome",
+  Dwarf = "dwarf",
+  Halfling = "halfling",
+  RoleModifier = "role_modifier",
+}
+
+const classes = [
+  CharRelation.Bard,
+  CharRelation.Ranger,
+  CharRelation.Warrior,
+  CharRelation.Wizard,
+  CharRelation.Thief,
+  CharRelation.Cleric,
+] as const;
+type Class = (typeof classes)[number];
+
+const races = [
+  CharRelation.Lizard,
+  CharRelation.Centaur,
+  CharRelation.Elf,
+  CharRelation.Orc,
+  CharRelation.Gnome,
+  CharRelation.Dwarf,
+  CharRelation.Halfling,
+] as const;
+type Race = (typeof classes)[number];
+
+enum OtherRelation {
+  Undead = "undead",
+  FromHell = "from_hell",
+  ClassModifier = "class_modifier",
+  RaceModifier = "race_modifier",
+}
+
+class Card {
+  deck: Deck;
+  type: Type;
+  subtype: Subtype;
+  name: Name;
+  id: CardId;
+  reprints: Reprints;
+  required: CardId[];
+  char_relations: CharRelation[];
+  other_relations: OtherRelation[];
   level: number;
-  name: string;
 
   constructor(c: Card) {
-    this.id = c.id;
-    this.cardType = c.cardType;
-    this.cardSubtype = c.cardSubtype;
-    this.level = c.level;
+    this.deck = c.deck;
+    this.type = c.type;
+    this.subtype = c.subtype;
     this.name = c.name;
+    this.id = c.id;
+    this.reprints = c.reprints;
+    this.required = c.required;
+    this.char_relations = c.char_relations;
+    this.other_relations = c.other_relations;
+    this.level = c.level;
   }
 }
 
-export const DECK_CARD_TYPES = [
-  "DOOR-WALKING",
-  "DOOR-CHEAT",
-  "DOOR-RACE",
-  "DOOR-CLASS",
-  "DOOR-MODIFIER",
-  "DOOR-MONSTER",
-  "DOOR-COMMON",
-  "DOOR-MONSTER_BOOST",
-  "DOOR-CURSE",
-  "DOOR-PORTAL",
-  "DOOR-PET",
-  "TREASURE-ONE_HAND",
-  "TREASURE-TWO_HANDS",
-  "TREASURE-BOOTS",
-  "TREASURE-BODY",
-  "TREASURE-HAT",
-  "TREASURE-OTHER",
-  "TREASURE-RING",
-  "TREASURE-DICE",
-  "TREASURE-FREE",
-  "TREASURE-ONE_TIME",
-  "TREASURE-GAIN_LVL",
-  "TREASURE-HIRELING_BOOST",
-  "TREASURE-HIRELING",
-  "TREASURE-MOUNT_BOOST",
-  "TREASURE-GEAR_BOOST",
-] as const;
+class CurseCard extends Card {
+  override deck: Deck.Door = Deck.Door;
+  override type: Type.Curse = Type.Curse;
+  override level = 0;
 
-export type DeckCardType = (typeof DECK_CARD_TYPES)[number];
+  constructor(
+    curseSubtype: CurseSubtype,
+    props: Omit<Card, "type" | "card" | "level" | "subtype">
+  ) {
+    super({
+      ...props,
+      deck: Deck.Door,
+      type: Type.Curse,
+      level: 0,
+      subtype: curseSubtype,
+    });
+  }
+}
 
-export type DeckSize = Record<DeckCardType, number>;
+class RaceCard extends Card {
+  override deck: Deck.Door = Deck.Door;
+  override type: Type.Race = Type.Race;
+  override subtype: Subtype.Other = Subtype.Other;
+  override level = 0;
+
+  constructor(
+    race: Race,
+    props: Omit<Card, "type" | "card" | "level" | "subtype" | "char_relations">
+  ) {
+    super({
+      ...props,
+      deck: Deck.Door,
+      type: Type.Race,
+      level: 0,
+      subtype: Subtype.Other,
+      char_relations: [race],
+    });
+  }
+}
+
+class ClassCard extends Card {
+  override deck: Deck.Door = Deck.Door;
+  override type: Type.Class = Type.Class;
+  override subtype: Subtype.Other = Subtype.Other;
+  override level = 0;
+
+  constructor(
+    _class: Class,
+    props: Omit<Card, "type" | "card" | "level" | "subtype" | "char_relations">
+  ) {
+    super({
+      ...props,
+      deck: Deck.Door,
+      type: Type.Class,
+      level: 0,
+      subtype: Subtype.Other,
+      char_relations: [_class],
+    });
+  }
+}
+
+class MonsterCard extends Card {
+  override deck: Deck.Door = Deck.Door;
+  override type: Type.Monster = Type.Monster;
+  override subtype: Subtype.Other = Subtype.Other;
+
+  constructor(_class: Class, props: Omit<Card, "type" | "card" | "subtype">) {
+    super({
+      ...props,
+      deck: Deck.Door,
+      type: Type.Monster,
+      subtype: Subtype.Other,
+    });
+  }
+}
