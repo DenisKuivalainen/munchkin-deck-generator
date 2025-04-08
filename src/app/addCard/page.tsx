@@ -613,7 +613,13 @@ export default () => {
             />
             <Required required={required} setRequired={setRequired} />
             {name.en.length && reprints.length ? (
-              <Button onClick={saveCard}>Add card</Button>
+              <Button
+                onClick={saveCard}
+                variant="contained"
+                style={{ marginTop: 16, marginBottom: 40 }}
+              >
+                Add card
+              </Button>
             ) : (
               <></>
             )}

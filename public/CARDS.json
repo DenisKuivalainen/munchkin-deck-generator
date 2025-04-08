@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "deck": "treasure",
+    "type": "hireling",
+    "subtype": "none",
+    "name": {
+      "en": "sdf",
+      "ru": ""
+    },
+    "id": "0000",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "hireling"
+    ],
+    "other_relations": [],
+    "level": 0
+  }
+]
