@@ -45,10 +45,21 @@ import {
 } from "@/types";
 import axios from "axios";
 import { cardFactory } from "@/cardFactory";
-import _CARDS from "../../../public/CARDS.json";
+import _CARDS from "../public/CARDS.json";
 import { enToRu } from "@/translator";
-import { CardEditor } from "@/Components";
-const CARDS: Card[] = _CARDS.map((c: any) => new Card(c));
+import { useRouter } from "next/navigation";
+
+export const useCards = () => {
+  const [cards, setCards] = useState<Card[]>([]);
+
+  useEffect(() => {
+    fetch(`${window.location.origin}/CARDS.json`)
+      .then((response) => response.json())
+      .then((data) => setCards(data));
+  }, []);
+
+  return cards;
+};
 
 const DeckSelect = ({
   children,
@@ -66,7 +77,7 @@ const DeckSelect = ({
         <Select
           labelId="deck-label"
           id="demo-simple-select"
-          value={deck}
+          value={deck ?? ""}
           label="Deck"
           onChange={(e: SelectChangeEvent) => setDeck(e.target.value as Deck)}
         >
@@ -310,7 +321,7 @@ const ReprintsInput = ({
                 <Box display="flex" alignItems="center">
                   <Avatar
                     variant="square"
-                    src={`icons/${newExpansion}.gif`}
+                    src={`${window.location.origin}/icons/${newExpansion}.gif`}
                     alt={newExpansion}
                     sx={{ width: 23, height: 23 }}
                   />
@@ -325,7 +336,7 @@ const ReprintsInput = ({
                 <ListItemAvatar>
                   <Avatar
                     variant="square"
-                    src={`icons/${expansion}.gif`}
+                    src={`${window.location.origin}/icons/${expansion}.gif`}
                     alt={expansion}
                   />
                 </ListItemAvatar>
@@ -365,7 +376,7 @@ const ReprintsInput = ({
                     <Box display="flex" alignItems="center" gap={1}>
                       <Avatar
                         variant="square"
-                        src={`icons/${selected}.gif`}
+                        src={`${window.location.origin}/icons/${selected}.gif`}
                         alt={selected}
                         sx={{ width: 23, height: 23 }}
                       />
@@ -380,7 +391,7 @@ const ReprintsInput = ({
                     <ListItemAvatar>
                       <Avatar
                         variant="square"
-                        src={`icons/${expansion}.gif`}
+                        src={`${window.location.origin}/icons/${expansion}.gif`}
                         alt={expansion}
                       />
                     </ListItemAvatar>
@@ -505,15 +516,16 @@ const Required = ({
   required: CardId[];
   setRequired: React.Dispatch<React.SetStateAction<CardId[]>>;
 }) => {
-  const selectedValues = CARDS.filter((c) => required.includes(c.id));
+  const cards = useCards();
+  const selectedValues = cards.filter((c) => required.includes(c.id));
 
   return (
     <>
       <Box sx={{ width: 600, marginTop: "16px", marginBottom: "8px" }}>
         <Autocomplete
           multiple
-          options={CARDS}
-          getOptionLabel={(option) => option.name.en}
+          options={cards}
+          getOptionLabel={(option) => option.name.ru}
           value={selectedValues}
           onChange={(e, newValue) => {
             const newIds = newValue.map((item) => item.id);
@@ -524,7 +536,8 @@ const Required = ({
             value.map((option, index) => (
               <Chip
                 variant="outlined"
-                label={option.name.en}
+                size="small"
+                label={option.name.ru}
                 {...getTagProps({ index })}
                 key={option.id}
               />
@@ -546,37 +559,80 @@ const Required = ({
   );
 };
 
-const A = () => {
-  const [selectedDeck, setSelectedDeck] = useState<Deck>(Deck.Door);
-  const [selectedType, setSelectedType] = useState<Type>(Type.Monster);
-  const [selectedSybtype, setSelectedSubtype] = useState<Subtype>(Subtype.None);
+export const CardEditor = ({
+  cardId,
+  onSave,
+}: {
+  cardId?: CardId;
+  onSave: (card: Card) => Promise<void> | void;
+}) => {
+  const router = useRouter();
+  const cards = useCards();
+  const [isCardLoading, setIsCardLoading] = useState(true);
+
+  const [selectedDeck, setSelectedDeck] = useState<Deck>();
+  const [selectedType, setSelectedType] = useState<Type>();
+  const [selectedSybtype, setSelectedSubtype] = useState<Subtype>();
   const defaultName = Object.fromEntries(
     Object.values(Lang).map((e) => [e, ""] as [Lang, string])
   ) as Name;
   const [name, setName] = useState<Name>(defaultName);
-  const [level, setLevel] = useState<number>(5);
+  const [id, setId] = useState<CardId>("");
+  const [level, setLevel] = useState<number>(0);
   const [reprints, setReprints] = useState<Reprint[]>([]);
   const [charRelations, setCharRelations] = useState<CharRelation[]>([]);
   const [otherRelations, setOtherRelations] = useState<OtherRelation[]>([]);
   const [required, setRequired] = useState<CardId[]>([]);
 
-  //   useEffect(() => setSelectedType(undefined), [selectedDeck]);
-  //   useEffect(() => setSelectedSubtype(undefined), [selectedType]);
   useEffect(() => {
+    if (!cards.length) return;
+    if (!cardId) return setIsCardLoading(false);
+
+    const card = cards.find((c) => c.id === cardId);
+    if (!card) {
+      router.push("/404");
+      return;
+    }
+
+    setSelectedDeck(card.deck);
+    setSelectedType(card.type);
+    setSelectedSubtype(card.subtype);
+    setName(card.name);
+    setId(card.id);
+    setLevel(card.level);
+    setReprints(card.reprints);
+    setCharRelations(card.char_relations);
+    setOtherRelations(card.other_relations);
+    setRequired(card.required);
+
+    setTimeout(() => setIsCardLoading(false), 0);
+  }, [cards]);
+  useEffect(() => {
+    if (isCardLoading) return;
+    setSelectedType(undefined);
+    console.log(111);
+  }, [selectedDeck]);
+  useEffect(() => {
+    if (isCardLoading) return;
+    setSelectedSubtype(undefined);
+  }, [selectedType]);
+  useEffect(() => {
+    if (isCardLoading) return;
+
     setName(defaultName);
-    // setLevel(0);
+    setLevel(0);
     setReprints([]);
     setCharRelations([]);
     setOtherRelations([]);
   }, [selectedSybtype]);
 
-  const saveCard = () => {
+  const saveCard = async () => {
     const card = cardFactory({
       deck: selectedDeck!,
       type: selectedType!,
       subtype: selectedSybtype!,
       name,
-      id: "",
+      id,
       level,
       reprints,
       char_relations: charRelations,
@@ -584,7 +640,9 @@ const A = () => {
       required,
     });
 
-    axios.post("/api/addCard", card).then(() => window.location.reload());
+    await onSave(card);
+
+    router.back();
   };
 
   return (
@@ -623,7 +681,7 @@ const A = () => {
                 variant="contained"
                 style={{ marginTop: 16, marginBottom: 40 }}
               >
-                Add card
+                Save card
               </Button>
             ) : (
               <></>
@@ -633,12 +691,4 @@ const A = () => {
       </DeckSelect>
     </Box>
   );
-};
-
-export default () => {
-  const onSave: React.ComponentProps<typeof CardEditor>["onSave"] = (card) =>
-    axios.post("/api/addCard", card);
-  // .then(() => window.location.reload());
-
-  return <CardEditor onSave={onSave} />;
 };

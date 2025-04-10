@@ -1,5 +1,6 @@
 import {
   BoostCard,
+  Card,
   CardId,
   CharRelation,
   CheatCard,
@@ -79,5 +80,7 @@ export const cardFactory = (card: {
         case Type.Gear:
           return new GearCard(card);
       }
+    default:
+      return new Card(card);
   }
 };

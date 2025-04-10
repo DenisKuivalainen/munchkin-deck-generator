@@ -184,7 +184,7 @@ export enum CharRelation {
   Dwarf = "dwarf",
   Halfling = "halfling",
   RoleModifier = "role_modifier",
-  Stead = "stead",
+  Steed = "steed",
   Hireling = "hireling",
 }
 
@@ -214,6 +214,8 @@ export enum OtherRelation {
   FromHell = "from_hell",
   ClassModifier = "class_modifier",
   RaceModifier = "race_modifier",
+  Steed = "steed",
+  Hireling = "hireling",
 }
 
 export class Card {
@@ -424,7 +426,7 @@ export class MonsterBoostCard extends Card {
     super({
       ...props,
       deck: Deck.Door,
-      type: Type.RoleModifier,
+      type: Type.MonsterBoost,
       level: 0,
     });
     this.subtype = props.subtype;
@@ -450,7 +452,7 @@ export class CommonDoorCard extends Card {
 
 export class GearCard extends Card {
   override deck: Deck.Treasure = Deck.Treasure;
-  override type: Type.Common = Type.Common;
+  override type: Type.Gear = Type.Gear;
   override subtype: GearSubtype;
 
   constructor(props: Omit<Card, "subtype"> & { subtype: GearSubtype }) {
@@ -470,11 +472,25 @@ export class BoostCard extends Card {
   override subtype: BoostSubtype;
 
   constructor(props: Omit<Card, "subtype"> & { subtype: BoostSubtype }) {
+    let char_relations = props.char_relations;
+    if (props.subtype === Subtype.Hireling)
+      char_relations = [
+        ...props.char_relations.filter((c) => c !== CharRelation.Hireling),
+        CharRelation.Hireling,
+      ];
+
+    if (props.subtype === Subtype.Steed)
+      char_relations = [
+        ...props.char_relations.filter((c) => c !== CharRelation.Steed),
+        CharRelation.Steed,
+      ];
+
     super({
       ...props,
       deck: Deck.Treasure,
       type: Type.Boost,
       level: 0,
+      char_relations,
     });
     this.subtype = props.subtype;
   }
@@ -490,7 +506,7 @@ export class HirelingCard extends Card {
     super({
       ...props,
       deck: Deck.Treasure,
-      type: Type.Boost,
+      type: Type.Hireling,
       level: 0,
       subtype: Subtype.None,
       char_relations: [
@@ -511,7 +527,7 @@ export class GoUpALvlCard extends Card {
     super({
       ...props,
       deck: Deck.Treasure,
-      type: Type.Boost,
+      type: Type.GoUpALvl,
       level: 0,
     });
     this.subtype = props.subtype;
