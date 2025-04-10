@@ -525,7 +525,9 @@ const Required = ({
         <Autocomplete
           multiple
           options={cards}
-          getOptionLabel={(option) => option.name.ru}
+          getOptionLabel={(option) =>
+            option.name.ru.length ? option.name.ru : option.name.en
+          }
           value={selectedValues}
           onChange={(e, newValue) => {
             const newIds = newValue.map((item) => item.id);
@@ -537,7 +539,7 @@ const Required = ({
               <Chip
                 variant="outlined"
                 size="small"
-                label={option.name.ru}
+                label={option.name.ru.length ? option.name.ru : option.name.en}
                 {...getTagProps({ index })}
                 key={option.id}
               />

@@ -23,7 +23,7 @@ export default () => {
   return (
     <Card
       sx={{
-        padding: 2,
+        // padding: 2,
         display: "flex",
         flexDirection: "column",
         overflow: "hidden",
