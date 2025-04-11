@@ -2,6 +2,7 @@ type TypeFromConst<T extends readonly unknown[]> = T[number];
 
 export enum Expansion {
   original = "original",
+  promo = "promo",
   m2 = "m2",
   m3 = "m3",
   m4 = "m4",
@@ -11,6 +12,13 @@ export enum Expansion {
   m7 = "m7",
   m8 = "m8",
   partypack = "partypack",
+  curses = "curses",
+  dice = "dice",
+  enhancers = "enhancers",
+  gmanechangers = "gamechangers",
+  fairy = "fairy",
+  munchkinomicon = "munchkinomicon",
+  quests = "quests",
   puppy = "puppy",
 }
 
@@ -28,6 +36,9 @@ export type CardId = string;
 export enum Deck {
   Door = "door",
   Treasure = "treasure",
+  FairyDust = "fairy_dust",
+  Spell = "spell",
+  Quest = "quest",
 }
 export enum Type {
   Curse = "curse",
@@ -46,6 +57,7 @@ export enum Type {
   Hireling = "hireling",
   GoUpALvl = "go_up_a_lvl",
   OneShot = "one_shot",
+  None = "none",
 }
 
 export const doorsTypes = [
@@ -212,10 +224,13 @@ type Race = (typeof races)[number];
 export enum OtherRelation {
   Undead = "undead",
   FromHell = "from_hell",
+  Santa = "santa",
+  Unicorn = "unicorn",
   ClassModifier = "class_modifier",
   RaceModifier = "race_modifier",
   Steed = "steed",
   Hireling = "hireling",
+  Merch = "merch",
 }
 
 export class Card {

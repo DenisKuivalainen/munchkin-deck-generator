@@ -23,13 +23,11 @@ export default () => {
   return (
     <Card
       sx={{
-        // padding: 2,
         display: "flex",
         flexDirection: "column",
         overflow: "hidden",
       }}
     >
-      {/* Sticky TextField Container */}
       <div
         style={{
           position: "sticky",
@@ -48,13 +46,11 @@ export default () => {
         />
       </div>
 
-      {/* Scrollable Table Container */}
       <div style={{ overflowY: "auto", maxHeight: "calc(100vh - 120px)" }}>
         <Table sx={{ minWidth: 650 }}>
           <TableHead
             sx={{
               position: "sticky",
-              //   top: "56px", // Space for the sticky TextField
               top: 0,
               backgroundColor: "#fff",
               zIndex: 1,

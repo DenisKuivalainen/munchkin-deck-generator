@@ -102,31 +102,43 @@ const TypeSelect = ({
   type: Type | undefined;
   setType: (type: Type) => void;
 }) => {
-  const getTypes = () => {
+  const [types, setTypes] = useState<Type[]>([]);
+
+  useEffect(() => {
     switch (deck) {
       case Deck.Door:
-        return doorsTypes;
+        setTypes([...doorsTypes]);
+        break;
       case Deck.Treasure:
-        return treasureTypes;
+        setTypes([...treasureTypes]);
+        break;
+      default:
+        setTypes([]);
+        setType(Type.None);
+        break;
     }
-  };
+  }, []);
 
   return (
     <>
-      <FormControl margin="normal" fullWidth size="small">
-        <InputLabel id="deck-label">Type</InputLabel>
-        <Select
-          labelId="deck-label"
-          id="demo-simple-select"
-          value={type}
-          label="Type"
-          onChange={(e: SelectChangeEvent) => setType(e.target.value as Type)}
-        >
-          {getTypes().map((v) => (
-            <MenuItem value={v}>{v}</MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+      {types.length ? (
+        <FormControl margin="normal" fullWidth size="small">
+          <InputLabel id="deck-label">Type</InputLabel>
+          <Select
+            labelId="deck-label"
+            id="demo-simple-select"
+            value={type}
+            label="Type"
+            onChange={(e: SelectChangeEvent) => setType(e.target.value as Type)}
+          >
+            {types.map((v) => (
+              <MenuItem value={v}>{v}</MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      ) : (
+        <></>
+      )}
       {type ? children : <></>}
     </>
   );
@@ -313,19 +325,17 @@ const ReprintsInput = ({
         <Box display="flex" alignItems="center" gap={1}>
           <Select
             size="small"
-            style={{ width: 70, height: 56 }}
+            style={{ width: 70 }}
             value={newExpansion || ""}
             onChange={(e) => setNewExpansion(e.target.value as Expansion)}
             renderValue={() =>
               newExpansion ? (
-                <Box display="flex" alignItems="center">
-                  <Avatar
-                    variant="square"
-                    src={`${window.location.origin}/icons/${newExpansion}.gif`}
-                    alt={newExpansion}
-                    sx={{ width: 23, height: 23 }}
-                  />
-                </Box>
+                <Avatar
+                  variant="square"
+                  src={`${window.location.origin}/icons/${newExpansion}.gif`}
+                  alt={newExpansion}
+                  sx={{ height: 23 }}
+                />
               ) : (
                 <></>
               )
@@ -333,13 +343,13 @@ const ReprintsInput = ({
           >
             {Object.values(Expansion).map((expansion) => (
               <MenuItem key={expansion} value={expansion}>
-                <ListItemAvatar>
-                  <Avatar
-                    variant="square"
-                    src={`${window.location.origin}/icons/${expansion}.gif`}
-                    alt={expansion}
-                  />
-                </ListItemAvatar>
+                <Avatar
+                  variant="square"
+                  src={`${window.location.origin}/icons/${expansion}.gif`}
+                  alt={expansion}
+                  sx={{ height: 23 }}
+                />
+                {expansion}
               </MenuItem>
             ))}
           </Select>
@@ -366,7 +376,7 @@ const ReprintsInput = ({
             <FormControl fullWidth margin="normal">
               <Select
                 size="small"
-                style={{ width: 70, height: 56 }}
+                style={{ width: 70 }}
                 value={r.expansion}
                 onChange={(e) =>
                   updateReprint(r.id, e.target.value as Expansion)
@@ -378,7 +388,7 @@ const ReprintsInput = ({
                         variant="square"
                         src={`${window.location.origin}/icons/${selected}.gif`}
                         alt={selected}
-                        sx={{ width: 23, height: 23 }}
+                        sx={{ height: 23 }}
                       />
                     </Box>
                   ) : (
@@ -388,13 +398,13 @@ const ReprintsInput = ({
               >
                 {Object.values(Expansion).map((expansion) => (
                   <MenuItem key={expansion} value={expansion}>
-                    <ListItemAvatar>
-                      <Avatar
-                        variant="square"
-                        src={`${window.location.origin}/icons/${expansion}.gif`}
-                        alt={expansion}
-                      />
-                    </ListItemAvatar>
+                    <Avatar
+                      variant="square"
+                      src={`${window.location.origin}/icons/${expansion}.gif`}
+                      alt={expansion}
+                      sx={{ height: 23 }}
+                    />
+                    {expansion}
                   </MenuItem>
                 ))}
               </Select>
@@ -430,40 +440,63 @@ const CharRelationSelect = ({
     }
   };
 
-  const getItems = () => {
+  const renderGroup = (items: CharRelation[]) =>
+    items.map((relation) => (
+      <Grid item xs={6} sm={4} md={3} key={relation}>
+        <FormControlLabel
+          control={
+            <Checkbox
+              checked={charRelations.includes(relation)}
+              onChange={() => handleToggle(relation)}
+              disabled={
+                isSingleSelect &&
+                charRelations.length === 1 &&
+                !charRelations.includes(relation)
+              }
+            />
+          }
+          label={relation}
+        />
+      </Grid>
+    ));
+
+  const join = (arrays: React.JSX.Element[][]): React.JSX.Element[] => {
+    return arrays.reduce((acc, curr) => {
+      if (!acc.length) return curr;
+      return [
+        ...acc,
+        <Grid item xs={12}>
+          <div style={{ height: 16 }} />
+        </Grid>,
+        ...curr,
+      ];
+    }, []);
+  };
+
+  const getElements = () => {
     switch (type) {
       case Type.Class:
-        return classes;
+        return renderGroup(classes);
       case Type.Race:
-        return races;
+        return renderGroup(races);
+
       default:
-        return Object.values(CharRelation);
+        return join(
+          [
+            classes,
+            races,
+            Object.values(CharRelation).filter(
+              (r) => !classes.includes(r) && !races.includes(r)
+            ),
+          ].map((r) => renderGroup(r))
+        );
     }
   };
 
   return (
     <>
       <FormControl component="fieldset" fullWidth>
-        <Grid container spacing={1}>
-          {getItems().map((relation) => (
-            <Grid item xs={6} sm={4} md={3} key={relation}>
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    checked={charRelations.includes(relation)}
-                    onChange={() => handleToggle(relation)}
-                    disabled={
-                      isSingleSelect &&
-                      charRelations.length === 1 &&
-                      !charRelations.includes(relation)
-                    }
-                  />
-                }
-                label={relation}
-              />
-            </Grid>
-          ))}
-        </Grid>
+        <Grid container>{getElements()}</Grid>
       </FormControl>
       <Divider />
     </>
@@ -612,7 +645,6 @@ export const CardEditor = ({
   useEffect(() => {
     if (isCardLoading) return;
     setSelectedType(undefined);
-    console.log(111);
   }, [selectedDeck]);
   useEffect(() => {
     if (isCardLoading) return;
@@ -621,7 +653,6 @@ export const CardEditor = ({
   useEffect(() => {
     if (isCardLoading) return;
 
-    setName(defaultName);
     setLevel(0);
     setReprints([]);
     setCharRelations([]);
@@ -646,6 +677,8 @@ export const CardEditor = ({
 
     router.back();
   };
+
+  const matchingCard = cards.find((c) => c.name.en === name.en);
 
   return (
     <Box p={4} maxWidth={600} mx="auto">
@@ -677,6 +710,22 @@ export const CardEditor = ({
               setOtherRelations={setOtherRelations}
             />
             <Required required={required} setRequired={setRequired} />
+            {matchingCard && matchingCard.id !== cardId ? (
+              <div style={{ marginTop: 16 }}>
+                <Typography color="error">
+                  Card with such name already exists, edit it instead
+                </Typography>
+                <Button
+                  onClick={() => router.push(`/editCard/${matchingCard.id}`)}
+                  color="error"
+                  variant="contained"
+                >
+                  Edit "{matchingCard.name.en}" card
+                </Button>
+              </div>
+            ) : (
+              <></>
+            )}
             {name.en.length && reprints.length ? (
               <Button
                 onClick={saveCard}
