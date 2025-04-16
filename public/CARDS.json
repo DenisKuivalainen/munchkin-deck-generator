@@ -15,9 +15,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "lizard"
-    ],
+    "char_relations": ["lizard"],
     "other_relations": [],
     "level": 2
   },
@@ -117,9 +115,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "cleric"
-    ],
+    "char_relations": ["cleric"],
     "other_relations": [],
     "level": 4
   },
@@ -179,9 +175,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "ranger"
-    ],
+    "char_relations": ["ranger"],
     "other_relations": [],
     "level": 4
   },
@@ -221,10 +215,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "centaur",
-      "steed"
-    ],
+    "char_relations": ["centaur", "steed"],
     "other_relations": [],
     "level": 2
   },
@@ -304,9 +295,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "halfling"
-    ],
+    "char_relations": ["halfling"],
     "other_relations": [],
     "level": 3
   },
@@ -326,9 +315,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "bard"
-    ],
+    "char_relations": ["bard"],
     "other_relations": [],
     "level": 3
   },
@@ -348,9 +335,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "thief"
-    ],
+    "char_relations": ["thief"],
     "other_relations": [],
     "level": 3
   },
@@ -370,9 +355,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "orc"
-    ],
+    "char_relations": ["orc"],
     "other_relations": [],
     "level": 4
   },
@@ -392,9 +375,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "bard"
-    ],
+    "char_relations": ["bard"],
     "other_relations": [],
     "level": 3
   },
@@ -534,9 +515,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "cleric"
-    ],
+    "char_relations": ["cleric"],
     "other_relations": [],
     "level": 3
   },
@@ -556,9 +535,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "dwarf"
-    ],
+    "char_relations": ["dwarf"],
     "other_relations": [],
     "level": 4
   },
@@ -578,9 +555,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "warrior"
-    ],
+    "char_relations": ["warrior"],
     "other_relations": [],
     "level": 4
   },
@@ -600,9 +575,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "elf"
-    ],
+    "char_relations": ["elf"],
     "other_relations": [],
     "level": 3
   },
@@ -622,9 +595,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "wizard"
-    ],
+    "char_relations": ["wizard"],
     "other_relations": [],
     "level": 5
   },
@@ -684,9 +655,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "warrior"
-    ],
+    "char_relations": ["warrior"],
     "other_relations": [],
     "level": 5
   },
@@ -706,9 +675,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "dwarf"
-    ],
+    "char_relations": ["dwarf"],
     "other_relations": [],
     "level": 4
   },
@@ -728,9 +695,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "elf"
-    ],
+    "char_relations": ["elf"],
     "other_relations": [],
     "level": 3
   },
@@ -750,9 +715,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "gnome"
-    ],
+    "char_relations": ["gnome"],
     "other_relations": [],
     "level": 5
   },
@@ -792,9 +755,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "bard"
-    ],
+    "char_relations": ["bard"],
     "other_relations": [],
     "level": 4
   },
@@ -814,9 +775,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "centaur"
-    ],
+    "char_relations": ["centaur"],
     "other_relations": [],
     "level": 1
   },
@@ -836,9 +795,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "cleric"
-    ],
+    "char_relations": ["cleric"],
     "other_relations": [],
     "level": 1
   },
@@ -879,9 +836,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "undead"
-    ],
+    "other_relations": ["undead"],
     "level": 2
   },
   {
@@ -980,9 +935,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "ranger"
-    ],
+    "char_relations": ["ranger"],
     "other_relations": [],
     "level": 5
   },
@@ -1023,9 +976,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "undead"
-    ],
+    "other_relations": ["undead"],
     "level": 4
   },
   {
@@ -1044,9 +995,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "ranger"
-    ],
+    "char_relations": ["ranger"],
     "other_relations": [],
     "level": 3
   },
@@ -1066,9 +1015,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "elf"
-    ],
+    "char_relations": ["elf"],
     "other_relations": [],
     "level": 4
   },
@@ -1208,9 +1155,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "orc"
-    ],
+    "char_relations": ["orc"],
     "other_relations": [],
     "level": 5
   },
@@ -1230,9 +1175,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "ranger"
-    ],
+    "char_relations": ["ranger"],
     "other_relations": [],
     "level": 3
   },
@@ -1252,9 +1195,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 4
   },
@@ -1294,9 +1235,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "centaur"
-    ],
+    "char_relations": ["centaur"],
     "other_relations": [],
     "level": 6
   },
@@ -1336,9 +1275,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "lizard"
-    ],
+    "char_relations": ["lizard"],
     "other_relations": [],
     "level": 3
   },
@@ -1358,9 +1295,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 1
   },
@@ -1460,9 +1395,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -1502,9 +1435,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "gnome"
-    ],
+    "char_relations": ["gnome"],
     "other_relations": [],
     "level": 4
   },
@@ -1644,9 +1575,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "wizard"
-    ],
+    "char_relations": ["wizard"],
     "other_relations": [],
     "level": 3
   },
@@ -1686,9 +1615,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "dwarf"
-    ],
+    "char_relations": ["dwarf"],
     "other_relations": [],
     "level": 3
   },
@@ -1808,9 +1735,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "gnome"
-    ],
+    "char_relations": ["gnome"],
     "other_relations": [],
     "level": 4
   },
@@ -1830,9 +1755,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "lizard"
-    ],
+    "char_relations": ["lizard"],
     "other_relations": [],
     "level": 3
   },
@@ -1852,9 +1775,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "centaur"
-    ],
+    "char_relations": ["centaur"],
     "other_relations": [],
     "level": 2
   },
@@ -1895,9 +1816,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "undead"
-    ],
+    "other_relations": ["undead"],
     "level": 1
   },
   {
@@ -1976,9 +1895,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "elf"
-    ],
+    "char_relations": ["elf"],
     "other_relations": [],
     "level": 1
   },
@@ -1998,9 +1915,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "wizard"
-    ],
+    "char_relations": ["wizard"],
     "other_relations": [],
     "level": 3
   },
@@ -2100,9 +2015,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "orc"
-    ],
+    "char_relations": ["orc"],
     "other_relations": [],
     "level": 2
   },
@@ -2122,9 +2035,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "thief"
-    ],
+    "char_relations": ["thief"],
     "other_relations": [],
     "level": 2
   },
@@ -2164,9 +2075,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "lizard"
-    ],
+    "char_relations": ["lizard"],
     "other_relations": [],
     "level": 2
   },
@@ -2266,9 +2175,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "cleric"
-    ],
+    "char_relations": ["cleric"],
     "other_relations": [],
     "level": 3
   },
@@ -2288,9 +2195,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling"],
     "other_relations": [],
     "level": 0
   },
@@ -2390,9 +2295,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "wizard"
-    ],
+    "char_relations": ["wizard"],
     "other_relations": [],
     "level": 3
   },
@@ -2452,9 +2355,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "elf"
-    ],
+    "char_relations": ["elf"],
     "other_relations": [],
     "level": 0
   },
@@ -2473,9 +2374,7 @@
         "expansion": "partypack"
       }
     ],
-    "required": [
-      "0120"
-    ],
+    "required": ["0120"],
     "char_relations": [],
     "other_relations": [],
     "level": 2
@@ -2495,9 +2394,7 @@
         "expansion": "partypack"
       }
     ],
-    "required": [
-      "0118"
-    ],
+    "required": ["0118"],
     "char_relations": [],
     "other_relations": [],
     "level": 2
@@ -2517,9 +2414,7 @@
         "expansion": "partypack"
       }
     ],
-    "required": [
-      "0119"
-    ],
+    "required": ["0119"],
     "char_relations": [],
     "other_relations": [],
     "level": 2
@@ -2620,9 +2515,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "wizard"
-    ],
+    "char_relations": ["wizard"],
     "other_relations": [],
     "level": 0
   },
@@ -2662,9 +2555,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "dwarf"
-    ],
+    "char_relations": ["dwarf"],
     "other_relations": [],
     "level": 0
   },
@@ -2804,9 +2695,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "thief"
-    ],
+    "char_relations": ["thief"],
     "other_relations": [],
     "level": 1
   },
@@ -2846,9 +2735,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "warrior"
-    ],
+    "char_relations": ["warrior"],
     "other_relations": [],
     "level": 3
   },
@@ -2868,9 +2755,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "thief"
-    ],
+    "char_relations": ["thief"],
     "other_relations": [],
     "level": 4
   },
@@ -2890,9 +2775,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "thief"
-    ],
+    "char_relations": ["thief"],
     "other_relations": [],
     "level": 2
   },
@@ -2912,9 +2795,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "halfling"
-    ],
+    "char_relations": ["halfling"],
     "other_relations": [],
     "level": 3
   },
@@ -2934,9 +2815,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "halfling"
-    ],
+    "char_relations": ["halfling"],
     "other_relations": [],
     "level": 3
   },
@@ -2996,10 +2875,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed",
-      "hireling"
-    ],
+    "char_relations": ["steed", "hireling"],
     "other_relations": [],
     "level": 0
   },
@@ -3083,9 +2959,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling"],
     "other_relations": [],
     "level": 0
   },
@@ -3105,9 +2979,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -3623,15 +3495,15 @@
     "reprints": [
       {
         "id": "00",
-        "expansion": "partypack"
+        "expansion": "promo"
       },
       {
         "id": "01",
-        "expansion": "partypack"
+        "expansion": "promo"
       },
       {
         "id": "02",
-        "expansion": "partypack"
+        "expansion": "promo"
       }
     ],
     "required": [],
@@ -4076,9 +3948,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "undead"
-    ],
+    "other_relations": ["undead"],
     "level": 2
   },
   {
@@ -4097,9 +3967,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "elf"
-    ],
+    "char_relations": ["elf"],
     "other_relations": [],
     "level": 2
   },
@@ -4339,9 +4207,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "dwarf"
-    ],
+    "char_relations": ["dwarf"],
     "other_relations": [],
     "level": 6
   },
@@ -4521,10 +4387,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "halfling",
-      "orc"
-    ],
+    "char_relations": ["halfling", "orc"],
     "other_relations": [],
     "level": 2
   },
@@ -4544,9 +4407,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "halfling"
-    ],
+    "char_relations": ["halfling"],
     "other_relations": [],
     "level": 3
   },
@@ -4702,15 +4563,15 @@
     "reprints": [
       {
         "id": "00",
-        "expansion": "partypack"
+        "expansion": "promo"
       },
       {
         "id": "01",
-        "expansion": "partypack"
+        "expansion": "promo"
       },
       {
         "id": "02",
-        "expansion": "partypack"
+        "expansion": "promo"
       }
     ],
     "required": [],
@@ -4924,7 +4785,7 @@
     "subtype": "combat",
     "name": {
       "en": "Pollymorph Potion",
-      "ru": "Зелье стрелочника"
+      "ru": "Зелье полуморфа"
     },
     "id": "0238",
     "reprints": [
@@ -4955,9 +4816,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "undead"
-    ],
+    "other_relations": ["undead"],
     "level": 0
   },
   {
@@ -5012,15 +4871,15 @@
     "reprints": [
       {
         "id": "00",
-        "expansion": "partypack"
+        "expansion": "promo"
       },
       {
         "id": "01",
-        "expansion": "partypack"
+        "expansion": "promo"
       },
       {
         "id": "02",
-        "expansion": "partypack"
+        "expansion": "promo"
       }
     ],
     "required": [],
@@ -5385,7 +5244,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [],
+    "other_relations": ["merch"],
     "level": 0
   },
   {
@@ -5444,9 +5303,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -5466,9 +5323,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -5640,9 +5495,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "bard"
-    ],
+    "char_relations": ["bard"],
     "other_relations": [],
     "level": 2
   },
@@ -5738,9 +5591,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling"],
     "other_relations": [],
     "level": 0
   },
@@ -5900,10 +5751,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "gnome",
-      "halfling"
-    ],
+    "char_relations": ["gnome", "halfling"],
     "other_relations": [],
     "level": 0
   },
@@ -6027,9 +5875,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling"],
     "other_relations": [],
     "level": 0
   },
@@ -6348,9 +6194,7 @@
         "expansion": "m3"
       }
     ],
-    "required": [
-      "0021"
-    ],
+    "required": ["0021"],
     "char_relations": [],
     "other_relations": [],
     "level": 0
@@ -6431,9 +6275,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -6453,9 +6295,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -6475,9 +6315,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -6497,9 +6335,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -6519,9 +6355,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -6541,9 +6375,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -6563,9 +6395,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -6585,9 +6415,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -6607,9 +6435,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -6629,9 +6455,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -6651,9 +6475,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -6673,9 +6495,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -6695,9 +6515,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling"],
     "other_relations": [],
     "level": 0
   },
@@ -6717,9 +6535,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling"],
     "other_relations": [],
     "level": 0
   },
@@ -6731,7 +6547,7 @@
       "en": "Wandering Monster",
       "ru": "Бродячая тварь"
     },
-    "id": "0321",
+    "id": "WAMO",
     "reprints": [
       {
         "id": "00",
@@ -7335,9 +7151,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "lizard"
-    ],
+    "char_relations": ["lizard"],
     "other_relations": [],
     "level": 0
   },
@@ -7381,9 +7195,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "centaur"
-    ],
+    "char_relations": ["centaur"],
     "other_relations": [],
     "level": 0
   },
@@ -7427,9 +7239,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "elf"
-    ],
+    "char_relations": ["elf"],
     "other_relations": [],
     "level": 0
   },
@@ -7473,9 +7283,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "orc"
-    ],
+    "char_relations": ["orc"],
     "other_relations": [],
     "level": 0
   },
@@ -7519,9 +7327,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "gnome"
-    ],
+    "char_relations": ["gnome"],
     "other_relations": [],
     "level": 0
   },
@@ -7565,9 +7371,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "dwarf"
-    ],
+    "char_relations": ["dwarf"],
     "other_relations": [],
     "level": 0
   },
@@ -7611,9 +7415,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "halfling"
-    ],
+    "char_relations": ["halfling"],
     "other_relations": [],
     "level": 0
   },
@@ -7653,9 +7455,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "bard"
-    ],
+    "char_relations": ["bard"],
     "other_relations": [],
     "level": 0
   },
@@ -7695,9 +7495,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "ranger"
-    ],
+    "char_relations": ["ranger"],
     "other_relations": [],
     "level": 0
   },
@@ -7737,9 +7535,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "warrior"
-    ],
+    "char_relations": ["warrior"],
     "other_relations": [],
     "level": 0
   },
@@ -7779,9 +7575,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "wizard"
-    ],
+    "char_relations": ["wizard"],
     "other_relations": [],
     "level": 0
   },
@@ -7821,9 +7615,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "thief"
-    ],
+    "char_relations": ["thief"],
     "other_relations": [],
     "level": 0
   },
@@ -7863,9 +7655,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "cleric"
-    ],
+    "char_relations": ["cleric"],
     "other_relations": [],
     "level": 0
   },
@@ -7885,12 +7675,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "role_modifier"
-    ],
-    "other_relations": [
-      "class_modifier"
-    ],
+    "char_relations": ["role_modifier", "unused"],
+    "other_relations": ["class_modifier"],
     "level": 0
   },
   {
@@ -7917,12 +7703,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "role_modifier"
-    ],
-    "other_relations": [
-      "class_modifier"
-    ],
+    "char_relations": ["role_modifier"],
+    "other_relations": ["class_modifier"],
     "level": 0
   },
   {
@@ -7933,7 +7715,7 @@
       "en": "Super Munchkin",
       "ru": "Суперманчкин"
     },
-    "id": "0356",
+    "id": "SUMU",
     "reprints": [
       {
         "id": "00",
@@ -7978,9 +7760,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "class_modifier"
-    ],
+    "other_relations": ["class_modifier"],
     "level": 0
   },
   {
@@ -8007,12 +7787,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "role_modifier"
-    ],
-    "other_relations": [
-      "class_modifier"
-    ],
+    "char_relations": ["role_modifier"],
+    "other_relations": ["class_modifier"],
     "level": 0
   },
   {
@@ -8039,12 +7815,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "role_modifier"
-    ],
-    "other_relations": [
-      "class_modifier"
-    ],
+    "char_relations": ["role_modifier"],
+    "other_relations": ["class_modifier"],
     "level": 0
   },
   {
@@ -8063,12 +7835,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "role_modifier"
-    ],
-    "other_relations": [
-      "race_modifier"
-    ],
+    "char_relations": ["role_modifier", "unused"],
+    "other_relations": ["race_modifier"],
     "level": 0
   },
   {
@@ -8095,12 +7863,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "role_modifier"
-    ],
-    "other_relations": [
-      "race_modifier"
-    ],
+    "char_relations": ["role_modifier"],
+    "other_relations": ["race_modifier"],
     "level": 0
   },
   {
@@ -8111,7 +7875,7 @@
       "en": "Half-Breed",
       "ru": "Полукровка"
     },
-    "id": "0361",
+    "id": "HABR",
     "reprints": [
       {
         "id": "00",
@@ -8160,9 +7924,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "race_modifier"
-    ],
+    "other_relations": ["race_modifier"],
     "level": 0
   },
   {
@@ -8189,12 +7951,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "role_modifier"
-    ],
-    "other_relations": [
-      "race_modifier"
-    ],
+    "char_relations": ["role_modifier"],
+    "other_relations": ["race_modifier"],
     "level": 0
   },
   {
@@ -8221,13 +7979,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "role_modifier"
-    ],
-    "other_relations": [
-      "class_modifier",
-      "race_modifier"
-    ],
+    "char_relations": ["role_modifier"],
+    "other_relations": ["class_modifier", "race_modifier"],
     "level": 0
   },
   {
@@ -8254,13 +8007,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "role_modifier"
-    ],
-    "other_relations": [
-      "class_modifier",
-      "race_modifier"
-    ],
+    "char_relations": ["role_modifier"],
+    "other_relations": ["class_modifier", "race_modifier"],
     "level": 0
   },
   {
@@ -8279,12 +8027,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8303,12 +8047,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8327,12 +8067,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8351,12 +8087,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8375,12 +8107,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8399,12 +8127,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8423,12 +8147,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8447,12 +8167,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8471,12 +8187,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8495,12 +8207,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8519,12 +8227,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8543,12 +8247,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8567,12 +8267,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8591,12 +8287,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8615,12 +8307,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8639,12 +8327,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
-    "other_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
+    "other_relations": ["steed"],
     "level": 0
   },
   {
@@ -8663,12 +8347,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -8687,13 +8367,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling",
-      "lizard"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling", "lizard"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -8712,12 +8387,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -8736,13 +8407,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling",
-      "gnome"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling", "gnome"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -8761,13 +8427,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling",
-      "halfling"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling", "halfling"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -8786,13 +8447,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling",
-      "dwarf"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling", "dwarf"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -8811,13 +8467,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling",
-      "steed"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling", "steed"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -8836,13 +8487,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling",
-      "warrior"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling", "warrior"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -8861,13 +8507,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling",
-      "wizard"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling", "wizard"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -8886,12 +8527,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -8910,13 +8547,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling",
-      "elf"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling", "elf"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -8935,13 +8567,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling",
-      "thief"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling", "thief"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -8960,14 +8587,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling",
-      "steed"
-    ],
-    "other_relations": [
-      "hireling",
-      "steed"
-    ],
+    "char_relations": ["hireling", "steed"],
+    "other_relations": ["hireling", "steed"],
     "level": 0
   },
   {
@@ -8986,13 +8607,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling",
-      "centaur"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling", "centaur"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -9011,12 +8627,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -9035,13 +8647,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling",
-      "bard"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling", "bard"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -9060,13 +8667,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling",
-      "cleric"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling", "cleric"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -9085,12 +8687,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling"
-    ],
-    "other_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling"],
+    "other_relations": ["hireling"],
     "level": 0
   },
   {
@@ -9169,9 +8767,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "cleric"
-    ],
+    "char_relations": ["cleric"],
     "other_relations": [],
     "level": 0
   },
@@ -9367,15 +8963,15 @@
     "reprints": [
       {
         "id": "00",
-        "expansion": "partypack"
+        "expansion": "promo"
       },
       {
         "id": "01",
-        "expansion": "partypack"
+        "expansion": "promo"
       },
       {
         "id": "02",
-        "expansion": "partypack"
+        "expansion": "promo"
       }
     ],
     "required": [],
@@ -9718,9 +9314,7 @@
         "expansion": "m2"
       }
     ],
-    "required": [
-      "0404"
-    ],
+    "required": ["0404"],
     "char_relations": [],
     "other_relations": [],
     "level": 0
@@ -9760,9 +9354,7 @@
         "expansion": "m8"
       }
     ],
-    "required": [
-      "0430"
-    ],
+    "required": ["0430"],
     "char_relations": [],
     "other_relations": [],
     "level": 0
@@ -9800,9 +9392,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "undead"
-    ],
+    "other_relations": ["undead"],
     "level": 0
   },
   {
@@ -9825,12 +9415,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "cleric"
-    ],
-    "other_relations": [
-      "from_hell"
-    ],
+    "char_relations": ["cleric"],
+    "other_relations": ["from_hell"],
     "level": 0
   },
   {
@@ -9989,9 +9575,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "bard"
-    ],
+    "char_relations": ["bard"],
     "other_relations": [],
     "level": 0
   },
@@ -10011,9 +9595,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "wizard"
-    ],
+    "char_relations": ["wizard"],
     "other_relations": [],
     "level": 0
   },
@@ -10093,9 +9675,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "warrior"
-    ],
+    "char_relations": ["warrior"],
     "other_relations": [],
     "level": 0
   },
@@ -10495,16 +10075,14 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
   {
     "deck": "door",
     "type": "curse",
-    "subtype": "steed",
+    "subtype": "gear",
     "name": {
       "en": "Bad Steed Feed",
       "ru": "Не в коня корм"
@@ -10517,9 +10095,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -10539,9 +10115,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 0
   },
@@ -10561,10 +10135,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling",
-      "steed"
-    ],
+    "char_relations": ["hireling", "steed"],
     "other_relations": [],
     "level": 0
   },
@@ -10584,9 +10155,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "hireling"
-    ],
+    "char_relations": ["hireling"],
     "other_relations": [],
     "level": 0
   },
@@ -10606,12 +10175,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "role_modifier"
-    ],
-    "other_relations": [
-      "race_modifier"
-    ],
+    "char_relations": ["role_modifier"],
+    "other_relations": ["race_modifier"],
     "level": 0
   },
   {
@@ -10631,9 +10196,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "race_modifier"
-    ],
+    "other_relations": ["race_modifier"],
     "level": 0
   },
   {
@@ -10653,9 +10216,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "race_modifier"
-    ],
+    "other_relations": ["race_modifier"],
     "level": 0
   },
   {
@@ -10675,9 +10236,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "race_modifier"
-    ],
+    "other_relations": ["race_modifier"],
     "level": 0
   },
   {
@@ -10697,10 +10256,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "class_modifier",
-      "race_modifier"
-    ],
+    "other_relations": ["class_modifier", "race_modifier"],
     "level": 0
   },
   {
@@ -10720,10 +10276,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "class_modifier",
-      "race_modifier"
-    ],
+    "other_relations": ["class_modifier", "race_modifier"],
     "level": 0
   },
   {
@@ -10742,12 +10295,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "role_modifier"
-    ],
-    "other_relations": [
-      "class_modifier"
-    ],
+    "char_relations": ["role_modifier"],
+    "other_relations": ["class_modifier"],
     "level": 0
   },
   {
@@ -10767,9 +10316,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "class_modifier"
-    ],
+    "other_relations": ["class_modifier"],
     "level": 0
   },
   {
@@ -10789,9 +10336,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "class_modifier"
-    ],
+    "other_relations": ["class_modifier"],
     "level": 0
   },
   {
@@ -10811,9 +10356,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "class_modifier"
-    ],
+    "other_relations": ["class_modifier"],
     "level": 0
   },
   {
@@ -10833,9 +10376,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "class_modifier"
-    ],
+    "other_relations": ["class_modifier"],
     "level": 0
   },
   {
@@ -11555,9 +11096,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "undead"
-    ],
+    "other_relations": ["undead"],
     "level": 0
   },
   {
@@ -11617,9 +11156,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "undead"
-    ],
+    "other_relations": ["undead"],
     "level": 0
   },
   {
@@ -11638,9 +11175,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "dwarf"
-    ],
+    "char_relations": ["dwarf"],
     "other_relations": [],
     "level": 0
   },
@@ -11776,15 +11311,15 @@
     "reprints": [
       {
         "id": "00",
-        "expansion": "partypack"
+        "expansion": "promo"
       },
       {
         "id": "01",
-        "expansion": "partypack"
+        "expansion": "promo"
       },
       {
         "id": "02",
-        "expansion": "partypack"
+        "expansion": "promo"
       }
     ],
     "required": [],
@@ -11908,12 +11443,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "ranger"
-    ],
-    "other_relations": [
-      "undead"
-    ],
+    "char_relations": ["ranger"],
+    "other_relations": ["undead"],
     "level": 1
   },
   {
@@ -11992,9 +11523,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "cleric"
-    ],
+    "char_relations": ["cleric"],
     "other_relations": [],
     "level": 1
   },
@@ -12034,9 +11563,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "elf"
-    ],
+    "char_relations": ["elf"],
     "other_relations": [],
     "level": 1
   },
@@ -12056,9 +11583,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "cleric"
-    ],
+    "char_relations": ["cleric"],
     "other_relations": [],
     "level": 1
   },
@@ -12098,9 +11623,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "cleric"
-    ],
+    "char_relations": ["cleric"],
     "other_relations": [],
     "level": 1
   },
@@ -12120,9 +11643,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "bard"
-    ],
+    "char_relations": ["bard"],
     "other_relations": [],
     "level": 1
   },
@@ -12282,9 +11803,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "elf"
-    ],
+    "char_relations": ["elf"],
     "other_relations": [],
     "level": 1
   },
@@ -12325,9 +11844,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "undead"
-    ],
+    "other_relations": ["undead"],
     "level": 1
   },
   {
@@ -12367,9 +11884,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "undead"
-    ],
+    "other_relations": ["undead"],
     "level": 1
   },
   {
@@ -12388,9 +11903,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "halfling"
-    ],
+    "char_relations": ["halfling"],
     "other_relations": [],
     "level": 1
   },
@@ -12430,10 +11943,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "wizard",
-      "lizard"
-    ],
+    "char_relations": ["wizard", "lizard"],
     "other_relations": [],
     "level": 2
   },
@@ -12453,10 +11963,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "ranger",
-      "centaur"
-    ],
+    "char_relations": ["ranger", "centaur"],
     "other_relations": [],
     "level": 2
   },
@@ -12476,9 +11983,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "bard"
-    ],
+    "char_relations": ["bard"],
     "other_relations": [],
     "level": 2
   },
@@ -12538,9 +12043,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "orc"
-    ],
+    "char_relations": ["orc"],
     "other_relations": [],
     "level": 2
   },
@@ -12561,9 +12064,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "undead"
-    ],
+    "other_relations": ["undead"],
     "level": 2
   },
   {
@@ -12622,10 +12123,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "dwarf",
-      "halfling"
-    ],
+    "char_relations": ["dwarf", "halfling"],
     "other_relations": [],
     "level": 2
   },
@@ -12645,9 +12143,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "bard"
-    ],
+    "char_relations": ["bard"],
     "other_relations": [],
     "level": 2
   },
@@ -12667,10 +12163,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "dwarf",
-      "halfling"
-    ],
+    "char_relations": ["dwarf", "halfling"],
     "other_relations": [],
     "level": 2
   },
@@ -12730,9 +12223,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "elf"
-    ],
+    "char_relations": ["elf"],
     "other_relations": [],
     "level": 2
   },
@@ -12753,9 +12244,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "undead"
-    ],
+    "other_relations": ["undead"],
     "level": 2
   },
   {
@@ -12774,9 +12263,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "wizard"
-    ],
+    "char_relations": ["wizard"],
     "other_relations": [],
     "level": 2
   },
@@ -12816,9 +12303,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "orc"
-    ],
+    "char_relations": ["orc"],
     "other_relations": [],
     "level": 3
   },
@@ -12838,11 +12323,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "dwarf",
-      "halfling",
-      "steed"
-    ],
+    "char_relations": ["dwarf", "halfling", "steed"],
     "other_relations": [],
     "level": 3
   },
@@ -12882,9 +12363,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "elf"
-    ],
+    "char_relations": ["elf"],
     "other_relations": [],
     "level": 3
   },
@@ -12904,12 +12383,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "thief"
-    ],
-    "other_relations": [
-      "undead"
-    ],
+    "char_relations": ["thief"],
+    "other_relations": ["undead"],
     "level": 3
   },
   {
@@ -12928,9 +12403,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "halfling"
-    ],
+    "char_relations": ["halfling"],
     "other_relations": [],
     "level": 3
   },
@@ -12990,9 +12463,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "bard"
-    ],
+    "char_relations": ["bard"],
     "other_relations": [],
     "level": 3
   },
@@ -13052,9 +12523,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "lizard"
-    ],
+    "char_relations": ["lizard"],
     "other_relations": [],
     "level": 4
   },
@@ -13074,10 +12543,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "halfling",
-      "elf"
-    ],
+    "char_relations": ["halfling", "elf"],
     "other_relations": [],
     "level": 4
   },
@@ -13096,13 +12562,8 @@
         "expansion": "m8"
       }
     ],
-    "required": [
-      "0093"
-    ],
-    "char_relations": [
-      "elf",
-      "ranger"
-    ],
+    "required": ["0093"],
+    "char_relations": ["elf", "ranger"],
     "other_relations": [],
     "level": 4
   },
@@ -13222,9 +12683,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "steed"
-    ],
+    "char_relations": ["steed"],
     "other_relations": [],
     "level": 4
   },
@@ -13244,9 +12703,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "elf"
-    ],
+    "char_relations": ["elf"],
     "other_relations": [],
     "level": 4
   },
@@ -13266,12 +12723,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "dwarf"
-    ],
-    "other_relations": [
-      "undead"
-    ],
+    "char_relations": ["dwarf"],
+    "other_relations": ["undead"],
     "level": 4
   },
   {
@@ -13290,9 +12743,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "wizard"
-    ],
+    "char_relations": ["wizard"],
     "other_relations": [],
     "level": 4
   },
@@ -13332,10 +12783,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "bard",
-      "elf"
-    ],
+    "char_relations": ["bard", "elf"],
     "other_relations": [],
     "level": 4
   },
@@ -13355,10 +12803,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "elf",
-      "orc"
-    ],
+    "char_relations": ["elf", "orc"],
     "other_relations": [],
     "level": 4
   },
@@ -13378,10 +12823,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "gnome",
-      "halfling"
-    ],
+    "char_relations": ["gnome", "halfling"],
     "other_relations": [],
     "level": 5
   },
@@ -13420,12 +12862,8 @@
         "expansion": "m2"
       }
     ],
-    "required": [
-      "0455"
-    ],
-    "char_relations": [
-      "elf"
-    ],
+    "required": ["0455"],
+    "char_relations": ["elf"],
     "other_relations": [],
     "level": 5
   },
@@ -13445,9 +12883,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "orc"
-    ],
+    "char_relations": ["orc"],
     "other_relations": [],
     "level": 5
   },
@@ -13467,11 +12903,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "elf",
-      "bard",
-      "halfling"
-    ],
+    "char_relations": ["elf", "bard", "halfling"],
     "other_relations": [],
     "level": 5
   },
@@ -13492,9 +12924,7 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": [
-      "undead"
-    ],
+    "other_relations": ["undead"],
     "level": 5
   },
   {
@@ -13513,13 +12943,8 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "wizard",
-      "ranger"
-    ],
-    "other_relations": [
-      "undead"
-    ],
+    "char_relations": ["wizard", "ranger"],
+    "other_relations": ["undead"],
     "level": 5
   },
   {
@@ -13538,9 +12963,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "orc"
-    ],
+    "char_relations": ["orc"],
     "other_relations": [],
     "level": 5
   },
@@ -13560,10 +12983,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "orc",
-      "thief"
-    ],
+    "char_relations": ["orc", "thief"],
     "other_relations": [],
     "level": 5
   },
@@ -13583,10 +13003,7 @@
       }
     ],
     "required": [],
-    "char_relations": [
-      "warrior",
-      "hireling"
-    ],
+    "char_relations": ["warrior", "hireling"],
     "other_relations": [],
     "level": 5
   },

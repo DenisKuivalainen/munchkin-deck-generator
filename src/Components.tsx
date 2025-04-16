@@ -48,13 +48,16 @@ import { cardFactory } from "@/cardFactory";
 import _CARDS from "../public/CARDS.json";
 import { enToRu } from "@/translator";
 import { useRouter } from "next/navigation";
+import { _Object } from "./objectHelpers";
 
 export const useCards = () => {
   const [cards, setCards] = useState<Card[]>([]);
 
   useEffect(() => {
-    fetch(`${window.location.origin}/CARDS.json`)
-      .then((response) => response.json())
+    axios
+      .get(`${window.location.origin}/CARDS.json`)
+      .then((res) => res.data)
+      .then((data) => data.map((d: any) => new Card(d)))
       .then((data) => setCards(data));
   }, []);
 
@@ -81,7 +84,7 @@ const DeckSelect = ({
           label="Deck"
           onChange={(e: SelectChangeEvent) => setDeck(e.target.value as Deck)}
         >
-          {Object.values(Deck).map((v) => (
+          {_Object.values(Deck).map((v) => (
             <MenuItem value={v}>{v}</MenuItem>
           ))}
         </Select>
@@ -232,7 +235,8 @@ const NameInput = ({
   return (
     <>
       <Divider />
-      {Object.entries(name)
+      {_Object
+        .entries(name)
         .map(([k, v]) => [k, v] as [Lang, string])
         .map(([k, v]) => (
           <>
@@ -341,7 +345,7 @@ const ReprintsInput = ({
               )
             }
           >
-            {Object.values(Expansion).map((expansion) => (
+            {_Object.values(Expansion).map((expansion) => (
               <MenuItem key={expansion} value={expansion}>
                 <Avatar
                   variant="square"
@@ -396,7 +400,7 @@ const ReprintsInput = ({
                   )
                 }
               >
-                {Object.values(Expansion).map((expansion) => (
+                {_Object.values(Expansion).map((expansion) => (
                   <MenuItem key={expansion} value={expansion}>
                     <Avatar
                       variant="square"
@@ -485,9 +489,9 @@ const CharRelationSelect = ({
           [
             classes,
             races,
-            Object.values(CharRelation).filter(
-              (r) => !classes.includes(r) && !races.includes(r)
-            ),
+            _Object
+              .values(CharRelation)
+              .filter((r) => !classes.includes(r) && !races.includes(r)),
           ].map((r) => renderGroup(r))
         );
     }
@@ -608,8 +612,8 @@ export const CardEditor = ({
   const [selectedDeck, setSelectedDeck] = useState<Deck>();
   const [selectedType, setSelectedType] = useState<Type>();
   const [selectedSybtype, setSelectedSubtype] = useState<Subtype>();
-  const defaultName = Object.fromEntries(
-    Object.values(Lang).map((e) => [e, ""] as [Lang, string])
+  const defaultName = _Object.fromEntries(
+    _Object.values(Lang).map((l) => [l, ""] as [Lang, string])
   ) as Name;
   const [name, setName] = useState<Name>(defaultName);
   const [id, setId] = useState<CardId>("");
@@ -651,7 +655,7 @@ export const CardEditor = ({
     setSelectedSubtype(undefined);
   }, [selectedType]);
   useEffect(() => {
-    if (isCardLoading) return;
+    if (isCardLoading || cardId) return;
 
     setLevel(0);
     setReprints([]);

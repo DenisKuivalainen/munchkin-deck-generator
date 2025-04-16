@@ -47,8 +47,7 @@ import axios from "axios";
 import { cardFactory } from "@/cardFactory";
 import _CARDS from "../../../public/CARDS.json";
 import { enToRu } from "@/translator";
-import { CardEditor } from "@/Components";
-const CARDS: Card[] = _CARDS.map((c: any) => new Card(c));
+import { CardEditor, useCards } from "@/Components";
 
 const DeckSelect = ({
   children,
@@ -505,6 +504,8 @@ const Required = ({
   required: CardId[];
   setRequired: React.Dispatch<React.SetStateAction<CardId[]>>;
 }) => {
+  const CARDS: Card[] = useCards();
+
   const selectedValues = CARDS.filter((c) => required.includes(c.id));
 
   return (

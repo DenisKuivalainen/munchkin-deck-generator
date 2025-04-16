@@ -1,3 +1,6 @@
+import * as R from "ramda";
+import { _Object } from "./objectHelpers";
+
 type TypeFromConst<T extends readonly unknown[]> = T[number];
 
 export enum Expansion {
@@ -73,6 +76,7 @@ export const doorsTypes = [
   Type.MonsterBoost,
   Type.Common,
 ] as const;
+type DoorTypes = TypeFromConst<typeof doorsTypes>;
 
 export const treasureTypes = [
   Type.Gear,
@@ -122,10 +126,10 @@ export const oneShotSubtypes = [
   Subtype.Other,
   Subtype.AgainstCurse,
 ] as const;
-type OneShotSubtype = (typeof oneShotSubtypes)[number];
+export type OneShotSubtype = TypeFromConst<typeof oneShotSubtypes>;
 
 export const goUpALvlSubtypes = [Subtype.WithEffect, Subtype.NoEffect] as const;
-type GoUpALvlSubtype = (typeof goUpALvlSubtypes)[number];
+type GoUpALvlSubtype = TypeFromConst<typeof goUpALvlSubtypes>;
 
 export const boostSubtypes = [
   Subtype.Hireling,
@@ -136,7 +140,7 @@ export const boostSubtypes = [
   Subtype.Footgear,
   Subtype.Weapon,
 ] as const;
-type BoostSubtype = (typeof boostSubtypes)[number];
+export type BoostSubtype = TypeFromConst<typeof boostSubtypes>;
 
 export const gearSubtypes = [
   Subtype.Headgear,
@@ -146,7 +150,7 @@ export const gearSubtypes = [
   Subtype.TwoHand,
   Subtype.Other,
 ] as const;
-type GearSubtype = (typeof gearSubtypes)[number];
+type GearSubtype = TypeFromConst<typeof gearSubtypes>;
 
 export const curseSubtypes = [
   Subtype.Level, // Reduces level
@@ -162,7 +166,7 @@ export const curseSubtypes = [
   Subtype.Gear, // Affects any gear
   Subtype.Other,
 ] as const;
-type CurseSubtype = (typeof curseSubtypes)[number];
+export type CurseSubtype = TypeFromConst<typeof curseSubtypes>;
 
 export const roleModifierSubtypes = [
   Subtype.ClassModifier,
@@ -171,7 +175,7 @@ export const roleModifierSubtypes = [
   Subtype.RaceEnhancer,
   Subtype.Other,
 ] as const;
-type RoleModifierSubtype = (typeof roleModifierSubtypes)[number];
+type RoleModifierSubtype = TypeFromConst<typeof roleModifierSubtypes>;
 
 export const monsterBoostSubtypes = [
   Subtype.Plus10,
@@ -179,7 +183,7 @@ export const monsterBoostSubtypes = [
   Subtype.Minus5,
   Subtype.Boost,
 ] as const;
-type MonsterBoostSubtype = (typeof monsterBoostSubtypes)[number];
+export type MonsterBoostSubtype = TypeFromConst<typeof monsterBoostSubtypes>;
 
 export enum CharRelation {
   Bard = "bard",
@@ -198,6 +202,7 @@ export enum CharRelation {
   RoleModifier = "role_modifier",
   Steed = "steed",
   Hireling = "hireling",
+  Unused = "unused",
 }
 
 export const classes = [
@@ -208,18 +213,18 @@ export const classes = [
   CharRelation.Thief,
   CharRelation.Cleric,
 ] as const;
-type Class = (typeof classes)[number];
+type Class = TypeFromConst<typeof classes>;
 
 export const races = [
-  CharRelation.Lizard,
   CharRelation.Centaur,
+  CharRelation.Lizard,
   CharRelation.Elf,
   CharRelation.Orc,
   CharRelation.Gnome,
   CharRelation.Dwarf,
   CharRelation.Halfling,
 ] as const;
-type Race = (typeof races)[number];
+type Race = TypeFromConst<typeof races>;
 
 export enum OtherRelation {
   Undead = "undead",
@@ -579,4 +584,111 @@ export class OneShotCard extends Card {
     });
     this.subtype = props.subtype;
   }
+}
+
+export class CardRepresentation {
+  deck: Deck;
+  type: Type;
+  name: Name;
+  id: CardId;
+  reprint: Reprint;
+  level: number;
+
+  constructor(card: Card, reprint: Reprint) {
+    this.name = card.name;
+    this.id = card.id;
+    this.reprint = reprint;
+    this.deck = card.deck;
+    this.type = card.type;
+    this.level = card.level;
+    // this.deck === Deck.Door && this.type === Type.Monster ? card.level : 0;
+  }
+}
+
+export enum GameOptions {
+  Hirelings = "hirelings", // 5
+  Steeds = "steeds", // 5
+  RoleEnhancers = "role_enhancers", // 6
+  GearBoosts = "gear_boosts", // 4
+  Dungeons = "dungeons", // 5
+  Fairy = "fairy", // 4
+  Munchkinomicon = "munchkinomicon", // 4
+}
+
+export const GameOptionsBallance: Record<GameOptions, number> = {
+  [GameOptions.Hirelings]: 5,
+  [GameOptions.Steeds]: 5,
+  [GameOptions.RoleEnhancers]: 6,
+  [GameOptions.GearBoosts]: 4,
+  [GameOptions.Dungeons]: 5,
+  [GameOptions.Fairy]: 4,
+  [GameOptions.Munchkinomicon]: 4,
+};
+
+type ArrayOfLength<
+  T,
+  N extends number,
+  Acc extends T[] = []
+> = Acc["length"] extends N ? Acc : ArrayOfLength<T, N, [T, ...Acc]>;
+
+export class DeckOptions {
+  gameOptions: Record<GameOptions, boolean>;
+  classes: Record<Class, boolean>;
+  races: Record<Race, boolean>;
+  excludedExpansions: Record<Expansion, boolean>;
+
+  constructor(
+    gameOptions: GameOptions[],
+    _classes: ArrayOfLength<Class, 4>,
+    _races: ArrayOfLength<Race, 3> | ArrayOfLength<Race, 4>,
+    excludedExpansions: Expansion[] = []
+  ) {
+    this.validate(gameOptions, _classes, _races);
+
+    this.gameOptions = _Object.fromEntries(
+      _Object.values(GameOptions).map((v) => [v, gameOptions.includes(v)])
+    );
+    this.classes = _Object.fromEntries(
+      classes.map((c) => [c, _classes.includes(c)])
+    );
+    this.races = _Object.fromEntries(races.map((r) => [r, _races.includes(r)]));
+
+    this.excludedExpansions = _Object.fromEntries(
+      _Object.values(Expansion).map((v) => [v, excludedExpansions.includes(v)])
+    );
+  }
+
+  private validate = (
+    gameOptions: GameOptions[],
+    _classes: Class[],
+    _races: Race[]
+  ) => {
+    gameOptions = R.uniq(gameOptions);
+    _classes = R.uniq(_classes);
+    _races = R.uniq(_races);
+
+    if (_classes.length != 4)
+      throw Error("classes should have 4 unique elements.");
+
+    const racesLength = gameOptions.includes(GameOptions.RoleEnhancers) ? 4 : 3;
+    if (_races.length != racesLength)
+      throw Error(`races should have ${racesLength} unique elements.`);
+
+    if (_races.includes(CharRelation.Centaur)) {
+      if (
+        !gameOptions.includes(GameOptions.Steeds) &&
+        !_classes.includes(CharRelation.Ranger)
+      )
+        throw Error(
+          `${CharRelation.Centaur} is a prohibited option in with this configuration of gameOptions and classes.`
+        );
+    }
+
+    if (
+      gameOptions.reduce((prev, curr) => {
+        return prev + GameOptionsBallance[curr];
+      }, 0) > 10
+    )
+      throw Error(`Selected gameOptions are not balanced.`);
+  };
 }

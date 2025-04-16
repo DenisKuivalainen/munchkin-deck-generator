@@ -1,35 +1,46 @@
 "use client";
 import { useCards } from "@/Components";
-import { getDeck } from "@/deckGenerator";
-import { Card } from "@/types";
+import { GeneratedDeck, countOriginalCardsOfType } from "@/deckGenerator";
+import {
+  Card,
+  CharRelation,
+  DeckOptions,
+  Expansion,
+  GameOptions,
+} from "@/types";
 import { Typography } from "@mui/material";
 
 export default () => {
   const cards = useCards();
 
-  console.log();
-
+  let gd = new GeneratedDeck(
+    new DeckOptions(
+      // [GameOptions.Hirelings, GameOptions.Steeds],
+      // [GameOptions.RoleEnhancers],
+      [GameOptions.GearBoosts],
+      [
+        CharRelation.Bard,
+        CharRelation.Wizard,
+        CharRelation.Thief,
+        CharRelation.Cleric,
+      ],
+      [
+        CharRelation.Dwarf,
+        CharRelation.Elf,
+        // CharRelation.Halfling,
+        CharRelation.Gnome,
+      ],
+      [Expansion.puppy]
+    ),
+    cards
+  );
   return (
     <>
-      {Object.entries(getDeck(cards)).map(([deck, types]) => (
-        <>
-          <Typography variant="h3">{deck}</Typography>
-          {Object.entries(types as any).map(([type, _cards]) => (
-            <>
-              <Typography variant="h4">{type}</Typography>
-              {((_cards || []) as any[])
-                .map((c) => new Card(c))
-                .map((c) => (
-                  <p>
-                    {c.name.ru.length ? c.name.ru : c.name.en}{" "}
-                    {`(${c.subtype})`}
-                    {" - "}
-                    {c.reprints.map((r) => r.expansion).join(" ")}
-                  </p>
-                ))}
-            </>
-          ))}
-        </>
+      {gd.deck.map((c) => (
+        <p>
+          {c.deck} {c.type} - {c.id} {c.name.ru.length ? c.name.ru : c.name.en}{" "}
+          ({c.level}) - {c.reprint.expansion} ({c.reprint.id})
+        </p>
       ))}
     </>
   );
