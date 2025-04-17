@@ -25,7 +25,7 @@ const originalSetCards: PartialRecord<
   PartialRecord<Type, PartialRecord<Subtype, number>>
 > = {
   treasure: {
-    /** */ gear: {
+    gear: {
       one_hand: 13,
       two_hand: 5,
       footgear: 3,
@@ -33,17 +33,17 @@ const originalSetCards: PartialRecord<
       headgear: 4,
       other: 8,
     },
-    /** */ go_up_a_lvl: { with_effect: 3, no_effect: 6 },
-    /** */ one_shot: {
+    go_up_a_lvl: { with_effect: 3, no_effect: 6 },
+    one_shot: {
       boost: 11,
       combat: 5,
       run_away: 3,
       other: 2,
       against_curse: 2,
     },
-    /** */ common: { none: 4 },
-    /** */ hireling: { none: 0 },
-    /** */ boost: {
+    common: { none: 4 },
+    hireling: { none: 0 },
+    boost: {
       headgear: 0,
       armor: 0,
       footgear: 0,
@@ -54,22 +54,22 @@ const originalSetCards: PartialRecord<
     },
   },
   door: {
-    /** */ wandering: { none: 3 },
-    /** */ cheat: { none: 1 },
-    /** */ portal: { none: 0 },
-    /** */ race: { none: 9 },
-    /** */ class: { none: 12 },
-    /** */ role_modifier: {
+    wandering: { none: 3 },
+    cheat: { none: 1 },
+    portal: { none: 0 },
+    race: { none: 9 },
+    class: { none: 12 },
+    role_modifier: {
       class_modifier: 2,
       class_enhancer: 0,
       race_modifier: 2,
       race_enhancer: 0,
       other: 0,
     },
-    /** */ pet: { none: 0 },
-    /** */ common: { none: 5 },
-    /** */ monster_boost: { minus_5: 1, plus_5: 2, plus_10: 2, boost: 0 },
-    /** */ curse: {
+    pet: { none: 0 },
+    common: { none: 5 },
+    monster_boost: { minus_5: 1, plus_5: 2, plus_10: 2, boost: 0 },
+    curse: {
       level: 3,
       steed: 0,
       hireling: 0,
@@ -357,8 +357,8 @@ export class GeneratedDeck {
             let oneShotIncrease: OneShotSubtype[] = [
               Subtype.Other,
               Subtype.Combat,
-              Subtype.RunAway,
               Subtype.AgainstCurse,
+              Subtype.RunAway,
               Subtype.Boost,
             ];
 
@@ -475,9 +475,14 @@ export class GeneratedDeck {
     type: Type,
     subtype: Partial<Record<Subtype, number>>
   ): [Card, Reprint][] => {
-    const cardsOfType = this.cards.filter(
-      (c) => c.deck === deck && c.type === type
-    );
+    const cardsOfType = this.cards
+      .filter((c) => c.deck === deck && c.type === type)
+      .filter(
+        (c) =>
+          ![OtherRelation.Munchkinomicon, OtherRelation.SGF].some((r) =>
+            c.other_relations.includes(r)
+          )
+      );
 
     let res: [Card, Reprint][] = [];
 
@@ -520,6 +525,29 @@ export class GeneratedDeck {
                 (a[1]! * boosts.one_shot.boost) /
                   originalSetCards.treasure?.one_shot?.boost!
               ).map((c) => [c, shuffleArray(c.reprints)[0]] as [Card, Reprint]),
+            ];
+          } else if (a[0] == Subtype.AgainstCurse) {
+            const againstCurseCards = cardsOfType.filter(
+              (c) => c.subtype === a[0]
+            );
+            const wishingRing = againstCurseCards.find((c) => c.id === "WIRI")!;
+            const wishingRingReprint = shuffleArray(wishingRing.reprints)[0];
+
+            res = [
+              ...res,
+              [wishingRing, wishingRingReprint],
+              ...shuffleArray(
+                againstCurseCards
+                  .map((c) =>
+                    c.reprints
+                      .filter(
+                        (r) =>
+                          !(c.id === "WIRi" && r.id === wishingRingReprint.id)
+                      )
+                      .map((r) => [c, r] as [Card, Reprint])
+                  )
+                  .flat()
+              ).slice(0, a[1]! - 1),
             ];
           } else {
             res = [
@@ -698,38 +726,61 @@ export class GeneratedDeck {
     return res;
   };
 
+  private findReplacement = (
+    arr: [Card, Reprint][],
+    target: Card,
+    excludeId: string
+  ): Card | undefined => {
+    const candidates = shuffleArray(
+      arr.filter(
+        ([c]) =>
+          c.deck === target.deck &&
+          c.type === target.type &&
+          c.subtype === target.subtype &&
+          c.id !== excludeId
+      )
+    );
+
+    const levelMatch = candidates.filter(([c]) => c.level === target.level);
+    const nearLevelMatch =
+      levelMatch.length > 0
+        ? levelMatch
+        : candidates.filter(([c]) => Math.abs(c.level - target.level) <= 1);
+
+    return nearLevelMatch[0]?.[0];
+  };
+
   private checkRequired = (
     arr: [Card, Reprint][],
     depth: number = 0
   ): [Card, Reprint][] => {
     depth++;
-    console.log(depth);
     if (depth > 1000) return arr;
 
-    for (const [card, reprint] of arr) {
-      if (card.required.length) {
-        if (!card.required.some((r) => arr.map((c) => c[0].id).includes(r))) {
-          const replacement = this.cards.find(
-            (c) => c.id === shuffleArray(card.required)[0]
-          )!;
-          console.log(card.id, replacement.id);
-          const toReplace = shuffleArray(
-            arr.filter(
-              (a) =>
-                a[0].deck === replacement.deck &&
-                a[0].type === replacement.type &&
-                a[0].subtype === replacement.subtype
-            )
-          )[0][0];
+    for (const [card, _] of arr) {
+      const requiredIds = card.required;
 
-          return this.checkRequired(
-            [
-              ...arr.filter((a) => a[0].id !== toReplace.id),
-              [replacement, shuffleArray(replacement.reprints)[0]],
-            ],
-            depth
-          );
-        }
+      if (requiredIds.length === 0) continue;
+
+      const currentCardIds = arr.map(([c]) => c.id);
+      const isAnyRequiredMissing = !requiredIds.some((id) =>
+        currentCardIds.includes(id)
+      );
+
+      if (isAnyRequiredMissing) {
+        const requiredId = shuffleArray(requiredIds)[0];
+        const replacement = this.cards.find((c) => c.id === requiredId)!;
+
+        let toReplace =
+          this.findReplacement(arr, replacement, card.id) ??
+          this.findReplacement(arr, card, card.id)!;
+
+        const updatedArr: [Card, Reprint][] = [
+          ...arr.filter(([c]) => c.id !== toReplace.id),
+          [replacement, shuffleArray(replacement.reprints)[0]],
+        ];
+
+        return this.checkRequired(updatedArr, depth);
       }
     }
 
@@ -746,6 +797,8 @@ export class GeneratedDeck {
     for (const [deck, type, subtype] of subtypeCounts) {
       res = [...res, ...this.getCardsOfSubtype(deck, type, subtype)];
     }
+
+    // Add munchkinomicon and fairy
 
     res = this.checkRequired(res);
     return res.map((r) => new CardRepresentation(...r));

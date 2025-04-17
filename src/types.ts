@@ -236,6 +236,8 @@ export enum OtherRelation {
   Steed = "steed",
   Hireling = "hireling",
   Merch = "merch",
+  Munchkinomicon = "munchkinomicon",
+  SGF = "sgf",
 }
 
 export class Card {
