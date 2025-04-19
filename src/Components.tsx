@@ -120,7 +120,7 @@ const TypeSelect = ({
         setType(Type.None);
         break;
     }
-  }, []);
+  }, [deck]);
 
   return (
     <>
@@ -130,7 +130,7 @@ const TypeSelect = ({
           <Select
             labelId="deck-label"
             id="demo-simple-select"
-            value={type}
+            value={type || ""}
             label="Type"
             onChange={(e: SelectChangeEvent) => setType(e.target.value as Type)}
           >
@@ -549,11 +549,14 @@ const OtherRelationSelect = ({
 const Required = ({
   required,
   setRequired,
+  cardId,
 }: {
   required: CardId[];
   setRequired: React.Dispatch<React.SetStateAction<CardId[]>>;
+  cardId?: CardId;
 }) => {
-  const cards = useCards();
+  const _cards = useCards();
+  const cards = _cards.filter((c) => (cardId ? c.id !== cardId : true));
   const selectedValues = cards.filter((c) => required.includes(c.id));
 
   return (
@@ -625,7 +628,10 @@ export const CardEditor = ({
 
   useEffect(() => {
     if (!cards.length) return;
-    if (!cardId) return setIsCardLoading(false);
+    if (!cardId) {
+      setIsCardLoading(false);
+      return;
+    }
 
     const card = cards.find((c) => c.id === cardId);
     if (!card) {
@@ -646,14 +652,17 @@ export const CardEditor = ({
 
     setTimeout(() => setIsCardLoading(false), 0);
   }, [cards]);
+
   useEffect(() => {
     if (isCardLoading) return;
     setSelectedType(undefined);
   }, [selectedDeck]);
+
   useEffect(() => {
     if (isCardLoading) return;
     setSelectedSubtype(undefined);
   }, [selectedType]);
+
   useEffect(() => {
     if (isCardLoading || cardId) return;
 
@@ -679,7 +688,7 @@ export const CardEditor = ({
 
     await onSave(card);
 
-    router.back();
+    cardId ? router.back() : window.location.reload();
   };
 
   const matchingCard = cards.find((c) => c.name.en === name.en);
@@ -713,7 +722,11 @@ export const CardEditor = ({
               otherRelations={otherRelations}
               setOtherRelations={setOtherRelations}
             />
-            <Required required={required} setRequired={setRequired} />
+            <Required
+              required={required}
+              setRequired={setRequired}
+              cardId={cardId}
+            />
             {matchingCard && matchingCard.id !== cardId ? (
               <div style={{ marginTop: 16 }}>
                 <Typography color="error">

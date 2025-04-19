@@ -15,7 +15,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["lizard"],
+    "char_relations": [
+      "lizard"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -115,7 +117,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["cleric"],
+    "char_relations": [
+      "cleric"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -175,7 +179,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["ranger"],
+    "char_relations": [
+      "ranger"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -215,7 +221,10 @@
       }
     ],
     "required": [],
-    "char_relations": ["centaur", "steed"],
+    "char_relations": [
+      "centaur",
+      "steed"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -295,7 +304,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["halfling"],
+    "char_relations": [
+      "halfling"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -315,7 +326,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["bard"],
+    "char_relations": [
+      "bard"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -335,7 +348,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["thief"],
+    "char_relations": [
+      "thief"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -355,7 +370,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["orc"],
+    "char_relations": [
+      "orc"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -375,7 +392,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["bard"],
+    "char_relations": [
+      "bard"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -515,7 +534,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["cleric"],
+    "char_relations": [
+      "cleric"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -535,7 +556,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["dwarf"],
+    "char_relations": [
+      "dwarf"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -555,7 +578,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["warrior"],
+    "char_relations": [
+      "warrior"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -575,7 +600,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["elf"],
+    "char_relations": [
+      "elf"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -595,7 +622,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["wizard"],
+    "char_relations": [
+      "wizard"
+    ],
     "other_relations": [],
     "level": 5
   },
@@ -634,7 +663,9 @@
         "expansion": "m2"
       }
     ],
-    "required": [],
+    "required": [
+      "0721"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 4
@@ -655,7 +686,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["warrior"],
+    "char_relations": [
+      "warrior"
+    ],
     "other_relations": [],
     "level": 5
   },
@@ -675,7 +708,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["dwarf"],
+    "char_relations": [
+      "dwarf"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -695,7 +730,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["elf"],
+    "char_relations": [
+      "elf"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -715,7 +752,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["gnome"],
+    "char_relations": [
+      "gnome"
+    ],
     "other_relations": [],
     "level": 5
   },
@@ -755,7 +794,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["bard"],
+    "char_relations": [
+      "bard"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -775,7 +816,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["centaur"],
+    "char_relations": [
+      "centaur"
+    ],
     "other_relations": [],
     "level": 1
   },
@@ -795,7 +838,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["cleric"],
+    "char_relations": [
+      "cleric"
+    ],
     "other_relations": [],
     "level": 1
   },
@@ -836,7 +881,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["undead"],
+    "other_relations": [
+      "undead"
+    ],
     "level": 2
   },
   {
@@ -935,7 +982,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["ranger"],
+    "char_relations": [
+      "ranger"
+    ],
     "other_relations": [],
     "level": 5
   },
@@ -976,7 +1025,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["undead"],
+    "other_relations": [
+      "undead"
+    ],
     "level": 4
   },
   {
@@ -995,7 +1046,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["ranger"],
+    "char_relations": [
+      "ranger"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -1015,7 +1068,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["elf"],
+    "char_relations": [
+      "elf"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -1155,7 +1210,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["orc"],
+    "char_relations": [
+      "orc"
+    ],
     "other_relations": [],
     "level": 5
   },
@@ -1175,7 +1232,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["ranger"],
+    "char_relations": [
+      "ranger"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -1195,7 +1254,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -1235,7 +1296,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["centaur"],
+    "char_relations": [
+      "centaur"
+    ],
     "other_relations": [],
     "level": 6
   },
@@ -1275,7 +1338,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["lizard"],
+    "char_relations": [
+      "lizard"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -1295,7 +1360,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 1
   },
@@ -1395,7 +1462,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -1434,8 +1503,13 @@
         "expansion": "m3"
       }
     ],
-    "required": [],
-    "char_relations": ["gnome"],
+    "required": [
+      "0657",
+      "0666"
+    ],
+    "char_relations": [
+      "gnome"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -1575,7 +1649,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["wizard"],
+    "char_relations": [
+      "wizard"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -1615,7 +1691,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["dwarf"],
+    "char_relations": [
+      "dwarf"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -1735,7 +1813,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["gnome"],
+    "char_relations": [
+      "gnome"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -1755,7 +1835,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["lizard"],
+    "char_relations": [
+      "lizard"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -1775,7 +1857,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["centaur"],
+    "char_relations": [
+      "centaur"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -1816,7 +1900,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["undead"],
+    "other_relations": [
+      "undead"
+    ],
     "level": 1
   },
   {
@@ -1895,7 +1981,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["elf"],
+    "char_relations": [
+      "elf"
+    ],
     "other_relations": [],
     "level": 1
   },
@@ -1915,7 +2003,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["wizard"],
+    "char_relations": [
+      "wizard"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -2015,7 +2105,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["orc"],
+    "char_relations": [
+      "orc"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -2035,7 +2127,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["thief"],
+    "char_relations": [
+      "thief"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -2075,7 +2169,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["lizard"],
+    "char_relations": [
+      "lizard"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -2175,7 +2271,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["cleric"],
+    "char_relations": [
+      "cleric"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -2195,7 +2293,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling"],
+    "char_relations": [
+      "hireling"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -2245,7 +2345,7 @@
     "subtype": "other",
     "name": {
       "en": "Portable Hole",
-      "ru": "переносная Дыра"
+      "ru": "Переносная Дыра"
     },
     "id": "0112",
     "reprints": [
@@ -2295,7 +2395,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["wizard"],
+    "char_relations": [
+      "wizard"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -2355,7 +2457,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["elf"],
+    "char_relations": [
+      "elf"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -2374,7 +2478,9 @@
         "expansion": "partypack"
       }
     ],
-    "required": ["0120"],
+    "required": [
+      "0120"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 2
@@ -2394,7 +2500,9 @@
         "expansion": "partypack"
       }
     ],
-    "required": ["0118"],
+    "required": [
+      "0118"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 2
@@ -2414,7 +2522,9 @@
         "expansion": "partypack"
       }
     ],
-    "required": ["0119"],
+    "required": [
+      "0119"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 2
@@ -2515,7 +2625,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["wizard"],
+    "char_relations": [
+      "wizard"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -2555,7 +2667,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["dwarf"],
+    "char_relations": [
+      "dwarf"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -2695,7 +2809,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["thief"],
+    "char_relations": [
+      "thief"
+    ],
     "other_relations": [],
     "level": 1
   },
@@ -2735,7 +2851,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["warrior"],
+    "char_relations": [
+      "warrior"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -2755,7 +2873,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["thief"],
+    "char_relations": [
+      "thief"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -2775,7 +2895,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["thief"],
+    "char_relations": [
+      "thief"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -2795,7 +2917,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["halfling"],
+    "char_relations": [
+      "halfling"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -2815,7 +2939,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["halfling"],
+    "char_relations": [
+      "halfling"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -2875,7 +3001,10 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed", "hireling"],
+    "char_relations": [
+      "steed",
+      "hireling"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -2959,7 +3088,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling"],
+    "char_relations": [
+      "hireling"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -2979,7 +3110,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -3948,7 +4081,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["undead"],
+    "other_relations": [
+      "undead"
+    ],
     "level": 2
   },
   {
@@ -3967,7 +4102,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["elf"],
+    "char_relations": [
+      "elf"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -4207,7 +4344,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["dwarf"],
+    "char_relations": [
+      "dwarf"
+    ],
     "other_relations": [],
     "level": 6
   },
@@ -4387,7 +4526,10 @@
       }
     ],
     "required": [],
-    "char_relations": ["halfling", "orc"],
+    "char_relations": [
+      "halfling",
+      "orc"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -4407,7 +4549,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["halfling"],
+    "char_relations": [
+      "halfling"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -4816,7 +4960,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["undead"],
+    "other_relations": [
+      "undead"
+    ],
     "level": 0
   },
   {
@@ -5120,9 +5266,27 @@
       {
         "id": "00",
         "expansion": "m8"
+      },
+      {
+        "id": "01",
+        "expansion": "dice"
+      },
+      {
+        "id": "02",
+        "expansion": "dice"
+      },
+      {
+        "id": "03",
+        "expansion": "dice"
+      },
+      {
+        "id": "04",
+        "expansion": "dice"
       }
     ],
-    "required": [],
+    "required": [
+      "0265"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 0
@@ -5244,7 +5408,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["merch"],
+    "other_relations": [
+      "merch"
+    ],
     "level": 0
   },
   {
@@ -5303,7 +5469,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -5323,7 +5491,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -5495,7 +5665,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["bard"],
+    "char_relations": [
+      "bard"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -5591,7 +5763,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling"],
+    "char_relations": [
+      "hireling"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -5751,7 +5925,10 @@
       }
     ],
     "required": [],
-    "char_relations": ["gnome", "halfling"],
+    "char_relations": [
+      "gnome",
+      "halfling"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -5875,7 +6052,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling"],
+    "char_relations": [
+      "hireling"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -6194,7 +6373,9 @@
         "expansion": "m3"
       }
     ],
-    "required": ["0021"],
+    "required": [
+      "0021"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 0
@@ -6275,7 +6456,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -6295,7 +6478,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -6315,7 +6500,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -6335,7 +6522,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -6355,7 +6544,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -6375,7 +6566,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -6394,8 +6587,12 @@
         "expansion": "m8"
       }
     ],
-    "required": [],
-    "char_relations": ["steed"],
+    "required": [
+      "0646"
+    ],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -6415,7 +6612,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -6435,7 +6634,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -6455,7 +6656,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -6475,7 +6678,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -6495,7 +6700,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -6515,7 +6722,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling"],
+    "char_relations": [
+      "hireling"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -6535,7 +6744,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling"],
+    "char_relations": [
+      "hireling"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -7151,7 +7362,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["lizard"],
+    "char_relations": [
+      "lizard"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -7195,7 +7408,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["centaur"],
+    "char_relations": [
+      "centaur"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -7239,7 +7454,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["elf"],
+    "char_relations": [
+      "elf"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -7283,7 +7500,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["orc"],
+    "char_relations": [
+      "orc"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -7327,7 +7546,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["gnome"],
+    "char_relations": [
+      "gnome"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -7371,7 +7592,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["dwarf"],
+    "char_relations": [
+      "dwarf"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -7415,7 +7638,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["halfling"],
+    "char_relations": [
+      "halfling"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -7455,7 +7680,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["bard"],
+    "char_relations": [
+      "bard"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -7495,7 +7722,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["ranger"],
+    "char_relations": [
+      "ranger"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -7535,7 +7764,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["warrior"],
+    "char_relations": [
+      "warrior"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -7575,7 +7806,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["wizard"],
+    "char_relations": [
+      "wizard"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -7615,7 +7848,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["thief"],
+    "char_relations": [
+      "thief"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -7655,7 +7890,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["cleric"],
+    "char_relations": [
+      "cleric"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -7675,8 +7912,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["role_modifier", "unused"],
-    "other_relations": ["class_modifier"],
+    "char_relations": [
+      "role_modifier",
+      "unused"
+    ],
+    "other_relations": [
+      "class_modifier"
+    ],
     "level": 0
   },
   {
@@ -7703,8 +7945,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["role_modifier"],
-    "other_relations": ["class_modifier"],
+    "char_relations": [
+      "role_modifier"
+    ],
+    "other_relations": [
+      "class_modifier"
+    ],
     "level": 0
   },
   {
@@ -7760,7 +8006,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["class_modifier"],
+    "other_relations": [
+      "class_modifier"
+    ],
     "level": 0
   },
   {
@@ -7787,8 +8035,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["role_modifier"],
-    "other_relations": ["class_modifier"],
+    "char_relations": [
+      "role_modifier"
+    ],
+    "other_relations": [
+      "class_modifier"
+    ],
     "level": 0
   },
   {
@@ -7815,8 +8067,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["role_modifier"],
-    "other_relations": ["class_modifier"],
+    "char_relations": [
+      "role_modifier"
+    ],
+    "other_relations": [
+      "class_modifier"
+    ],
     "level": 0
   },
   {
@@ -7835,8 +8091,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["role_modifier", "unused"],
-    "other_relations": ["race_modifier"],
+    "char_relations": [
+      "role_modifier",
+      "unused"
+    ],
+    "other_relations": [
+      "race_modifier"
+    ],
     "level": 0
   },
   {
@@ -7863,8 +8124,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["role_modifier"],
-    "other_relations": ["race_modifier"],
+    "char_relations": [
+      "role_modifier"
+    ],
+    "other_relations": [
+      "race_modifier"
+    ],
     "level": 0
   },
   {
@@ -7924,7 +8189,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["race_modifier"],
+    "other_relations": [
+      "race_modifier"
+    ],
     "level": 0
   },
   {
@@ -7951,8 +8218,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["role_modifier"],
-    "other_relations": ["race_modifier"],
+    "char_relations": [
+      "role_modifier"
+    ],
+    "other_relations": [
+      "race_modifier"
+    ],
     "level": 0
   },
   {
@@ -7979,8 +8250,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["role_modifier"],
-    "other_relations": ["class_modifier", "race_modifier"],
+    "char_relations": [
+      "role_modifier"
+    ],
+    "other_relations": [
+      "class_modifier",
+      "race_modifier"
+    ],
     "level": 0
   },
   {
@@ -8007,8 +8283,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["role_modifier"],
-    "other_relations": ["class_modifier", "race_modifier"],
+    "char_relations": [
+      "role_modifier"
+    ],
+    "other_relations": [
+      "class_modifier",
+      "race_modifier"
+    ],
     "level": 0
   },
   {
@@ -8027,8 +8308,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8047,8 +8332,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8067,8 +8356,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8087,8 +8380,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8107,8 +8404,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8127,8 +8428,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8147,8 +8452,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8167,8 +8476,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8187,8 +8500,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8207,8 +8524,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8227,8 +8548,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8247,8 +8572,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8267,8 +8596,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8287,8 +8620,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8307,8 +8644,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8327,8 +8668,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
-    "other_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8347,8 +8692,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8367,8 +8716,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling", "lizard"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling",
+      "lizard"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8387,8 +8741,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8407,8 +8765,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling", "gnome"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling",
+      "gnome"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8427,8 +8790,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling", "halfling"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling",
+      "halfling"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8447,8 +8815,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling", "dwarf"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling",
+      "dwarf"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8467,8 +8840,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling", "steed"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling",
+      "steed"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8487,8 +8865,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling", "warrior"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling",
+      "warrior"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8507,8 +8890,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling", "wizard"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling",
+      "wizard"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8527,8 +8915,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8547,8 +8939,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling", "elf"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling",
+      "elf"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8567,8 +8964,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling", "thief"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling",
+      "thief"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8587,8 +8989,14 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling", "steed"],
-    "other_relations": ["hireling", "steed"],
+    "char_relations": [
+      "hireling",
+      "steed"
+    ],
+    "other_relations": [
+      "hireling",
+      "steed"
+    ],
     "level": 0
   },
   {
@@ -8607,8 +9015,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling", "centaur"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling",
+      "centaur"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8627,8 +9040,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8647,8 +9064,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling", "bard"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling",
+      "bard"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8667,8 +9089,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling", "cleric"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling",
+      "cleric"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8687,8 +9114,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling"],
-    "other_relations": ["hireling"],
+    "char_relations": [
+      "hireling"
+    ],
+    "other_relations": [
+      "hireling"
+    ],
     "level": 0
   },
   {
@@ -8767,7 +9198,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["cleric"],
+    "char_relations": [
+      "cleric"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -8806,7 +9239,10 @@
         "expansion": "m2"
       }
     ],
-    "required": [],
+    "required": [
+      "0443",
+      "0429"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 0
@@ -8846,7 +9282,9 @@
         "expansion": "m2"
       }
     ],
-    "required": [],
+    "required": [
+      "0428"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 0
@@ -9174,7 +9612,9 @@
         "expansion": "m3"
       }
     ],
-    "required": [],
+    "required": [
+      "0443"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 0
@@ -9314,7 +9754,9 @@
         "expansion": "m2"
       }
     ],
-    "required": ["0404"],
+    "required": [
+      "0404"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 0
@@ -9334,7 +9776,9 @@
         "expansion": "m8"
       }
     ],
-    "required": [],
+    "required": [
+      "0431"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 0
@@ -9354,7 +9798,9 @@
         "expansion": "m8"
       }
     ],
-    "required": ["0430"],
+    "required": [
+      "0430"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 0
@@ -9392,7 +9838,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["undead"],
+    "other_relations": [
+      "undead"
+    ],
     "level": 0
   },
   {
@@ -9415,8 +9863,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["cleric"],
-    "other_relations": ["from_hell"],
+    "char_relations": [
+      "cleric"
+    ],
+    "other_relations": [
+      "from_hell"
+    ],
     "level": 0
   },
   {
@@ -9575,7 +10027,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["bard"],
+    "char_relations": [
+      "bard"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -9595,7 +10049,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["wizard"],
+    "char_relations": [
+      "wizard"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -9675,7 +10131,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["warrior"],
+    "char_relations": [
+      "warrior"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -10045,7 +10503,7 @@
     "subtype": "level",
     "name": {
       "en": "Exploding Kneecaps",
-      "ru": "наколенный взрыв"
+      "ru": "Наколенный взрыв"
     },
     "id": "0465",
     "reprints": [
@@ -10054,7 +10512,10 @@
         "expansion": "m3"
       }
     ],
-    "required": [],
+    "required": [
+      "0142",
+      "0135"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 0
@@ -10075,7 +10536,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -10095,7 +10558,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -10115,7 +10580,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -10135,7 +10602,10 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling", "steed"],
+    "char_relations": [
+      "hireling",
+      "steed"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -10155,7 +10625,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["hireling"],
+    "char_relations": [
+      "hireling"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -10175,8 +10647,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["role_modifier"],
-    "other_relations": ["race_modifier"],
+    "char_relations": [
+      "role_modifier"
+    ],
+    "other_relations": [
+      "race_modifier"
+    ],
     "level": 0
   },
   {
@@ -10196,7 +10672,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["race_modifier"],
+    "other_relations": [
+      "race_modifier"
+    ],
     "level": 0
   },
   {
@@ -10216,7 +10694,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["race_modifier"],
+    "other_relations": [
+      "race_modifier"
+    ],
     "level": 0
   },
   {
@@ -10236,7 +10716,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["race_modifier"],
+    "other_relations": [
+      "race_modifier"
+    ],
     "level": 0
   },
   {
@@ -10256,7 +10738,10 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["class_modifier", "race_modifier"],
+    "other_relations": [
+      "class_modifier",
+      "race_modifier"
+    ],
     "level": 0
   },
   {
@@ -10276,7 +10761,10 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["class_modifier", "race_modifier"],
+    "other_relations": [
+      "class_modifier",
+      "race_modifier"
+    ],
     "level": 0
   },
   {
@@ -10295,8 +10783,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["role_modifier"],
-    "other_relations": ["class_modifier"],
+    "char_relations": [
+      "role_modifier"
+    ],
+    "other_relations": [
+      "class_modifier"
+    ],
     "level": 0
   },
   {
@@ -10316,7 +10808,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["class_modifier"],
+    "other_relations": [
+      "class_modifier"
+    ],
     "level": 0
   },
   {
@@ -10336,7 +10830,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["class_modifier"],
+    "other_relations": [
+      "class_modifier"
+    ],
     "level": 0
   },
   {
@@ -10356,7 +10852,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["class_modifier"],
+    "other_relations": [
+      "class_modifier"
+    ],
     "level": 0
   },
   {
@@ -10376,7 +10874,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["class_modifier"],
+    "other_relations": [
+      "class_modifier"
+    ],
     "level": 0
   },
   {
@@ -11074,7 +11574,10 @@
         "expansion": "m2"
       }
     ],
-    "required": [],
+    "required": [
+      "0657",
+      "0666"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 0
@@ -11096,7 +11599,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["undead"],
+    "other_relations": [
+      "undead"
+    ],
     "level": 0
   },
   {
@@ -11156,7 +11661,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["undead"],
+    "other_relations": [
+      "undead"
+    ],
     "level": 0
   },
   {
@@ -11175,7 +11682,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["dwarf"],
+    "char_relations": [
+      "dwarf"
+    ],
     "other_relations": [],
     "level": 0
   },
@@ -11254,7 +11763,11 @@
         "expansion": "m7"
       }
     ],
-    "required": [],
+    "required": [
+      "0261",
+      "0270",
+      "0324"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 0
@@ -11443,8 +11956,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["ranger"],
-    "other_relations": ["undead"],
+    "char_relations": [
+      "ranger"
+    ],
+    "other_relations": [
+      "undead"
+    ],
     "level": 1
   },
   {
@@ -11523,7 +12040,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["cleric"],
+    "char_relations": [
+      "cleric"
+    ],
     "other_relations": [],
     "level": 1
   },
@@ -11563,7 +12082,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["elf"],
+    "char_relations": [
+      "elf"
+    ],
     "other_relations": [],
     "level": 1
   },
@@ -11583,7 +12104,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["cleric"],
+    "char_relations": [
+      "cleric"
+    ],
     "other_relations": [],
     "level": 1
   },
@@ -11623,7 +12146,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["cleric"],
+    "char_relations": [
+      "cleric"
+    ],
     "other_relations": [],
     "level": 1
   },
@@ -11643,7 +12168,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["bard"],
+    "char_relations": [
+      "bard"
+    ],
     "other_relations": [],
     "level": 1
   },
@@ -11803,7 +12330,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["elf"],
+    "char_relations": [
+      "elf"
+    ],
     "other_relations": [],
     "level": 1
   },
@@ -11844,7 +12373,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["undead"],
+    "other_relations": [
+      "undead"
+    ],
     "level": 1
   },
   {
@@ -11884,7 +12415,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["undead"],
+    "other_relations": [
+      "undead"
+    ],
     "level": 1
   },
   {
@@ -11903,7 +12436,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["halfling"],
+    "char_relations": [
+      "halfling"
+    ],
     "other_relations": [],
     "level": 1
   },
@@ -11943,7 +12478,10 @@
       }
     ],
     "required": [],
-    "char_relations": ["wizard", "lizard"],
+    "char_relations": [
+      "wizard",
+      "lizard"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -11963,7 +12501,10 @@
       }
     ],
     "required": [],
-    "char_relations": ["ranger", "centaur"],
+    "char_relations": [
+      "ranger",
+      "centaur"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -11983,7 +12524,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["bard"],
+    "char_relations": [
+      "bard"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -12043,7 +12586,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["orc"],
+    "char_relations": [
+      "orc"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -12064,7 +12609,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["undead"],
+    "other_relations": [
+      "undead"
+    ],
     "level": 2
   },
   {
@@ -12123,7 +12670,10 @@
       }
     ],
     "required": [],
-    "char_relations": ["dwarf", "halfling"],
+    "char_relations": [
+      "dwarf",
+      "halfling"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -12143,7 +12693,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["bard"],
+    "char_relations": [
+      "bard"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -12163,7 +12715,10 @@
       }
     ],
     "required": [],
-    "char_relations": ["dwarf", "halfling"],
+    "char_relations": [
+      "dwarf",
+      "halfling"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -12223,7 +12778,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["elf"],
+    "char_relations": [
+      "elf"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -12244,7 +12801,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["undead"],
+    "other_relations": [
+      "undead"
+    ],
     "level": 2
   },
   {
@@ -12263,7 +12822,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["wizard"],
+    "char_relations": [
+      "wizard"
+    ],
     "other_relations": [],
     "level": 2
   },
@@ -12303,7 +12864,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["orc"],
+    "char_relations": [
+      "orc"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -12323,7 +12886,11 @@
       }
     ],
     "required": [],
-    "char_relations": ["dwarf", "halfling", "steed"],
+    "char_relations": [
+      "dwarf",
+      "halfling",
+      "steed"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -12363,7 +12930,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["elf"],
+    "char_relations": [
+      "elf"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -12383,8 +12952,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["thief"],
-    "other_relations": ["undead"],
+    "char_relations": [
+      "thief"
+    ],
+    "other_relations": [
+      "undead"
+    ],
     "level": 3
   },
   {
@@ -12403,7 +12976,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["halfling"],
+    "char_relations": [
+      "halfling"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -12463,7 +13038,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["bard"],
+    "char_relations": [
+      "bard"
+    ],
     "other_relations": [],
     "level": 3
   },
@@ -12502,7 +13079,9 @@
         "expansion": "m2"
       }
     ],
-    "required": [],
+    "required": [
+      "0123"
+    ],
     "char_relations": [],
     "other_relations": [],
     "level": 3
@@ -12523,7 +13102,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["lizard"],
+    "char_relations": [
+      "lizard"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -12543,7 +13124,10 @@
       }
     ],
     "required": [],
-    "char_relations": ["halfling", "elf"],
+    "char_relations": [
+      "halfling",
+      "elf"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -12562,8 +13146,13 @@
         "expansion": "m8"
       }
     ],
-    "required": ["0093"],
-    "char_relations": ["elf", "ranger"],
+    "required": [
+      "0093"
+    ],
+    "char_relations": [
+      "elf",
+      "ranger"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -12683,7 +13272,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["steed"],
+    "char_relations": [
+      "steed"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -12703,7 +13294,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["elf"],
+    "char_relations": [
+      "elf"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -12723,8 +13316,12 @@
       }
     ],
     "required": [],
-    "char_relations": ["dwarf"],
-    "other_relations": ["undead"],
+    "char_relations": [
+      "dwarf"
+    ],
+    "other_relations": [
+      "undead"
+    ],
     "level": 4
   },
   {
@@ -12743,7 +13340,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["wizard"],
+    "char_relations": [
+      "wizard"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -12783,7 +13382,10 @@
       }
     ],
     "required": [],
-    "char_relations": ["bard", "elf"],
+    "char_relations": [
+      "bard",
+      "elf"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -12803,7 +13405,10 @@
       }
     ],
     "required": [],
-    "char_relations": ["elf", "orc"],
+    "char_relations": [
+      "elf",
+      "orc"
+    ],
     "other_relations": [],
     "level": 4
   },
@@ -12823,7 +13428,10 @@
       }
     ],
     "required": [],
-    "char_relations": ["gnome", "halfling"],
+    "char_relations": [
+      "gnome",
+      "halfling"
+    ],
     "other_relations": [],
     "level": 5
   },
@@ -12862,8 +13470,12 @@
         "expansion": "m2"
       }
     ],
-    "required": ["0455"],
-    "char_relations": ["elf"],
+    "required": [
+      "0455"
+    ],
+    "char_relations": [
+      "elf"
+    ],
     "other_relations": [],
     "level": 5
   },
@@ -12883,7 +13495,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["orc"],
+    "char_relations": [
+      "orc"
+    ],
     "other_relations": [],
     "level": 5
   },
@@ -12903,7 +13517,11 @@
       }
     ],
     "required": [],
-    "char_relations": ["elf", "bard", "halfling"],
+    "char_relations": [
+      "elf",
+      "bard",
+      "halfling"
+    ],
     "other_relations": [],
     "level": 5
   },
@@ -12924,7 +13542,9 @@
     ],
     "required": [],
     "char_relations": [],
-    "other_relations": ["undead"],
+    "other_relations": [
+      "undead"
+    ],
     "level": 5
   },
   {
@@ -12943,8 +13563,13 @@
       }
     ],
     "required": [],
-    "char_relations": ["wizard", "ranger"],
-    "other_relations": ["undead"],
+    "char_relations": [
+      "wizard",
+      "ranger"
+    ],
+    "other_relations": [
+      "undead"
+    ],
     "level": 5
   },
   {
@@ -12963,7 +13588,9 @@
       }
     ],
     "required": [],
-    "char_relations": ["orc"],
+    "char_relations": [
+      "orc"
+    ],
     "other_relations": [],
     "level": 5
   },
@@ -12983,7 +13610,10 @@
       }
     ],
     "required": [],
-    "char_relations": ["orc", "thief"],
+    "char_relations": [
+      "orc",
+      "thief"
+    ],
     "other_relations": [],
     "level": 5
   },
@@ -13003,7 +13633,10 @@
       }
     ],
     "required": [],
-    "char_relations": ["warrior", "hireling"],
+    "char_relations": [
+      "warrior",
+      "hireling"
+    ],
     "other_relations": [],
     "level": 5
   },
@@ -13026,5 +13659,3510 @@
     "char_relations": [],
     "other_relations": [],
     "level": 5
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Platycore",
+      "ru": "Утконтикора"
+    },
+    "id": "0613",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "wizard"
+    ],
+    "other_relations": [],
+    "level": 6
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Lawyers",
+      "ru": "Адвокат"
+    },
+    "id": "0614",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "thief"
+    ],
+    "other_relations": [],
+    "level": 6
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Pukachu",
+      "ru": "Рыгачу"
+    },
+    "id": "0615",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 6
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Shrieking Geek",
+      "ru": "Гикающий гик"
+    },
+    "id": "0616",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "warrior"
+    ],
+    "other_relations": [],
+    "level": 6
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Jockey",
+      "ru": "Жокей"
+    },
+    "id": "0617",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "halfling",
+      "centaur"
+    ],
+    "other_relations": [],
+    "level": 6
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Glass Jaw",
+      "ru": "Стеклянная челюсть"
+    },
+    "id": "0618",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m5"
+      }
+    ],
+    "required": [
+      "0053",
+      "0518"
+    ],
+    "char_relations": [
+      "wizard"
+    ],
+    "other_relations": [],
+    "level": 7
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Bearded Collie",
+      "ru": ""
+    },
+    "id": "0619",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "puppy"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "dwarf"
+    ],
+    "other_relations": [],
+    "level": 7
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Giant Cockroach",
+      "ru": "Тараканище"
+    },
+    "id": "0620",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "elf"
+    ],
+    "other_relations": [],
+    "level": 7
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "That Gecko on the Telly",
+      "ru": "Геккон по телеку"
+    },
+    "id": "0621",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "lizard",
+      "gnome"
+    ],
+    "other_relations": [],
+    "level": 6
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Knight Owl",
+      "ru": "Соварный рацарь"
+    },
+    "id": "0622",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m5"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "ranger",
+      "warrior"
+    ],
+    "other_relations": [],
+    "level": 6
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Sick Puppy",
+      "ru": ""
+    },
+    "id": "0623",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "puppy"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "elf"
+    ],
+    "other_relations": [],
+    "level": 6
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Big Fat Hairy Dale",
+      "ru": "Жиртрест косматый"
+    },
+    "id": "0624",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m4"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 6
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Barrel of Monkeys",
+      "ru": "Бочка мартышек"
+    },
+    "id": "0625",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m3"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "halfling"
+    ],
+    "other_relations": [],
+    "level": 6
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Frog Prince",
+      "ru": "Царевич-лягушка"
+    },
+    "id": "0626",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 6
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Moon Maidens",
+      "ru": "Ягодевицы"
+    },
+    "id": "0627",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 7
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Monster The GM Made Up Himself",
+      "ru": "Монстр которого придумал лично мастер"
+    },
+    "id": "0628",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "dwarf",
+      "wizard",
+      "halfling",
+      "elf"
+    ],
+    "other_relations": [],
+    "level": 7
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Grassy Gnoll",
+      "ru": "Травяной гнолль"
+    },
+    "id": "0629",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 7
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Kamikaze Kobolds",
+      "ru": "Кобольды-камикадзе"
+    },
+    "id": "0630",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m3"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "wizard"
+    ],
+    "other_relations": [],
+    "level": 7
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Yak Yak Yak",
+      "ru": "Як-цуп-цоп"
+    },
+    "id": "0631",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m4"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "bard"
+    ],
+    "other_relations": [],
+    "level": 7
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Hound Dog",
+      "ru": ""
+    },
+    "id": "0632",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "puppy"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "bard"
+    ],
+    "other_relations": [],
+    "level": 8
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Bridle Shower",
+      "ru": "Уздевичник"
+    },
+    "id": "0633",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "warrior",
+      "centaur"
+    ],
+    "other_relations": [],
+    "level": 8
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Male Chauvinist Pig",
+      "ru": "Хряк-шовинист"
+    },
+    "id": "0634",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m3"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 8
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Salaad",
+      "ru": "Салаад"
+    },
+    "id": "0635",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m5"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "elf",
+      "halfling"
+    ],
+    "other_relations": [],
+    "level": 8
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Face Sucker",
+      "ru": "Лицесос"
+    },
+    "id": "0636",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "elf"
+    ],
+    "other_relations": [],
+    "level": 8
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Gazebo",
+      "ru": "Газебо"
+    },
+    "id": "0637",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 8
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Amazon",
+      "ru": "Амазонка"
+    },
+    "id": "0638",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 8
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Ghoulfiends",
+      "ru": "Мадемонуазели"
+    },
+    "id": "0639",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 8
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Hair Elemental",
+      "ru": "Волосяной элементаль"
+    },
+    "id": "0640",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m4"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "dwarf"
+    ],
+    "other_relations": [],
+    "level": 8
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Australian Shepherd",
+      "ru": ""
+    },
+    "id": "0641",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "puppy"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "halfling"
+    ],
+    "other_relations": [],
+    "level": 9
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Owl Bare",
+      "ru": "Голофилин"
+    },
+    "id": "0642",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m4"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "wizard",
+      "steed"
+    ],
+    "other_relations": [],
+    "level": 9
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Scary Clowns",
+      "ru": "Жуткие клоуны"
+    },
+    "id": "0643",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "halfling"
+    ],
+    "other_relations": [
+      "undead"
+    ],
+    "level": 9
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Right Angel",
+      "ru": "Прямой ангел"
+    },
+    "id": "0644",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [
+      "0093"
+    ],
+    "char_relations": [
+      "cleric"
+    ],
+    "other_relations": [],
+    "level": 9
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Giant Skunk",
+      "ru": "Гигантский скунс"
+    },
+    "id": "0645",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 9
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Santa",
+      "ru": "Санта"
+    },
+    "id": "0646",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "elf"
+    ],
+    "other_relations": [
+      "santa"
+    ],
+    "level": 9
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Cat Girl",
+      "ru": "Крошка-кошка"
+    },
+    "id": "0647",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "orc"
+    ],
+    "other_relations": [],
+    "level": 9
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Orc of the Covenant",
+      "ru": "Ветхозаветный пророрк"
+    },
+    "id": "0648",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m5"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "orc",
+      "dwarf"
+    ],
+    "other_relations": [],
+    "level": 9
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Dryad",
+      "ru": "Дриада"
+    },
+    "id": "0649",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m3"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "wizard"
+    ],
+    "other_relations": [],
+    "level": 9
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Life of the Party",
+      "ru": ""
+    },
+    "id": "0650",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "partypack"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 10
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Death of the Party",
+      "ru": ""
+    },
+    "id": "0651",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "partypack"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [
+      "undead"
+    ],
+    "level": 10
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Fries",
+      "ru": "Картошки"
+    },
+    "id": "0652",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m7"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 10
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Salty Dog",
+      "ru": ""
+    },
+    "id": "0653",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "puppy"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "cleric"
+    ],
+    "other_relations": [],
+    "level": 10
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Meanderthal",
+      "ru": "Скитандерталец"
+    },
+    "id": "0654",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 10
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Gator Aides",
+      "ru": "Помогаторы"
+    },
+    "id": "0655",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "thief",
+      "lizard"
+    ],
+    "other_relations": [],
+    "level": 10
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Net Troll",
+      "ru": "Сетевой тролль"
+    },
+    "id": "0656",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 10
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Floating Nose",
+      "ru": "Блуждающий нос"
+    },
+    "id": "0657",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 10
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "3,872 Orcs",
+      "ru": "3872 Орка"
+    },
+    "id": "0658",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "dwarf"
+    ],
+    "other_relations": [],
+    "level": 10
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "The Ether Bunny",
+      "ru": "Эфирный кролик"
+    },
+    "id": "0659",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m4"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 10
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Dopplegangsters",
+      "ru": "Доппельгангстеры"
+    },
+    "id": "0660",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m3"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "bard"
+    ],
+    "other_relations": [],
+    "level": 10
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "The Wraith of Khan",
+      "ru": "Призрак Хана"
+    },
+    "id": "0661",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m5"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "warrior",
+      "ranger"
+    ],
+    "other_relations": [
+      "undead"
+    ],
+    "level": 10
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Cockatrice",
+      "ru": "Кукаректриса"
+    },
+    "id": "0662",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m5"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "bard"
+    ],
+    "other_relations": [],
+    "level": 10
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Gam Store Manager",
+      "ru": "Игропродавец"
+    },
+    "id": "0663",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m7"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 10
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Television",
+      "ru": "Телеприведение"
+    },
+    "id": "0664",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m7"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 10
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "M. T. Suit",
+      "ru": "П У Стоместин"
+    },
+    "id": "0665",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "wizard",
+      "thief"
+    ],
+    "other_relations": [
+      "undead"
+    ],
+    "level": 11
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "The Shadow Nose",
+      "ru": "Теневой нос"
+    },
+    "id": "0666",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [
+      "undead"
+    ],
+    "level": 11
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Pterodactyl",
+      "ru": "Птеродактиль"
+    },
+    "id": "0667",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "halfling"
+    ],
+    "other_relations": [],
+    "level": 11
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Misplacer Beast",
+      "ru": "Растеряхухоль"
+    },
+    "id": "0668",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m4"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 11
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Filthy Geats",
+      "ru": "Грязные Вандалы"
+    },
+    "id": "0669",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m3"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "bard"
+    ],
+    "other_relations": [],
+    "level": 11
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Tongue Demon",
+      "ru": "Языческий демон"
+    },
+    "id": "0670",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "cleric",
+      "elf"
+    ],
+    "other_relations": [
+      "from_hell"
+    ],
+    "level": 12
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Wannabe Vampire",
+      "ru": "Закос под вампира"
+    },
+    "id": "0671",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "cleric"
+    ],
+    "other_relations": [],
+    "level": 12
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Bigfoot",
+      "ru": "Бигфут"
+    },
+    "id": "0672",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "dwarf",
+      "halfling"
+    ],
+    "other_relations": [],
+    "level": 12
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Lounge Lizards",
+      "ru": "Тусящеры"
+    },
+    "id": "0673",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "lizard",
+      "bard"
+    ],
+    "other_relations": [],
+    "level": 12
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "The Snerks",
+      "ru": "Шнурки"
+    },
+    "id": "0674",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m5"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "cleric",
+      "ranger"
+    ],
+    "other_relations": [
+      "from_hell"
+    ],
+    "level": 12
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Lord Tennis Anyone",
+      "ru": "Лорд Втеннисон"
+    },
+    "id": "0675",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "centaur",
+      "orc"
+    ],
+    "other_relations": [],
+    "level": 12
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "The Dead Sea Trolls",
+      "ru": "Мертвоморские тролли"
+    },
+    "id": "0676",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m3"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "elf"
+    ],
+    "other_relations": [],
+    "level": 12
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Munchkin Sphinx",
+      "ru": "Манчкин-сфинкс"
+    },
+    "id": "0677",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m4"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 12
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Bull Dog",
+      "ru": ""
+    },
+    "id": "0678",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "puppy"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 12
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Snoot Elemental",
+      "ru": "Соплементаль"
+    },
+    "id": "0679",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [
+      "0657",
+      "0666"
+    ],
+    "char_relations": [
+      "elf"
+    ],
+    "other_relations": [],
+    "level": 13
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "The Three Munchketeers",
+      "ru": "Три манчкитера"
+    },
+    "id": "0680",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m5"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "ranger",
+      "bard",
+      "orc"
+    ],
+    "other_relations": [],
+    "level": 13
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Thing With A Name So Long There's No Room For A Picture On The Card",
+      "ru": "Тварь с таким длинным именем что для картинки не хватило места на карте"
+    },
+    "id": "0681",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "warrior"
+    ],
+    "other_relations": [],
+    "level": 13
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Bipolar Bear",
+      "ru": "Биполярный медведь"
+    },
+    "id": "0682",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m4"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 13
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Lust Monster",
+      "ru": "Мержавка-похотница"
+    },
+    "id": "0683",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 13
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Redneck Tree",
+      "ru": "Деревянщина"
+    },
+    "id": "0684",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m3"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "orc",
+      "warrior"
+    ],
+    "other_relations": [],
+    "level": 13
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Stoned Golem",
+      "ru": "Обдолбанный голем"
+    },
+    "id": "0685",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "halfling"
+    ],
+    "other_relations": [],
+    "level": 14
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Unspeakably Awful Indescribable Horror",
+      "ru": "Невыразимо жуткий неописуемый ужас"
+    },
+    "id": "0686",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "warrior",
+      "wizard"
+    ],
+    "other_relations": [],
+    "level": 14
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Insurance Salesman",
+      "ru": "Страховой агент"
+    },
+    "id": "0687",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 14
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "The Fairy Godfather",
+      "ru": "Крестный фей"
+    },
+    "id": "0688",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m4"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "cleric",
+      "hireling",
+      "steed"
+    ],
+    "other_relations": [],
+    "level": 14
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Druid",
+      "ru": "Друид"
+    },
+    "id": "0689",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m5"
+      }
+    ],
+    "required": [
+      "0223"
+    ],
+    "char_relations": [
+      "ranger",
+      "elf"
+    ],
+    "other_relations": [],
+    "level": 14
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Obtuse Angel",
+      "ru": "Тупой ангел"
+    },
+    "id": "0690",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [
+      "0093"
+    ],
+    "char_relations": [
+      "dwarf",
+      "cleric"
+    ],
+    "other_relations": [],
+    "level": 14
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Snakes on a Bus",
+      "ru": "Змеебус"
+    },
+    "id": "0691",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "lizard",
+      "warrior"
+    ],
+    "other_relations": [],
+    "level": 14
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Headless Norseman",
+      "ru": "Ратник без головы"
+    },
+    "id": "0692",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "bard",
+      "gnome"
+    ],
+    "other_relations": [
+      "undead"
+    ],
+    "level": 14
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Over Bear",
+      "ru": "Надмедведь"
+    },
+    "id": "0693",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m3"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "halfling",
+      "dwarf"
+    ],
+    "other_relations": [],
+    "level": 14
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Border Terrier",
+      "ru": ""
+    },
+    "id": "0694",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "puppy"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "thief"
+    ],
+    "other_relations": [],
+    "level": 14
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Tentacle Demon",
+      "ru": "Щупальцастый демон"
+    },
+    "id": "0695",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "cleric"
+    ],
+    "other_relations": [
+      "from_hell"
+    ],
+    "level": 15
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Frost Giant",
+      "ru": "Снеговичище"
+    },
+    "id": "0696",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 15
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Hydrant",
+      "ru": "Гидрантей"
+    },
+    "id": "0697",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 15
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Cursor",
+      "ru": ""
+    },
+    "id": "0698",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "curses"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 15
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Poison Ivy Kudzu Flytrap",
+      "ru": "Кудзу - ядовитая мухоловка"
+    },
+    "id": "0699",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m3"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "elf"
+    ],
+    "other_relations": [],
+    "level": 15
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Oxymoron",
+      "ru": "Абыкто"
+    },
+    "id": "0700",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m5"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "warrior",
+      "ranger"
+    ],
+    "other_relations": [],
+    "level": 15
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Hairy Potter",
+      "ru": "Влас Гончаров"
+    },
+    "id": "0701",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m4"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "wizard",
+      "elf"
+    ],
+    "other_relations": [],
+    "level": 15
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Junkyard Dog",
+      "ru": ""
+    },
+    "id": "0702",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "puppy"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "thief"
+    ],
+    "other_relations": [],
+    "level": 16
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Boxer",
+      "ru": ""
+    },
+    "id": "0703",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "puppy"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "warrior"
+    ],
+    "other_relations": [],
+    "level": 16
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Undead Clowns",
+      "ru": "Клоундеды"
+    },
+    "id": "0704",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m5"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "bard",
+      "wizard"
+    ],
+    "other_relations": [
+      "undead"
+    ],
+    "level": 16
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Tikbalang",
+      "ru": "Тикбаланг"
+    },
+    "id": "0705",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "centaur"
+    ],
+    "other_relations": [],
+    "level": 16
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Fowl Fiend",
+      "ru": "Куродемон"
+    },
+    "id": "0706",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m3"
+      }
+    ],
+    "required": [
+      "0526"
+    ],
+    "char_relations": [
+      "cleric",
+      "wizard"
+    ],
+    "other_relations": [
+      "from_hell"
+    ],
+    "level": 16
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Hyppogriff",
+      "ru": "Гиппогриф"
+    },
+    "id": "0707",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 16
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "King Tut",
+      "ru": "Царь Тут"
+    },
+    "id": "0708",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [
+      "undead"
+    ],
+    "level": 16
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Wight Brothers",
+      "ru": "Бледные братья"
+    },
+    "id": "0709",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [
+      "undead"
+    ],
+    "level": 16
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Party Crasher",
+      "ru": ""
+    },
+    "id": "0710",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "partypack"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 16
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "The Evil Eye",
+      "ru": "Око зла"
+    },
+    "id": "0711",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m4"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "thief"
+    ],
+    "other_relations": [],
+    "level": 16
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Jabberwock",
+      "ru": "Бармаглот"
+    },
+    "id": "0712",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "wizard",
+      "dwarf"
+    ],
+    "other_relations": [],
+    "level": 17
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Lightning Bug",
+      "ru": "Молнячок"
+    },
+    "id": "0713",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m5"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "elf"
+    ],
+    "other_relations": [],
+    "level": 17
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Monster Truck",
+      "ru": "Грузовище"
+    },
+    "id": "0714",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m4"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [],
+    "level": 17
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Judge Fredd",
+      "ru": "Судья Фредд"
+    },
+    "id": "0715",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m2"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "thief"
+    ],
+    "other_relations": [],
+    "level": 17
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Seven Year Lich",
+      "ru": "Мэрилич Монро"
+    },
+    "id": "0716",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m3"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "warrior"
+    ],
+    "other_relations": [
+      "undead"
+    ],
+    "level": 17
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Dogs of War",
+      "ru": ""
+    },
+    "id": "0717",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "puppy"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 18
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Cavalier King Charles Spaniel",
+      "ru": ""
+    },
+    "id": "0718",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "puppy"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "elf"
+    ],
+    "other_relations": [],
+    "level": 18
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Auntie Paladin",
+      "ru": "Фнтипаладеща"
+    },
+    "id": "0719",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m3"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "cleric"
+    ],
+    "other_relations": [
+      "from_hell"
+    ],
+    "level": 18
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Elmer",
+      "ru": "Элмер"
+    },
+    "id": "0720",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "centaur",
+      "wizard"
+    ],
+    "other_relations": [],
+    "level": 18
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Squidzilla",
+      "ru": "Кальмадзилла"
+    },
+    "id": "0721",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "elf"
+    ],
+    "other_relations": [],
+    "level": 18
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Bullrog",
+      "ru": "Бульрог"
+    },
+    "id": "0722",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 18
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "The Hand Of Fate",
+      "ru": "Рука судьбы"
+    },
+    "id": "0723",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m5"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "steed"
+    ],
+    "other_relations": [],
+    "level": 18
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Knight of the Living Dead",
+      "ru": "Ночальник живых мертвецов"
+    },
+    "id": "0724",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m4"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "warrior",
+      "halfling"
+    ],
+    "other_relations": [
+      "undead"
+    ],
+    "level": 18
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Midgard Serpent",
+      "ru": "Мидгардский змей"
+    },
+    "id": "0725",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "lizard",
+      "dwarf"
+    ],
+    "other_relations": [],
+    "level": 19
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Medusa",
+      "ru": "Медуза"
+    },
+    "id": "0726",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m3"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "elf"
+    ],
+    "other_relations": [],
+    "level": 19
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Cyclops",
+      "ru": "Циклоп"
+    },
+    "id": "0727",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m5"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "thief"
+    ],
+    "other_relations": [],
+    "level": 19
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Ninja Giant",
+      "ru": "Ниндзя-гигант"
+    },
+    "id": "0728",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m4"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "thief"
+    ],
+    "other_relations": [],
+    "level": 19
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Katrina",
+      "ru": "Катрина"
+    },
+    "id": "0729",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m4"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 20
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Knight Mare",
+      "ru": "Бронепони"
+    },
+    "id": "0730",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m8"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "centaur"
+    ],
+    "other_relations": [],
+    "level": 20
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Anubis",
+      "ru": "Анубис"
+    },
+    "id": "0731",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m5"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "cleric"
+    ],
+    "other_relations": [
+      "from_hell",
+      "undead"
+    ],
+    "level": 20
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Kali",
+      "ru": "Калли"
+    },
+    "id": "0732",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "m3"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "cleric"
+    ],
+    "other_relations": [
+      "from_hell"
+    ],
+    "level": 20
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Paw Prince",
+      "ru": ""
+    },
+    "id": "0733",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "puppy"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "warrior",
+      "halfling"
+    ],
+    "other_relations": [],
+    "level": 20
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Plutonium Dragon",
+      "ru": "Плутониевый дракон"
+    },
+    "id": "0734",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "original"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 20
+  },
+  {
+    "deck": "door",
+    "type": "curse",
+    "subtype": "other",
+    "name": {
+      "en": "Curse Disperse",
+      "ru": ""
+    },
+    "id": "0735",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "curses"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "curse",
+    "subtype": "level",
+    "name": {
+      "en": "Curse of Verse!",
+      "ru": ""
+    },
+    "id": "0736",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "curses"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "curse",
+    "subtype": "other",
+    "name": {
+      "en": "Mildly Irritating Curse",
+      "ru": ""
+    },
+    "id": "0737",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "curses"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "common",
+    "subtype": "none",
+    "name": {
+      "en": "Curse Reverse",
+      "ru": ""
+    },
+    "id": "0738",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "curses"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Curse-stacean",
+      "ru": ""
+    },
+    "id": "0739",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "curses"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 5
+  },
+  {
+    "deck": "door",
+    "type": "curse",
+    "subtype": "other",
+    "name": {
+      "en": "Written in CURSE-ive!",
+      "ru": ""
+    },
+    "id": "0740",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "curses"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "curse",
+    "subtype": "level",
+    "name": {
+      "en": "Truth or CURSE-quences",
+      "ru": ""
+    },
+    "id": "0741",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "curses"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "curse",
+    "subtype": "gear",
+    "name": {
+      "en": "Mystery Curse!",
+      "ru": ""
+    },
+    "id": "0742",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "curses"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "curse",
+    "subtype": "armor",
+    "name": {
+      "en": "Too Big for Your Britches",
+      "ru": ""
+    },
+    "id": "0743",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "curses"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "curse",
+    "subtype": "headgear",
+    "name": {
+      "en": "Ripped Off",
+      "ru": ""
+    },
+    "id": "0744",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "curses"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "curse",
+    "subtype": "footgear",
+    "name": {
+      "en": "Flat Feet",
+      "ru": ""
+    },
+    "id": "0745",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "curses"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "curse",
+    "subtype": "other",
+    "name": {
+      "en": "Dug Too Deep!",
+      "ru": ""
+    },
+    "id": "0746",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "curses"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "curse",
+    "subtype": "gear",
+    "name": {
+      "en": "All Thumbs",
+      "ru": ""
+    },
+    "id": "0747",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "curses"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "curse",
+    "subtype": "level",
+    "name": {
+      "en": "Curse Magnet!",
+      "ru": ""
+    },
+    "id": "0748",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "curses"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "monster_boost",
+    "subtype": "plus_10",
+    "name": {
+      "en": "Pumped-Up",
+      "ru": ""
+    },
+    "id": "0749",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "gamechangers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "monster_boost",
+    "subtype": "boost",
+    "name": {
+      "en": "Unspeakable",
+      "ru": ""
+    },
+    "id": "0750",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "enhancers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "monster_boost",
+    "subtype": "boost",
+    "name": {
+      "en": "Really, Really",
+      "ru": ""
+    },
+    "id": "0751",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "enhancers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "monster_boost",
+    "subtype": "plus_10",
+    "name": {
+      "en": "Ultimate",
+      "ru": ""
+    },
+    "id": "0752",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "enhancers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "monster_boost",
+    "subtype": "plus_5",
+    "name": {
+      "en": "Seductive",
+      "ru": ""
+    },
+    "id": "0753",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "enhancers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "monster_boost",
+    "subtype": "plus_10",
+    "name": {
+      "en": "Savage",
+      "ru": ""
+    },
+    "id": "0754",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "enhancers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "monster_boost",
+    "subtype": "plus_5",
+    "name": {
+      "en": "Level-Draining",
+      "ru": ""
+    },
+    "id": "0755",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "enhancers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "monster_boost",
+    "subtype": "plus_10",
+    "name": {
+      "en": "Lethal",
+      "ru": ""
+    },
+    "id": "0756",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "enhancers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "monster_boost",
+    "subtype": "plus_10",
+    "name": {
+      "en": "Invisible",
+      "ru": ""
+    },
+    "id": "0757",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "enhancers"
+      }
+    ],
+    "required": [
+      "0092"
+    ],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "monster_boost",
+    "subtype": "plus_5",
+    "name": {
+      "en": "Hollywood",
+      "ru": ""
+    },
+    "id": "0758",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "enhancers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "monster_boost",
+    "subtype": "plus_5",
+    "name": {
+      "en": "Generic",
+      "ru": ""
+    },
+    "id": "0759",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "enhancers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "curse",
+    "subtype": "gear",
+    "name": {
+      "en": "Warranty Expires!",
+      "ru": ""
+    },
+    "id": "0760",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "enhancers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "curse",
+    "subtype": "level",
+    "name": {
+      "en": "Lead Paint!",
+      "ru": ""
+    },
+    "id": "0761",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "enhancers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "wandering",
+    "subtype": "none",
+    "name": {
+      "en": "Switcheroo",
+      "ru": ""
+    },
+    "id": "0762",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "enhancers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "wandering",
+    "subtype": "none",
+    "name": {
+      "en": "...And Its Little Friends",
+      "ru": ""
+    },
+    "id": "0763",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "enhancers"
+      },
+      {
+        "id": "01",
+        "expansion": "enhancers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "role_modifier",
+    "subtype": "class_enhancer",
+    "name": {
+      "en": "Master",
+      "ru": ""
+    },
+    "id": "0764",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "dice"
+      },
+      {
+        "id": "01",
+        "expansion": "dice"
+      },
+      {
+        "id": "02",
+        "expansion": "dice"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "role_modifier"
+    ],
+    "other_relations": [
+      "class_modifier"
+    ],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "role_modifier",
+    "subtype": "race_enhancer",
+    "name": {
+      "en": "High",
+      "ru": ""
+    },
+    "id": "0765",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "dice"
+      },
+      {
+        "id": "01",
+        "expansion": "dice"
+      },
+      {
+        "id": "02",
+        "expansion": "dice"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "role_modifier"
+    ],
+    "other_relations": [
+      "race_modifier"
+    ],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "role_modifier",
+    "subtype": "race_enhancer",
+    "name": {
+      "en": "Dark",
+      "ru": ""
+    },
+    "id": "0766",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "dice"
+      },
+      {
+        "id": "01",
+        "expansion": "dice"
+      },
+      {
+        "id": "02",
+        "expansion": "dice"
+      }
+    ],
+    "required": [],
+    "char_relations": [
+      "role_modifier"
+    ],
+    "other_relations": [
+      "race_modifier"
+    ],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "monster_boost",
+    "subtype": "plus_10",
+    "name": {
+      "en": "Narrow-Minded",
+      "ru": ""
+    },
+    "id": "0767",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "dice"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "door",
+    "type": "monster",
+    "subtype": "none",
+    "name": {
+      "en": "Ewenicorn",
+      "ru": ""
+    },
+    "id": "0768",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "promo"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [
+      "unicorn"
+    ],
+    "level": 2
+  },
+  {
+    "deck": "treasure",
+    "type": "common",
+    "subtype": "none",
+    "name": {
+      "en": "Bull-Headed",
+      "ru": ""
+    },
+    "id": "0769",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "gamechangers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "treasure",
+    "type": "go_up_a_lvl",
+    "subtype": "no_effect",
+    "name": {
+      "en": "Reload!",
+      "ru": ""
+    },
+    "id": "0770",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "gamechangers"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "treasure",
+    "type": "common",
+    "subtype": "none",
+    "name": {
+      "en": "Everyone Fall, Everyone Dies",
+      "ru": ""
+    },
+    "id": "0771",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "dice"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 0
+  },
+  {
+    "deck": "treasure",
+    "type": "gear",
+    "subtype": "headgear",
+    "name": {
+      "en": "Unicorn Helmet",
+      "ru": ""
+    },
+    "id": "0772",
+    "reprints": [
+      {
+        "id": "00",
+        "expansion": "promo"
+      }
+    ],
+    "required": [],
+    "char_relations": [],
+    "other_relations": [],
+    "level": 3
   }
 ]
