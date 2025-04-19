@@ -15,7 +15,8 @@ export default () => {
 
   let gd = new GeneratedDeck(
     new DeckOptions(
-      [GameOptions.Hirelings, GameOptions.Steeds],
+      [],
+      // [GameOptions.Hirelings, GameOptions.Steeds],
       // [GameOptions.RoleEnhancers],
       // [GameOptions.GearBoosts],
       [

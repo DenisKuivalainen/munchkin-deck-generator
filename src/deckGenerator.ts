@@ -757,7 +757,7 @@ export class GeneratedDeck {
     depth++;
     if (depth > 1000) return arr;
 
-    for (const [card, _] of arr) {
+    for (const [card] of arr) {
       const requiredIds = card.required;
 
       if (requiredIds.length === 0) continue;
@@ -769,7 +769,9 @@ export class GeneratedDeck {
 
       if (isAnyRequiredMissing) {
         const requiredId = shuffleArray(requiredIds)[0];
-        const replacement = this.cards.find((c) => c.id === requiredId)!;
+        const replacement = this.cards
+          .filter((c) => !currentCardIds.includes(c.id))
+          .find((c) => c.id === requiredId)!;
 
         let toReplace =
           this.findReplacement(arr, replacement, card.id) ??
